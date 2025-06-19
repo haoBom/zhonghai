@@ -18,36 +18,140 @@
 <body>
     <%- header %>
 
-    <% const items = [
+    <% const breakName = [
             { text: 'Customer case'},
         ];
     %>
 
-    <nav class="break">
-        <div class="container">
-            <ul>
-                <li>
-                    <img src="src/svg/i-1.svg" alt="">
-                    <a href="/">Home</a>
-                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
-                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
-                    </svg>
-                </li>
-                <% items.forEach((it, i) => { %>
-                <li>
-                    <% if (i < items.length - 1) { %>
-                    <a href="javascript:;"><span><%= it.text %></span></a>
-                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
-                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
-                    </svg>
-                    <% } else { %>
-                    <span><%= it.text %></span>
-                    <% } %>
-                </li>
-                <% }) %>
-            </ul>
-        </div>
-    </nav>
+    <main class="main">
+        <section class="p_header grid g-one">
+            <div class="c_img c_img_1">
+                <img src="/src/images/img-01.png" alt="Customer case">
+            </div>
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                            <img src="src/svg/i-1.svg" alt="">
+                            <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                            <% if (idx < breakName.length - 1) { %>
+                            <li>
+                                <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                    <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                                </svg>
+                                <a href="javascript:;"><span><%= it.text %></span></a>
+                            </li>
+                            <% } else { %>
+                            <li>
+                                <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                    <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                                </svg>
+                                <span><%= it.text %></span>
+                            </li>
+                            <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="c_h1 pt-80 pb-60 xl:pt-100">
+                    <h1 class="f-28 md:f-32 lg:f-48 xl:f-56">Customer case</h1>
+                </div>
+                <div class="c_sort">
+                    <ul class="flex g-60">
+                        <li class="flex"><a class="pt-30 pb-30" href="javascript:;">All</a></li>
+                        <li class="flex"><a class="pt-30 pb-30" href="javascript:;">EADS</a></li>
+                        <li class="flex"><a class="pt-30 pb-30" href="javascript:;">Medical treatment</a></li>
+                        <li class="flex"><a class="pt-30 pb-30" href="javascript:;">Ocean</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="p_case_1 pt-80 pb-120">
+            <div class="container flex f-col g-60">
+                <% const caseList = [
+                    { img: 'src/images/img-03.jpg' },
+                    { img: 'src/images/img-04.jpg' },
+                    { img: 'src/images/img-05.jpg' },
+                    { img: 'src/images/img-03.jpg' },
+                    { img: 'src/images/img-04.jpg' },
+                    { img: 'src/images/img-05.jpg' },
+                ]; %>
+                <div class="c_list_1 grid grid-3 g-30">
+                    <% caseList.forEach(item => { %>
+                        <a href="javascript:;" class="c_item radius-8 relative o-hidden">
+                            <div class="c_img radius-8 relative o-hidden">
+                                <img src="<%= item.img %>" alt="Customer case">
+                            </div>
+                            <div class="c_info radius-8 pl-30 pr-30 pt-30 pb-30 relative">
+                                <p class="t f-24">Case name</p>
+                                <p class="s f-16">Case Summary Occupancy Case Summary</p>
+                                <div class="i mt-30 op-0">
+                                    <img src="src/images/img-02.png" alt="Customer case">
+                                </div>
+                            </div>
+                        </a>
+                    <% }) %>
+                </div>
+                <div class="pagenation">
+                    <a href="javascript:;" class="page_a page_first">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7px" height="12px" viewBox="0 0 7 12">
+                            <path d="M0.466,5.875 L5.124,1.035 C5.378,0.772 5.808,0.754 6.084,0.995 C6.361,1.236 6.379,1.645 6.126,1.908 L1.888,6.312 L6.123,10.728 C6.375,10.992 6.356,11.401 6.079,11.642 C5.801,11.882 5.372,11.864 5.119,11.600 L0.469,6.753 C0.460,6.743 0.450,6.732 0.442,6.722 C0.230,6.478 0.234,6.115 0.466,5.875 L0.466,5.875 Z"/>
+                        </svg>
+                    </a>
+                    <a href="javascript:;" class="page_a page_num current">1</a>
+                    <a href="javascript:;" class="page_a page_num">2</a>
+                    <a href="javascript:;" class="page_a page_num">3</a>
+                    <a href="javascript:;" class="page_a page_num">5</a>
+                    <a href="javascript:;" class="page_a page_num">6</a>
+                    <a href="javascript:;" class="page_a page_num">7</a>
+                    <a href="javascript:;" class="page_a page_num">8</a>
+                    <a href="javascript:;" class="page_a page_next">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7px" height="12px" viewBox="0 0 7 12">
+                            <path d="M6.104,5.875 L1.464,1.035 C1.211,0.772 0.783,0.754 0.508,0.995 C0.232,1.236 0.214,1.645 0.466,1.908 L4.688,6.312 L0.470,10.728 C0.218,10.992 0.237,11.401 0.514,11.642 C0.790,11.882 1.218,11.864 1.469,11.600 L6.101,6.753 C6.110,6.743 6.120,6.732 6.128,6.722 C6.339,6.478 6.335,6.115 6.104,5.875 L6.104,5.875 Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="p_gallery_1 pt-120 pb-120">
+            <div class="container">
+                <div class="c_h1">
+                    <h1 class="f-28 md:f-32 lg:f-48 xl:f-56">Project case gallery</h1>
+                </div>
+                <% const galleryList = [
+                    { img: 'src/images/img-06.jpg' },
+                    { img: 'src/images/img-07.jpg' },
+                    { img: 'src/images/img-08.jpg' },
+                    { img: 'src/images/img-09.jpg' },
+                    { img: 'src/images/img-10.jpg' },
+                    { img: 'src/images/img-11.jpg' },
+                    { img: 'src/images/img-12.jpg' },
+                    { img: 'src/images/img-13.jpg' },
+                    { img: 'src/images/img-14.jpg' },
+                    { img: 'src/images/img-15.jpg' },
+                    { img: 'src/images/img-16.jpg' },
+                    { img: 'src/images/img-17.jpg' },
+                ]; %>
+                <div class="c_list mt-60 grid grid-4 g-30">
+                    <% galleryList.forEach(item => { %>
+                    <a href="javascript:;" class="c_item">
+                        <div class="c_img radius-10 relative o-hidden">
+                            <img src="<%= item.img %>" alt="Customer case">
+                        </div>
+                    </a>
+                    <% }) %>
+
+                </div>
+            </div>
+        </section>
+    </main>
   
     <%- footer %>
 

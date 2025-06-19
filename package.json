@@ -12,5 +12,9 @@
         "fast-glob": "^3.3.3",
         "vite": "^6.3.5",
         "vite-plugin-html": "^3.2.2"
+    },
+    "dependencies": {
+        "@fancyapps/ui": "^6.0.4",
+        "jquery": "^3.7.1"
     }
 }

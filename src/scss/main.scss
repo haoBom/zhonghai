@@ -1,5 +1,8 @@
 @use 'core/_var';
 @use 'common/common';
+@use 'layout/nheader';
+@use 'layout/case';
+@use 'element/pagenation';
 
 header{
     height: 30px;

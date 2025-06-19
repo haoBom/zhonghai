@@ -1,0 +1,55 @@
+@use '../common/tool' as *;
+
+.c_break {
+    background-color: var(--w);
+    height: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 0.06rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 0.06rem;
+            line-height: 1.2;
+            color: var(--9);
+
+            img{
+                width: 0.13rem;
+                height: auto;
+                margin-right: 0.04rem;
+            }
+
+            span {
+                width: auto;
+                white-space: pre;
+                @include ellipsis(1);
+            }
+
+            svg {
+                width: 0.16rem;
+            }
+
+            a,
+            span {
+                color: inherit;
+                line-height: inherit;
+                font-size: inherit;
+                transition: all var(--ease) .3s;
+
+                &:hover {
+                    color: var(--bc);
+                }
+            }
+
+            &:last-child {
+                color: var(--bc);
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.c_sort {
+    li {
+        a {
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -0.01rem;
+                right: 0;
+                height: 0.03rem;
+                width: 0;
+                background-color: var(--bc);
+                transition: all var(--ease) 0.3s;
+            }
+
+            &:hover::after{
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}

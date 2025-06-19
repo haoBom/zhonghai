@@ -1,0 +1,23 @@
+@use '../element/bread';
+@use '../element/sort';
+
+.p_header {
+    border-bottom: 0.01rem solid var(--d);
+    position: relative;
+
+    .c_h1 h1{
+        line-height: 1.2;
+    }
+
+    .c_img_1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+
+        img{
+            object-position: right top;
+        }
+    }
+}
