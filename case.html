@@ -2,49 +2,56 @@
 <html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="format-detection" content="telephone=no, email=no, address=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <title><%= title %></title>
-  <meta name="description" content="<%= description %>">
-  <meta name="keywords" content="<%= keywords %>">
-  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <link rel="stylesheet" crossorigin href="src/css/main.css" />
 </head>
 
 <body>
-  <%- header %>
-  <%- footer %>
+    <%- header %>
 
-  <% 
-    const items = [
-      { text: '首页'},
-      { text: '关于我们'},
-      { text: '联系我们'}
-    ];
-  %>
-  <nav class="break">
-    <div class="container">
-      <ul>
-        <% items.forEach((it, i) => { %>
-        <li>
-          <% if (i < items.length - 1) { %>
-          <a href="javascript:;"><%= it.text %></a>
-          <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
-            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
-          </svg>
-          <% } else { %>
-          <span><%= it.text %></span>
-          <% } %>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </nav>
-  <script type="module" crossorigin src="src/js/main.js"></script>
+    <% const items = [
+            { text: 'Customer case'},
+        ];
+    %>
+
+    <nav class="break">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="src/svg/i-1.svg" alt="">
+                    <a href="/">Home</a>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                </li>
+                <% items.forEach((it, i) => { %>
+                <li>
+                    <% if (i < items.length - 1) { %>
+                    <a href="javascript:;"><span><%= it.text %></span></a>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                    <% } else { %>
+                    <span><%= it.text %></span>
+                    <% } %>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+    </nav>
+  
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
 </body>
 
 </html>

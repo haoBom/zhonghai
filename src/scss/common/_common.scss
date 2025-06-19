@@ -1,0 +1,301 @@
+@use '_tool.scss';
+@use '_bread.scss';
+@use 'sass:map';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "MiSans-Normal", 'PingFang SC', 'Microsoft YaHei', 'Microsoft YaHei UI', 'SimSun', 'SimHei', 'Arial';
+    font-size: 0.16rem;
+    line-height: 1.4;
+    color: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #0006;
+}
+
+input:focus::-webkit-input-placeholder,
+input:focus::-moz-input-placeholder,
+input:hover::-webkit-input-placeholder,
+input:hover::-moz-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+textarea:focus::-moz-input-placeholder,
+textarea:hover::-webkit-input-placeholder,
+textarea:hover::-moz-input-placeholder {
+    color: #0006;
+}
+
+select:focus,
+textarea:focus,
+input:focus,
+button {
+    outline: none
+}
+
+textarea,
+input,
+select {
+    text-indent: 0.1rem;
+}
+
+input,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+    cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+    border: 0;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    color: inherit;
+    background: var(--f);
+}
+
+p {
+    color: var(--1);
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    list-style-type: none;
+    vertical-align: middle
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus,
+a:focus-visible {
+    outline: none;
+}
+
+a:focus-visible:not(:focus),
+a:active:focus,
+a:active:focus-visible,
+a:active:focus-visible:not(:focus) {
+    outline: none;
+}
+
+a:not(.disabled):hover {
+    color: var(--bc);
+    border-color: var(--bc);
+    text-decoration: none;
+    cursor: pointer
+}
+
+a[href] {
+    cursor: pointer
+}
+
+span,
+div,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    line-height: inherit;
+}
+
+img,
+video {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: middle
+}
+
+img[src=""],
+img:not([src]) {
+    opacity: 0
+}
+
+b {
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+
+font {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    text-transform: inherit;
+}
+
+svg {
+    width: 0.2rem;
+    height: 0.2rem;
+    margin: 0;
+    fill: currentColor;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+input,
+select,
+textarea {
+
+    &:focus,
+    &:focus-visible,
+    &:hover {
+        background-color: inherit;
+        text-transform: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+body {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: var(--f);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--cw);
+    padding: 0 0.15rem;
+    width: 100%;
+
+    @media screen and (max-width:1440px) {
+        max-width: 10rem;
+    }
+}
+
+.f-inherit * {
+    font-size: inherit;
+}
+
+.f-left {
+    text-align: left
+}
+
+.f-center {
+    text-align: center
+}
+
+.f-right {
+    text-align: right
+}
+
+.f-justify {
+    text-align: justify
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hide {
+    display: none
+}
+
+.grid {
+    display: grid;
+}
+
+.g-1-1 {
+    grid-area: 1 / 1;
+}
+
+.flex {
+    display: flex;
+}
+
+.f-row {
+    flex-direction: row;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.j-start {
+    justify-content: flex-start;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-end {
+    justify-content: flex-end;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.a-start {
+    align-items: flex-start;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.a-end {
+    align-items: flex-end;
+}
+
+.a-baseline {
+    align-items: baseline;
+}
+
+.initialization__page [data-rolling] {
+    overflow: hidden;
+    width: 200%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.initialization__page [data-rolling]>* {
+    display: flex;
+}
+
+.initialization__page [data-rolling] li {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    justify-content: center;
+    flex: 1;
+}

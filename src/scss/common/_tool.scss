@@ -1,0 +1,177 @@
+@use "sass:list";
+@use "sass:math";
+@use "sass:map";
+
+// 响应式断点
+$divisor-default: 19.2;
+$breakpoints: (
+    xl: 1440px,
+    lg: 1024px,
+    md: 768px,
+);
+$divisors: (
+    xl: 14.4,
+    lg: 10.24,
+    md: 7.68,
+);
+
+// 设置 html 根字体大小，响应式
+html {
+    scroll-behavior: smooth;
+    font-size: calc(100vw / #{$divisor-default});
+}
+
+@each $name, $breakpoint in $breakpoints {
+    $divisor: map.get($divisors, $name);
+
+    @if $divisor !=null {
+        @media (max-width: $breakpoint) {
+            html {
+                font-size: calc(100vw / #{$divisor});
+            }
+        }
+    }
+}
+
+// 字体工具
+@each $name, $size in (80: 0.8rem,
+    48: 0.48rem,
+    24: 0.24rem,
+    20: 0.2rem,
+    18: 0.18rem,
+    16: 0.16rem,
+    14: 0.14rem,
+    12: 0.12rem) {
+    .f-#{$name} {
+        font-size: $size;
+    }
+
+    @each $bp, $bp-size in $breakpoints {
+        @media screen and (min-width: $bp-size) {
+            .#{$bp}\:f-#{$name} {
+                font-size: $size;
+            }
+        }
+    }
+}
+
+// 内外边距工具
+$spacing-unit: 0.1rem;
+$spacing-steps: (
+    10,
+    15,
+    20,
+    30,
+    60,
+    120
+);
+
+@each $type in ('margin', 'padding') {
+    $prefix: if($type =='margin', 'm', 'p');
+
+    @each $dir-key, $dir-value in ('t': 'top',
+        'r': 'right',
+        'b': 'bottom',
+        'l': 'left',
+        '': 'all'
+
+    ) {
+        @each $step in $spacing-steps {
+            $value: $spacing-unit * math.div($step, 10);
+
+            // 默认类
+            .#{$prefix}#{$dir-key}-#{$step} {
+                @if $dir-key =='' {
+                    #{$type}: #{$value};
+                }
+
+                @else {
+                    #{$type}-#{$dir-value}: #{$value};
+                }
+            }
+
+            // 响应式类
+            @each $bp, $size in $breakpoints {
+                @media screen and (min-width: $size) {
+                    .#{$bp}\:#{$prefix}#{$dir-key}-#{$step} {
+                        @if $dir-key =='' {
+                            #{$type}: #{$value};
+                        }
+
+                        @else {
+                            #{$type}-#{$dir-value}: #{$value};
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 间距工具
+@each $name, $gap in (30: .3rem,
+    20: .2rem,
+    10: .1rem) {
+    .g-#{$name} {
+        gap: $gap;
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media screen and (min-width: $size) {
+            .#{$bp}\:g-#{$name} {
+                gap: $gap;
+            }
+        }
+    }
+}
+
+// 透明度工具
+$opacities: (
+    0: 0,
+    6: 0.6,
+    10: 1
+);
+
+@each $num, $opacity in $opacities {
+    .op-#{$num} {
+        opacity: $opacity;
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media screen and (min-width: $size) {
+            .#{$bp}\:op-#{$num} {
+                opacity: $opacity;
+            }
+        }
+    }
+}
+
+// 圆角工具
+$radiuses: (
+    8: 0.08rem
+);
+
+@each $num, $radius in $radiuses {
+    .radius-#{$num} {
+        border-radius: $radius;
+    }
+
+    @each $bp, $size in $breakpoints {
+        @media screen and (min-width: $size) {
+            .#{$bp}\:radius-#{$num} {
+                border-radius: $radius;
+            }
+        }
+    }
+}
+
+// 文本省略工具
+@mixin ellipsis($lines: 1) {
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    line-clamp: $lines;
+    overflow: hidden;
+}
