@@ -26,3 +26,11 @@ $fonts: (
     $style : map-get($attrs, style);
     @include font-face($family, $file, $weight, $style);
 }
+
+.ppins-bold{
+    font-family: "Poppins-Bold";
+
+    > *{
+        font-family: inherit;
+    }
+}

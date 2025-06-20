@@ -2297,6 +2297,13 @@ html {
   font-style: normal;
   font-display: swap;
 }
+.ppins-bold {
+  font-family: "Poppins-Bold";
+}
+.ppins-bold > * {
+  font-family: inherit;
+}
+
 *,
 *::before,
 *::after {
@@ -3025,6 +3032,44 @@ body {
   color: var(--d);
   text-align: center;
   text-indent: 0;
+}
+
+.c_contactBox {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.c_contact .c_i0 {
+  color: var(--0);
+}
+.c_contact .c_i1 {
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.c_contact .c_i1 span {
+  color: var(--1);
+}
+.c_contact .c_i1 span:first-child {
+  color: var(--bc);
+}
+.c_contact .c_contact_way .c_contact_way_xin {
+  grid-template-columns: 0.3rem 1fr;
+  gap: 0.15rem;
+}
+.c_contact .c_contact_way img {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+.c_contact .c_contact_quote {
+  padding: 1rem 0.6rem 0.8rem;
+  border-radius: 0.16rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: var(--f);
+  box-shadow: 0px 10px 50px 0px rgba(21, 74, 147, 0.15);
+  position: relative;
+  overflow: hidden;
+  height: 75vh;
 }
 
 header {

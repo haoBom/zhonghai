@@ -11,6 +11,7 @@ const htmlFiles = fg.sync(['./*.html'], { onlyFiles: true })
 const titles = {
     index: '中海万泰',
     about: '关于我们 - 中海万泰',
+    contact: '联系我们 - 中海万泰'
 }
 // 头部母版
 const headerTpl = fs.readFileSync(

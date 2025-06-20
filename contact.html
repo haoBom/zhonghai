@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+  <%- header %>
+
+  <% const breakName = [
+            { text: 'Contact Us'},
+        ];
+    %>
+
+  <main class="main">
+        <section class="c_contact">
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                            <img src="src/svg/i-1.svg" alt="">
+                            <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                        <% if (idx < breakName.length - 1) { %>
+                        <li>
+                            <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                            </svg>
+                            <a href="javascript:;"><span><%= it.text %></span></a>
+                        </li>
+                        <% } else { %>
+                        <li>
+                            <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                            </svg>
+                            <span><%= it.text %></span>
+                        </li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="c_contactBox mt-60 g-20">
+                    <div class="c_contact_info mt-80">
+                        <p class="f-24 c_i0 mb-20">Welcome to create</p>
+                        <p class="f-56 ppins-bold c_i1 flex f-col mb-60">
+                            <span>something innovative</span>
+                            <span>with us</span>
+                        </p>
+                        <div class="c_contact_way f-20">
+                            <div class="c_contact_way_xin grid mb-20 a-baseline">
+                                <img src="src/svg/i-2.svg" alt="number">
+                                <a href="tel:0000-000000">0000-000000</a>
+                            </div>
+                            <div class="c_contact_way_xin grid mb-20 a-baseline">
+                                <img src="src/svg/i-3.svg" alt="mail">
+                                <a href="mailto:000000000@163.com">000000000@163.com</a>
+                            </div>
+                            <div class="c_contact_way_xin grid mb-20 a-baseline">
+                                <img src="src/svg/i-4.svg" alt="add">
+                                <a href="javascript:;">Address placeholder Address placeholder Address placeholder Address placeholder Address placeholder</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c_contact_quote">
+                        <div class="c_contact_quote_info">
+                            <p class="f-32">You can also</p>
+                            <p class="f-40">provide a quotation</p>
+                            <p class="f-32">directly online</p>
+                            <p class="f-16">Upload drawings,<br> one click quotation, unlock efficient production password</p>
+                        </div>
+                        <div class="c_contact_quote_more"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  </main>
+
+  <%- footer %>
+
+  <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+# 忽略依赖包目录
+node_modules/
+
+# 忽略构建输出
+dist/
+build/
