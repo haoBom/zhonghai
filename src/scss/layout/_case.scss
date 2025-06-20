@@ -1,4 +1,12 @@
+@use '../common/tool' as *;
+
 .p_case_1 {
+    .c_list_1 {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(3.5rem, 1fr));
+    }
+
     .c_item {
         border-top: 0;
         border: 0.01rem solid var(--d);
@@ -27,7 +35,7 @@
                 display: grid;
                 place-content: center;
                 background: var(--f);
-                transition: all var(--ease) 0.3s;
+                transition: opacity var(--ease) 0.3s;
 
                 img {
                     width: 0.15rem;
@@ -37,12 +45,13 @@
             .t {
                 color: var(--0);
                 line-height: 1.2;
-                transition: all var(--ease) 0.3s;
+                transition: color var(--ease) 0.3s;
             }
 
             .s {
+                @include ellipsis(1);
                 margin-top: 0.04rem;
-                transition: all var(--ease) 0.3s;
+                transition: color var(--ease) 0.3s;
             }
         }
 
@@ -71,6 +80,16 @@
 
 .p_gallery_1 {
     background: var(--f6);
+
+    .c_list {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(2.8rem, 1fr));
+
+        @media screen and (max-width: 480px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 
     .c_item {
         img {

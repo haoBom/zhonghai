@@ -5,9 +5,9 @@
 // 响应式断点
 $divisor-default: 19.2;
 $breakpoints: (
-    xl: 1440px,
-    lg: 1024px,
     md: 768px,
+    lg: 1024px,
+    xl: 1440px
 );
 
 // 设置 html 根字体大小，响应式
@@ -48,7 +48,9 @@ html {
     20: 0.2rem,
     24: 0.24rem,
     28: 0.28rem,
+    30: 0.30rem,
     32: 0.32rem,
+    40: 0.40rem,
     48: 0.48rem,
     56: 0.56rem,
     80: 0.8rem) {

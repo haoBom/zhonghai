@@ -19,10 +19,18 @@
             line-height: 1.2;
             color: var(--9);
 
-            img{
+            @media screen and (max-width: 768px) {
+                font-size: 14px;
+            }
+
+            img {
                 width: 0.13rem;
                 height: auto;
                 margin-right: 0.04rem;
+
+                @media screen and (max-width: 768px) {
+                    width: 13px;
+                }
             }
 
             span {
@@ -33,6 +41,10 @@
 
             svg {
                 width: 0.16rem;
+
+                @media screen and (max-width: 768px) {
+                    width: 16px;
+                }
             }
 
             a,

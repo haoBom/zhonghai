@@ -4,6 +4,10 @@
     align-items: center;
     gap: 0.2rem;
 
+    @media screen and (max-width: 768px) {
+        gap: 0.1rem;
+    }
+
     .page_a {
         width: 0.52rem;
         height: 0.52rem;
@@ -15,6 +19,11 @@
         align-items: center;
         color: #27253d;
         transition: all var(--ease) 0.3s;
+
+        @media screen and (max-width: 768px) {
+            width: 0.44rem;
+            height: 0.44rem;
+        }
 
         svg {
             width: 0.12rem;

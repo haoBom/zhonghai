@@ -2,8 +2,17 @@
     li {
         a {
             position: relative;
+            display: flex;
 
-            &::after{
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: 480px) {
+                font-size: 14px;
+            }
+
+            &::after {
                 content: '';
                 position: absolute;
                 bottom: -0.01rem;
@@ -14,10 +23,19 @@
                 transition: all var(--ease) 0.3s;
             }
 
-            &:hover::after{
+            &:hover::after {
                 left: 0;
                 width: 100%;
             }
         }
+    }
+}
+
+.c_sort_swiper {
+    overflow: hidden;
+    width: 100%;
+
+    li {
+        width: auto;
     }
 }
