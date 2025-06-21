@@ -3482,6 +3482,72 @@ body {
   border-bottom: 0.01rem solid var(--d);
 }
 
+.te2 .swiper {
+  padding: 0.6rem 0;
+}
+.te2 .swiper img {
+  transition: all var(--ease) 0.3s;
+}
+.te2 .swiper p {
+  transition: all var(--ease) 0.3s;
+}
+.te2 .swiper a:hover p {
+  color: var(--bc);
+}
+.te2 .swiper a:hover img {
+  transform: scale(1.1);
+}
+
+.te3 .te3_left img {
+  border-radius: 0.16rem;
+}
+.te3 .te3_right .t {
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  color: var(--0);
+}
+.te3 .te3_right .s {
+  color: var(--1);
+}
+
+.te4 {
+  background-color: var(--bl);
+}
+.te4 .container {
+  background-color: var(--bc);
+  border-radius: 0.16rem;
+  padding: 0.1rem;
+}
+.te4 .te4_left_title {
+  padding-top: 1rem;
+  padding-bottom: 1.4rem;
+}
+.te4 .te4_left_title p {
+  color: var(--f);
+}
+.te4 .te4_left {
+  padding-left: 0.4rem;
+}
+.te4 .te4_left_item p {
+  font-size: 0.2rem;
+  color: var(--f);
+  opacity: 0.6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.1rem;
+  height: 0.5rem;
+  margin-top: 0.2rem;
+  border-bottom: 0.01rem solid rgba(255, 255, 255, 0.1);
+}
+.te4 .te4_left_item p img {
+  width: 0.15rem;
+}
+.te4 .te4_right img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .mp .container {
   max-width: 10rem;
 }

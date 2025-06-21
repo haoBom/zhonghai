@@ -1,3 +1,95 @@
 .c_technology_sort {
     border-bottom: 0.01rem solid var(--d);
 }
+
+.te2 {
+    .swiper {
+        padding: 0.6rem 0;
+
+        img {
+            transition: all var(--ease) 0.3s;
+        }
+
+        p {
+            transition: all var(--ease) 0.3s;
+        }
+
+        a:hover {
+            p {
+                color: var(--bc);
+            }
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.te3 {
+    .te3_left {
+        img {
+            border-radius: 0.16rem;
+        }
+    }
+
+    .te3_right {
+        .t {
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+            color: var(--0);
+        }
+
+        .s {
+            color: var(--1);
+        }
+    }
+}
+
+.te4 {
+    background-color: var(--bl);
+
+    .container {
+        background-color: var(--bc);
+        border-radius: 0.16rem;
+        padding: 0.1rem;
+    }
+
+    .te4_left_title {
+        padding-top: 1rem;
+        padding-bottom: 1.4rem;
+
+        p {
+            color: var(--f);
+        }
+    }
+
+    .te4_left {
+        padding-left: 0.4rem;
+    }
+
+    .te4_left_item {
+        p {
+            font-size: 0.2rem;
+            color: var(--f);
+            opacity: 0.6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.1rem;
+            height: 0.5rem;
+            margin-top: 0.2rem;
+            border-bottom: 0.01rem solid rgb(255 255 255 / 10%);
+
+            img {
+                width: 0.15rem;
+            }
+        }
+    }
+
+    .te4_right {
+        img {
+            object-fit: cover;
+        }
+    }
+}

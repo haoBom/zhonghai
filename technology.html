@@ -55,7 +55,7 @@
                 </ul>
                 </div>
                 <div class="l_title flex f-col">
-                    <div class="c_h1 mb-30">
+                    <div class="c_h1 mb-20">
                         <h1 class="f-40 lg:f-48 xl:f-56">Industry challenges</h1>
                     </div>
                     <div class="c_p">
@@ -83,6 +83,75 @@
                             <path d="M6.001,6.318 L1.758,10.561 C1.368,10.952 0.734,10.952 0.344,10.561 C-0.047,10.170 -0.047,9.538 0.344,9.147 L3.880,5.611 L0.344,2.076 C-0.047,1.685 -0.047,1.052 0.344,0.662 C0.734,0.271 1.368,0.271 1.758,0.662 L6.001,4.904 C6.391,5.295 6.391,5.928 6.001,6.318 Z"/>
                         </svg>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="te te2">
+            <% const te2_slideList = [
+                    { img: 'src/images/img-22.jpg', title: 'Precision deep holemachining' },
+                    { img: 'src/images/img-23.jpg', title: 'Thread rolling' },
+                    { img: 'src/images/img-24.jpg', title: 'Ultra deep gun drill' },
+                    { img: 'src/images/img-25.jpg', title: 'Space oblique hole processing' },
+                    { img: 'src/images/img-26.jpg', title: 'Deep hole drilling eccentric hole' },
+                    { img: 'src/images/img-27.jpg', title: 'Deep hole electric spark' },
+                    { img: 'src/images/img-28.jpg', title: 'Thin shaft machining' },
+                    { img: 'src/images/img-29.jpg', title: 'Five axis precision machining' },
+                    { img: 'src/images/img-28.jpg', title: 'Thin shaft machining' },
+                    { img: 'src/images/img-29.jpg', title: 'Five axis precision machining' }
+                ];
+            %>
+            <div class="container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <% te2_slideList.forEach((item) => { %>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="te2_img radius-8 relative o-hidden mb-20">
+                                        <img src="<%= item.img %>" alt="technology">
+                                    </div>
+                                    <div class="te_title f-14 f-center">
+                                        <p><%= item.title %></p>
+                                    </div>
+                                </a>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="te te3 pt-120 pb-120">
+            <div class="container grid grid-2">
+                <div class="te3_left">
+                    <img src="src/images/img-30.jpg" alt="technology" class="relative o-hidden">
+                </div>
+                <div class="te3_right pl-100 flex f-col a-center j-center">
+                    <p class="t f-40 lg:f-48 ppins-bold">Precision deep hole machining</p>
+                    <p class="s f-16">By using customized specialized deep hole cutting tools and deep hole machine equipment, high-precision machining of difficult to cut materials such as high difficulty multi-step sealed deep holes and deep hole inner ring grooves can be achieved. The machining range of the inner hole diameter of the part is ∅ 25-250mm, the maximum machining depth is 10m, and the coaxiality of the machined hole is 0.02mm. The diameter of the deep hole inner groove can reach 1.5 times the size of the through-hole, and the surface smoothness is better than Ra 1.6 μ m.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="te te4 pt-120 pb-120">
+            <div class="container grid grid-2 g-60">
+                <div class="te4_left">
+                    <div class="te4_left_title ppins-bold">
+                        <p class="f-40 lg:f-48 xl:f-56">Application industry</p>
+                    </div>
+                    <div class="te4_left_item">
+                        <p><span>EADS</span><img src="src/images/img-32.png" alt="Application industry"></p>
+                        <p><span>Application industry2</span><img src="src/images/img-32.png" alt="Application industry"></p>
+                        <p><span>Application industry3</span><img src="src/images/img-32.png" alt="Application industry"></p>
+                        <p><span>Application industry4</span><img src="src/images/img-32.png" alt="Application industry"></p>
+                        <p><span>Application industry5</span><img src="src/images/img-32.png" alt="Application industry"></p>
+                    </div>
+                </div>
+                <div class="te4_right grid g-one radius-8 relative o-hidden">
+                    <img src="src/images/img-31.jpg" alt="technology" class="relative o-hidden">
+                    <img src="src/images/img-31.jpg" alt="technology" class="relative o-hidden">
+                    <img src="src/images/img-31.jpg" alt="technology" class="relative o-hidden">
+                    <img src="src/images/img-31.jpg" alt="technology" class="relative o-hidden">
                 </div>
             </div>
         </section>
