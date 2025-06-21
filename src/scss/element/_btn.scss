@@ -1,0 +1,30 @@
+.btn {
+    height: 0.5rem;
+    width: max-content;
+    padding: 0 0.3rem;
+    padding-left: 0.15rem;
+    border-radius: 0.04rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.2rem;
+    transition: all var(--ease) 0.3s;
+
+    &::before {
+        content: '';
+        width: 0.08rem;
+        height: 0.08rem;
+        background-color: var(--ac);
+        border-radius: 100%;
+    }
+}
+
+.btn-bc {
+    color: var(--f);
+    background-color: var(--bc);
+
+    &:hover {
+        background-color: var(--bc_c);
+    }
+}

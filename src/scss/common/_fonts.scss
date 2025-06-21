@@ -15,6 +15,9 @@ $fonts: (
     'Poppins': (file: 'Poppins-Regular',
         weight: 400,
         style: normal),
+    'Poppins-Medium': (file: 'Poppins-Medium',
+        weight: 400,
+        style: normal),
     'Poppins-Bold': (file: 'Poppins-Bold',
         weight: 700,
         style: normal)
@@ -27,10 +30,18 @@ $fonts: (
     @include font-face($family, $file, $weight, $style);
 }
 
-.ppins-bold{
+.ppins-bold {
     font-family: "Poppins-Bold";
 
-    > *{
+    >* {
+        font-family: inherit;
+    }
+}
+
+.ppins-Medium {
+    font-family: "Poppins-Medium";
+
+    >* {
         font-family: inherit;
     }
 }

@@ -1,0 +1,100 @@
+footer {
+    background: #181818;
+
+    .footer_logo {
+        max-width: 1.18rem;
+    }
+
+    .footer_menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .footer_menu_item {
+        color: var(--f);
+
+        .footer_menu_t {
+            font-size: 0.18rem;
+            margin-bottom: 0.2rem;
+            font-family: "Poppins-Medium";
+
+            a {
+                transition: all var(--ease) 0.3s;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        .footer_menu_l {
+            font-size: 0.14rem;
+            margin-bottom: 0.1rem;
+
+            a {
+                transition: all var(--ease) 0.3s;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    .footer_other {
+        color: var(--f);
+        display: flex;
+        justify-content: space-between;
+        gap: 0.1rem;
+        padding: 0.2rem 0;
+
+        a {
+            transition: all var(--ease) 0.3s;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .footer_menu .search {
+        background-color: var(--f);
+        grid-template-columns: 1fr 0.4rem;
+        border-radius: 0.04rem;
+        margin-top: 0.1rem;
+        float: left;
+
+        .input-group {
+            padding: 0 0.15rem;
+            width: 100%;
+            grid-template-columns: 1fr;
+        }
+
+        .input-group .p_input {
+            background-color: var(--f);
+            color: var(--9);
+            padding: 0;
+            height: 0.4rem;
+        }
+
+        .formBtn {
+            width: 0.36rem;
+            height: 0.36rem;
+            background-color: var(--bc);
+            border-radius: 0.04rem;
+            padding: 0;
+            margin-top: 0.02rem;
+            transform: translateX(0rem);
+
+            &:hover {
+                background-color: var(--bc_c);
+            }
+
+            img {
+                width: 0.16rem;
+                height: 0.16rem;
+            }
+        }
+    }
+}

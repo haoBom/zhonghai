@@ -1,0 +1,36 @@
+.pn_page {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-start;
+    border-top: 0.01rem solid #dfdfdf;
+
+    .p_n {
+        display: flex;
+        flex-direction: column;
+        gap: 0.12rem;
+
+        a {
+            display: grid;
+            grid-template-columns: 0.5rem 1fr;
+            color: var(--1);
+            transition: all var(--ease) 0.3s;
+
+            span {
+                color: var(--6);
+                transition: all var(--ease) 0.3s;
+            }
+
+            &:not(.disabled):hover,
+            &:not(.disabled):hover span {
+                color: var(--bc);
+            }
+        }
+
+        .disabled {
+            cursor: no-drop;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.search {
+    width: 100%;
+    border: 1px solid #efefef;
+    background: #efefef;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1.4rem;
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr 1.2rem;
+    }
+}
+
+.search .input-group {
+    display: grid;
+    grid-template-columns: 0.3rem 1fr;
+    align-items: center;
+    padding: 0 0.3rem;
+}
+
+.search .input-group input,
+.search .input-group .p_input {
+    background: #efefef;
+    padding: 0.14rem 0rem;
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    height: 0.7rem;
+
+    @media screen and (max-width: 1024px) {
+        height: 0.5rem;
+    }
+}
+
+.search .input-group input,
+.search .input-group .p_input::placeholder {
+    color: var(--b);
+}
+
+.search .formBtn {
+    width: 100%;
+    height: calc(100% - 0.08rem);
+    background: var(--p);
+    border: 0;
+    border-radius: 0.3rem;
+    line-height: 1.2;
+    padding: 0.15rem;
+    color: #fff;
+    transition: all var(--ease) .3s;
+    cursor: pointer;
+    transform: translateX(-0.04rem);
+    margin-top: 0.04rem;
+    display: flex;
+    gap: 0.08rem;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0.1rem;
+
+        span {
+            font-size: 0.16rem;
+        }
+    }
+}
+
+.search .formBtn:hover {
+    background: var(--pl);
+}

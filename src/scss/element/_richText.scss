@@ -1,0 +1,20 @@
+.richText {
+    line-height: 1.8;
+    color: var(--1);
+}
+
+.richText * {
+    line-height: inherit;
+    color: inherit;
+}
+
+.richText img {
+    border-radius: 0.1rem;
+    margin: 0.1rem 0;
+}
+
+.richText .line {
+    margin: 0.4rem 0;
+    display: flex;
+    border-top: 0.01rem dashed #ccc;
+}

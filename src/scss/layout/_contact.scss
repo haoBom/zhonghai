@@ -1,6 +1,6 @@
 .c_contactBox {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 8fr 7fr;
 }
 
 .c_contact {
@@ -43,5 +43,51 @@
         position: relative;
         overflow: hidden;
         height: 75vh;
+    }
+
+    .c_contact_quote_info .ppins-bold {
+        line-height: 1.2;
+        color: var(--0);
+    }
+
+    .c_contact_quote_info .ppins-bold:nth-child(2) {
+        text-transform: uppercase;
+
+        span {
+            color: var(--ac);
+        }
+    }
+
+    .c_contact_info {
+        max-width: 7rem;
+    }
+
+    .c_contact_quote_img {
+        position: absolute;
+        pointer-events: none;
+        -webkit-mask-image: linear-gradient(var(--mask-direction, to right), hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%) 8%, hsl(0, 0%, 0%) 92%, hsla(0, 0%, 0%, 0));
+        mask-image: linear-gradient(var(--mask-direction, to top), hsl(0deg 0% 100% / 0%), hsl(0, 0%, 0%) 200%, hsl(0, 0%, 0%) 100%, hsla(0, 0%, 0%, 0));
+        width: 4.3rem;
+        height: 4rem;
+        right: 0;
+        bottom: 0;
+
+        img {
+            max-width: max-content;
+            height: auto;
+            max-height: none;
+            width: max-content;
+            animation: rotate 10s linear infinite;
+        }
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(-360deg);
+        }
     }
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'News'},
+                { text: 'News Title Occupancy News Title Occupancy News Title Occupancy'},
+            ];
+        %>
+
+    <main class="main">
+        <section>
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                            <img src="src/svg/i-1.svg" alt="">
+                            <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                        <% if (idx < breakName.length - 1) { %>
+                        <li>
+                            <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                            </svg>
+                            <a href="javascript:;"><span><%= it.text %></span></a>
+                        </li>
+                        <% } else { %>
+                        <li>
+                            <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                            </svg>
+                            <span><%= it.text %></span>
+                        </li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="l_news_detail">
+            <div class="container">
+                <div class="c_h1 pt-80 pb-120 xl:pt-100">
+                    <h1 class="f-40 lg:f-48">News Title Occupancy News Title Occupancy News Title Occupancy</h1>
+                    <div class="nd_timeBox pb-10 mb-40 flex j-between a-center">
+                        <div class="flex a-center g-30">
+                            <p class="nd_time flex a-center g-10">
+                                <img src="src/svg/i-7.svg" alt="time"><time>02.11.2025</time>
+                            </p>
+                            <p class="nd_type"><a href="javascript:;">News and Information</a></p>
+                        </div>
+                        <div class="nd_tag flex a-center g-10 f-14">
+                            <a href="javascript:;">#Tag occupancy</a>
+                            <a href="javascript:;">#Tag occupancy</a>
+                        </div>
+                    </div>
+                    <div class="richText">
+                        <p>
+                            Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation 
+                            Article Details Occupation Article details occupying space Article details occupying space Article details occupying space Article details occupying space Article details occupying space Position occupying Article Details Position occupying Article Details Position occupying 
+                            Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Position occupying Article Details Space occupying article details Space occupying article details Space occupying article details Space occupying article details Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation Article Details Occupation 
+                        </p>
+                        <img src="src/images/img-20.png" alt="img">
+                    </div>
+                    <div class="pn_page pt-30 mt-80">
+                        <div class="p_n">
+                            <a href="javascript:;" class="disabled">Pre:<span>This is already the latest issue</span></a>
+                            <a href="/hangyedongtai/9.html">Next:<span>News Title Occupancy News Title Occupancy News Title Occupancy</span></a>
+                        </div>
+                        <div class="pn_back">
+                            <a href="/hangyedongtai.html" class="btn btn-bc">Return to List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>
