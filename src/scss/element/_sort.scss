@@ -39,3 +39,21 @@
         width: auto;
     }
 }
+
+.c_sort_more {
+    color: var(--6);
+
+    span {
+        white-space: pre;
+        transition: all var(--ease) 0.3s;
+    }
+
+    svg {
+        width: 0.07rem;
+        transition: all var(--ease) 0.3s;
+    }
+
+    a:hover {
+        color: var(--bc);
+    }
+}

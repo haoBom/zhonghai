@@ -2747,6 +2747,21 @@ body {
   width: auto;
 }
 
+.c_sort_more {
+  color: var(--6);
+}
+.c_sort_more span {
+  white-space: pre;
+  transition: all var(--ease) 0.3s;
+}
+.c_sort_more svg {
+  width: 0.07rem;
+  transition: all var(--ease) 0.3s;
+}
+.c_sort_more a:hover {
+  color: var(--bc);
+}
+
 .pagenation {
   display: flex;
   justify-content: center;
@@ -3122,6 +3137,21 @@ body {
   }
 }
 
+.p_nyBanner .c_break ul li:first-child span {
+  opacity: 0.6;
+}
+.p_nyBanner .c_break ul li {
+  color: var(--f);
+}
+.p_nyBanner .l_title {
+  padding-top: 1.6rem;
+  height: calc(100% - 0.6rem);
+}
+.p_nyBanner .l_title h1,
+.p_nyBanner .l_title p {
+  color: var(--f);
+}
+
 .p_case_1 .c_list_1 {
   position: relative;
   display: grid;
@@ -3446,6 +3476,10 @@ body {
   to {
     transform: rotate(-360deg);
   }
+}
+
+.c_technology_sort {
+  border-bottom: 0.01rem solid var(--d);
 }
 
 .mp .container {
