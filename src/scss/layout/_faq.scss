@@ -1,0 +1,160 @@
+@use '../common/tool' as *;
+
+.f1 {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        gap: 0.8rem;
+    }
+
+    h1 {
+        line-height: 1.4;
+    }
+
+    .nd_timeBox {
+        margin-top: 0.6rem;
+        border-bottom: 0.01rem solid var(--d);
+        padding-bottom: 0.5rem;
+
+        p {
+            color: var(--9);
+        }
+
+        .nd_type a {
+            transition: all var(--ease) 0.3s;
+
+            &:hover {
+                color: var(--bc);
+            }
+        }
+
+        .nd_tag {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.1rem;
+
+            a {
+                border-radius: 0.3rem;
+                border: 0.01rem solid var(--9);
+                padding: 0 0.15rem;
+                color: var(--9);
+                height: 0.3rem;
+                display: flex;
+                align-items: center;
+                width: max-content;
+                transition: all var(--ease) 0.3s;
+
+                &:hover {
+                    color: var(--bc);
+                    border-color: var(--bc);
+                }
+            }
+        }
+    }
+
+    .f_left {
+        >ul {
+            border-radius: 0.08rem;
+            background: var(--f6);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+
+            >li {
+                padding: 0.16rem 0.4rem;
+
+                &:first-child {
+                    padding-top: 0.4rem;
+                }
+
+                &:last-child {
+                    padding-bottom: 0.4rem;
+                }
+            }
+
+            >li>p {
+                color: var(--0);
+                font-family: "Poppins-Medium";
+                display: flex;
+                justify-content: space-between;
+                gap: 0.1rem;
+
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 0.1rem;
+                }
+
+                svg {
+                    width: 0.12rem;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    color: var(--bc);
+                }
+            }
+
+            li>ul {
+                margin-top: 0.2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.1rem;
+                display: none;
+            }
+
+            >li.cur {
+                padding-top: 0.4rem;
+                padding-bottom: 0.4rem;
+                background-color: var(--bc);
+
+                >ul {
+                    display: flex;
+                }
+
+                >p {
+                    color: var(--f);
+                }
+
+                li>a {
+                    color: var(--f);
+                    display: flex;
+                    padding: 0.12rem 0;
+                    position: relative;
+
+                    span {
+                        @include ellipsis(1);
+                        position: relative;
+                        z-index: 2;
+                        color: var(--f);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: var(--f);
+                        border-radius: 0.24rem;
+                        left: -0.17rem;
+                        right: -0.17rem;
+                        top: 0;
+                        height: 100%;
+                        opacity: 0;
+                    }
+
+                    &:hover span {
+                        color: var(--1);
+                    }
+
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                }
+
+                &+li {
+                    margin-top: 0.2rem;
+                }
+            }
+        }
+    }
+}

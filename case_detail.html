@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <main class="main">
+
+    <section class="case_d_1">
+        <div class="container grid grid-2">
+            <div class="s3_right pr-100 flex f-col j-center">
+                <p class="t f-40 lg:f-48 ppins-bold">Case name</p>
+                <p class="s f-16">Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction Case Background Introduction </p>
+            </div>
+            <div class="s3_left">
+                <img src="src/images/img-77.png" alt="technology" class="radius-8 relative o-hidden">
+            </div>
+        </div>
+    </section>
+
+    <section class="p_case_1 case_d_2 pt-80 pb-100 md:pb-120">
+        <div class="container flex f-col g-60">
+        <% const caseList = [
+            { img: 'src/images/img-03.jpg' },
+            { img: 'src/images/img-04.jpg' },
+            { img: 'src/images/img-05.jpg' },
+        ]; %>
+        <div class="c_h2">
+            <h2 class="f-40 lg:f-48">Solution</h2>
+        </div>
+        <div class="c_list_1 g-30">
+            <% caseList.forEach(item => { %>
+            <a href="javascript:;" class="c_item radius-8 relative o-hidden">
+                <div class="c_img radius-8 relative o-hidden">
+                    <img src="<%= item.img %>" alt="Customer case">
+                </div>
+                <div class="c_info radius-8 pl-30 pr-30 pt-30 pb-30 relative">
+                    <p class="t f-24">Solution 1</p>
+                    <p class="s f-16">Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy</p>
+                    <div class="i mt-30 op-0">
+                    <img src="src/images/img-02.png" alt="Customer case">
+                    </div>
+                </div>
+            </a>
+            <% }) %>
+        </div>
+        </div>
+    </section>
+
+    <section class="case_d_3">
+        <div class="container">
+            <div class="a2_info pt-100 pb-60 md:pt-120">
+                <div class="c_h3">
+                    <h3 class="f-40 lg:f-48">Achieve results</h3>
+                </div>
+                <div class="c_rich">
+                    <p>Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements Introduction of achievements </p>
+                </div>
+            </div>
+        </div>
+        <div class="case_d_3_img">
+            <img src="src/images/img-76.png" alt="case">
+        </div>
+    </section>
+
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

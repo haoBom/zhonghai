@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'Material'},
+            ];
+        %>
+
+    <main class="main">
+        <section class="p_nyBanner grid g-one">
+            <div class="c_img c_img_1">
+                <img src="src/images/img-38.jpg" alt="Material">
+            </div>
+            <div class="container">
+                <div class="c_break">
+                <ul class="f-14">
+                    <li>
+                    <img src="src/svg/i-8.svg" alt="">
+                    <a href="/"><span>Home</span></a>
+                    </li>
+                    <% breakName.forEach((it, idx) => { %>
+                    <% if (idx < breakName.length - 1) { %>
+                    <li>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                    <a href="javascript:;"><span><%= it.text %></span></a>
+                    </li>
+                    <% } else { %>
+                    <li>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                    <span><%= it.text %></span>
+                    </li>
+                    <% } %>
+                    <% }) %>
+                </ul>
+                </div>
+                <div class="l_title flex f-col">
+                    <div class="c_h1 mb-20">
+                        <h1 class="f-40 lg:f-48 xl:f-56">Mastering the limits of materials, <br>
+                        intelligent manufacturing, <br>
+                        infinite possibilities</h1>
+                    </div>
+                    <div class="c_p">
+                        <p class="f-20">Challenge strength limits, carve micrometer precision, reshape material boundaries</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="l_materials pt-100 pb-100 md:pt-120 md:pb-120">
+            <div class="container">
+                <div class="c_h1 flex a-center j-between">
+                    <h1 class="f-28 md:f-32 lg:f-48">Common raw materials</h1>
+                    <a href="javascript:;" class="f-16 flex a-center g-10">View process technology <span><img src="src/images/img-41.png" alt="materials"></span></a>
+                </div>
+                <div class="l_materials_list grid grid-1 md:grid-2 mt-40 g-20 md:g-30 md:mt-60">
+                    <% for (let i = 0; i < 11; i++) { %>
+                    <a href="javascript:;" class="l_materials_item p-10 flex g-20 md:g-40 radius-8 relative o-hidden">
+                        <div class="l_materials_item_img relative o-hidden radius-8">
+                            <img src="src/images/img-40.jpg" class="" alt="materials">
+                        </div>
+                        <div class="l_materials_item_info pt-20 md:pt-40">
+                            <h3 class="f-20">High nitrogen non-magnetic stainless steel</h3>
+                            <div class="l_materials_item_line"></div>
+                            <div class="l_materials_item_brand">
+                                <p class="f-16">Brand:</p>
+                                <p class="f-16">
+                                    P550 <br>
+                                    P650<br>
+                                    15-15 HS MAX<br>
+                                    SCF-19
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <% } %>
+                    <a href="javascript:;" class="l_materials_item l_materials_item_other p-10 flex g-20 md:g-40 radius-8 relative o-hidden">
+                        <div class="l_materials_item_img relative o-hidden radius-8 grid g-one a-center j-center">
+                            <img src="src/images/img-42.png" class="" alt="materials">
+                            <div class="m">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="l_materials_item_info pt-20 md:pt-40">
+                            <h3 class="f-20">Other materials</h3>
+                            <div class="l_materials_item_line"></div>
+                            <div class="l_materials_item_brand">
+                                <p class="f-16">Brand:</p>
+                                <p class="f-16">
+                                    2Cr13<br>
+                                    420rMo<br>
+                                    320rMo4<br>
+                                    4145H<br>
+                                    Q235<br>
+                                    GCr15</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="l_column l_quote_1 grid g-one">
+            <div class="l_quote_1_img">
+                <img src="src/images/img-39.jpg" alt="quote">
+            </div>
+            <div class="container flex a-center">
+                <div class="flex j-between g-20">
+                    <div class="l_quote_1_info flex f-col j-center">
+                        <h3 class="f-40 lg:f-48 mb-10">We unlock unlimited possibilities for material
+                            <span>processing through your blueprint</span>
+                        </h3>
+                        <p class="f-18">Upload drawings/parameters · 24-hour intelligent quotation</p>
+                    </div>
+                    <div class="l_quote_1_btn">
+                        <a href="javascript:;" class="btn btn-f">Get a quote now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

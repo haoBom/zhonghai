@@ -124,10 +124,12 @@ $spacing-steps: (
 }
 
 // 间距工具
-@each $name, $gap in (60: .6rem,
-    30: .3rem,
+@each $name, $gap in (
+    10: .1rem,
     20: .2rem,
-    10: .1rem) {
+    30: .3rem,
+    40: .4rem,
+    60: .6rem) {
     .g-#{$name} {
         gap: $gap;
     }

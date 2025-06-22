@@ -18,7 +18,350 @@
 </head>
 <body>
     <%- header %>
+
+  <% const breakName = [
+            { text: 'About Us'},
+        ];
+    %>
+
+    <main class="main">
+        <section class="a a1">
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                            <img src="src/svg/i-1.svg" alt="">
+                            <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                        <% if (idx < breakName.length - 1) { %>
+                        <li>
+                            <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                            </svg>
+                            <a href="javascript:;"><span><%= it.text %></span></a>
+                        </li>
+                        <% } else { %>
+                        <li>
+                            <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                                <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                            </svg>
+                            <span><%= it.text %></span>
+                        </li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="a a2 grid g-one a-end">
+            <div class="a2_img">
+                <img src="src/images/img-43.jpg" alt="WELLTECH">
+            </div>
+            <div class="container">
+                <div class="a2_info pt-60 pb-60 md:pt-80">
+                    <div class="c_h3">
+                        <h3 class="f-40 lg:f-48">WELLTECH</h3>
+                    </div>
+                    <div class="c_rich">
+                        <h4 class="f-18 lg:f-24">Focusing on high-end precision manufacturing</h4>
+                        <p>Guangdong Zhonghai Wantai Technology Co., Ltd. (referred to as Zhonghai Wantai) was established in July 2020. It is a joint venture between China Oilfield Services Co., Ltd. (40%) and Foshan Nanhai Zhongnan Machinery Co., Ltd. (33%), with a registered capital of 260 million yuan and a total investment of over 1 billion yuan. Its headquarters is located in Foshan National High tech Industrial Development Zone. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="a a3">
+            <div class="ab1_Banner">
+                <div class="ab_top">
+                    <div class="ab_topImg">
+                        <img src="src/images/img-44.png" alt="about" title="about">
+                    </div>
+                </div>
+                <div class="ab_bottom">
+                    <ul>
+                        <li>
+                            <div class="ab_bottom_ico">
+                                <img src="src/svg/i-10.svg" alt="a3">
+                            </div>
+                            <div class="ab_bottom_info">
+                                <h5 class="mb-10">Five major workshops</h5>
+                                <p>5</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ab_bottom_ico">
+                                <img src="src/svg/i-10.svg" alt="a3">
+                            </div>
+                            <div class="ab_bottom_info">
+                                <h5 class="mb-10">Large equipment</h5>
+                                <p>200 <span>+</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ab_bottom_ico">
+                                <img src="src/svg/i-10.svg" alt="a3">
+                            </div>
+                            <div class="ab_bottom_info">
+                                <h5 class="mb-10">Annual production equipment</h5>
+                                <p>100 <span>+</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ab_bottom_ico">
+                                <img src="src/svg/i-10.svg" alt="a3">
+                            </div>
+                            <div class="ab_bottom_info">
+                                <h5 class="mb-10">Maintenance capability</h5>
+                                <p>T4 <span>+</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ab_bottom_ico">
+                                <img src="src/svg/i-10.svg" alt="a3">
+                            </div>
+                            <div class="ab_bottom_info">
+                                <h5 class="mb-10">Core patents</h5>
+                                <p>40 <span>+</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="a a4 pt-120 pb-120 md:pt-100 md:pb-100">
+            <div class="container flex j-between g-40 a4_item1">
+                <div class="a4_right flex f-col j-center">
+                    <p class="t f-40 lg:f-48 ppins-bold">What we focuse on</p>
+                    <p class="s f-16">The company focuses on high-end equipment manufacturing in the field of petroleum exploration and development. Its leading products include rotary directional drilling systems (Welleader), while drilling logging systems (Drilog), and open eye cable logging equipment. Its core technologies include deep hole drilling, gun drilling, laser cladding, and other difficult processing techniques, and its technical level is internationally leading.</p>
+                </div>
+                <div class="a4_left">
+                    <img src="src/images/img-45.png" alt="technology" class="bi">
+                    <div class="siimg">
+                        <img src="src/images/img-46.png" alt="technology" class="si">
+                    </div>
+                </div>
+            </div>
+            <div class="container flex j-between g-40 a4_item2">
+                <div class="a4_left">
+                    <img src="src/images/img-47.png" alt="technology" class="bi">
+                    <div class="siimg">
+                        <img src="src/images/img-48.png" alt="technology" class="si">
+                    </div>
+                </div>
+                <div class="a4_right flex f-col j-center">
+                    <p class="t f-40 lg:f-48 ppins-bold">Leading domestic and internationally renowned</p>
+                    <p class="s f-16">As the first intelligent production line carrier of the "Xuanji" system in China, the company has an annual production capacity of over 100 sets of equipment and T4 level maintenance capability. It has five professional workshops, more than 200 precision CNC equipment, and has passed dual certifications of API Q1 and ISO. Its business covers the entire chain of precision component manufacturing, equipment assembly, testing and maintenance, and is committed to providing one-stop solutions for the entire lifecycle of oil and gas fields. The company is positioned as a "leading domestic and internationally renowned" marine engineering equipment service provider, focusing on promoting the localization of high-end petroleum machinery and equipment, serving CNOOC Group and the global market, with the goal of becoming a leading enterprise in the field of world oilfield exploration equipment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="a a4-5">
+            <div class="container">
+                <div class="c_h2 flex a-center j-between">
+                    <h2 class="f-28 md:f-32 lg:f-48">Corporate culture</h2>
+                </div>
+                <div class="a4-5_list swiper">
+                    <div class="swiper-wrapper">
+                        <div class="pz4_Item swiper-slide grid g-one">
+                            <div class="a4-5_img">
+                                <img src="src/images/img-55.png" alt="Corporate culture">
+                            </div>
+                            <div class="a4-5_ico">
+                                <p class="sx pl-30 pr-30 pb-30">
+                                    <img src="src/images/img-58.png" alt="Corporate culture" title="Corporate culture">
+                                    <span class="f-24">Mission</span>
+                                </p>
+                            </div>
+                            <div class="a4-5_jx">
+                                <img src="src/images/img-58.png" alt="Corporate culture" title="Corporate culture">
+                                <div class="a4-5_jx_info">
+                                    <p class="f-24">Mission</p>
+                                    <p>Text placeholder Text placeholder Text placeholder
+                                    Text placeholder Text placeholder
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pz4_Item swiper-slide grid g-one">
+                            <div class="a4-5_img">
+                                <img src="src/images/img-56.png" alt="Corporate culture">
+                            </div>
+                            <div class="a4-5_ico">
+                                <p class="sx pl-30 pr-30 pb-30">
+                                    <img src="src/images/img-59.png" alt="Corporate culture" title="Corporate culture">
+                                    <span class="f-24">Vision</span>
+                                </p>
+                            </div>
+                            <div class="a4-5_jx">
+                                <img src="src/images/img-59.png" alt="Corporate culture" title="Corporate culture">
+                                <div class="a4-5_jx_info">
+                                    <p class="f-24">Mission</p>
+                                    <p>Text placeholder Text placeholder Text placeholder
+                                    Text placeholder Text placeholder
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pz4_Item swiper-slide grid g-one">
+                            <div class="a4-5_img">
+                                <img src="src/images/img-57.png" alt="Corporate culture">
+                            </div>
+                            <div class="a4-5_ico">
+                                <p class="sx pl-30 pr-30 pb-30">
+                                    <img src="src/images/img-60.png" alt="Corporate culture" title="Corporate culture">
+                                    <span class="f-24">Values</span>
+                                </p>
+                            </div>
+                            <div class="a4-5_jx">
+                                <img src="src/images/img-60.png" alt="Corporate culture" title="Corporate culture">
+                                <div class="a4-5_jx_info">
+                                    <p class="f-24">Mission</p>
+                                    <p>Text placeholder Text placeholder Text placeholder
+                                    Text placeholder Text placeholder
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="a a5 grid g-one">
+            <div class="a5_bg">
+                <img src="src/images/img-49.jpg" alt="a5">
+            </div>
+            <div class="pt-120 pb-120 md:pt-100 md:pb-100">
+                <div class="title">
+                    <p class="t f-40 lg:f-48 ppins-bold f-center">Development history</p>
+                </div>
+                <div class="container">
+                    <div class="history_list swiper">
+                        <div class="swiper-wrapper">
+                            <% for (let i = 0; i < 10; i++) { %>
+                            <div class="history_item swiper-slide">
+                                <time datetime="">2025</time>
+                                <p>
+                                    <span>
+                                        Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy
+                                    </span>
+                                </p>
+                                <div class="radius-8 relative o-hidden">
+                                    <img src="src/images/img-50.jpg" alt="history">
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="a5_mouse">
+                <div>
+                    <img src="src/images/img-51.png" alt="a5_mouse">
+                </div>
+            </div>
+        </section>
+
+        <section class="a a6 pt-120 pb-120 md:pt-100 md:pb-100">
+            <div class="container">
+                <div class="c_h2 flex a-center j-between">
+                    <h2 class="f-28 md:f-32 lg:f-48">Honor</h2>
+                </div>
+                <div class="honor_list swiper mt-40 md:mt-60">
+                    <div class="swiper-wrapper">
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-52.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-53.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-52.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-53.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-52.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-53.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-52.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                        <div class="honor_item swiper-slide">
+                            <div class="honor_imt p-10 radius-8 relative o-hidden">
+                                <img src="src/images/img-53.png" alt="">
+                            </div>
+                            <div class="honor_title mt-20 f-center">
+                                <p>API Spec Q1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="a a7 pb-100 md:pb-120">
+            <div class="container">
+                <a href="#" class="kcx grid g-one">
+                    <div class="kcx_img">
+                        <img src="src/images/img-54.png" alt="kcx">
+                    </div>
+                    <div class="kcx_title flex f-col j-center">
+                        <p class="f-28 md:f-32 lg:f-48 ppins-bold mb-20">Sustainable development</p>
+                        <p>Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space 
+                            Occupy Text Space Occupy Text Space Occupy Text Space Occupy
+                            Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy
+                            Text Space Text Space Occupy </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
     <%- footer %>
+
     <script type="module" crossorigin src="src/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'Service and Support'},
+                { text: 'FAQ'}
+            ];
+        %>
+
+    <main class="main">
+        <section class="p_header">
+            <div class="c_img c_img_1">
+                <img src="/src/images/img-01.png" alt="Our services">
+            </div>
+            <div class="r_ring">
+                <div class="r r1"></div>
+                <div class="r r2"></div>
+            </div>
+            <div class="container">
+                <div class="c_break">
+                <ul class="f-14">
+                    <li>
+                    <img src="src/svg/i-1.svg" alt="">
+                    <a href="/"><span>Home</span></a>
+                    </li>
+                    <% breakName.forEach((it, idx) => { %>
+                    <% if (idx < breakName.length - 1) { %>
+                    <li>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                    <a href="javascript:;"><span><%= it.text %></span></a>
+                    </li>
+                    <% } else { %>
+                    <li>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                    <span><%= it.text %></span>
+                    </li>
+                    <% } %>
+                    <% }) %>
+                </ul>
+                </div>
+                <div class="c_h1 pt-80 pb-60 xl:pt-100">
+                    <h1 class="f-40 lg:f-48">FAQ</h1>
+                    <p class="f-20 mt-30 mb-30">We have compiled all the problems <br>
+                    you frequently encounter
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="f f1 pb-100 md:pb-120 pt-80">
+            <div class="container">
+                <div class="f_left">
+                    <ul>
+                        <li class="cur">
+                            <p>
+                                <a href="javascript:;">
+                                    <span>Problem classification 1</span>
+                                </a>
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="12px" height="7px" viewBox="0 0 12 7">
+                                    <path d="M10.948,1.988 L6.706,6.231 C6.315,6.621 5.682,6.621 5.292,6.231 L1.049,1.988 C0.658,1.598 0.658,0.965 1.049,0.574 C1.439,0.184 2.073,0.184 2.463,0.574 L5.999,4.110 L9.534,0.574 C9.925,0.184 10.558,0.184 10.948,0.574 C11.339,0.965 11.339,1.598 10.948,1.988 Z"/>
+                                </svg>
+                            </p>
+                            <ul>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="javascript:;">
+                                    <span>Problem classification 1</span>
+                                </a>
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="12px" height="7px" viewBox="0 0 12 7">
+                                    <path d="M10.948,1.988 L6.706,6.231 C6.315,6.621 5.682,6.621 5.292,6.231 L1.049,1.988 C0.658,1.598 0.658,0.965 1.049,0.574 C1.439,0.184 2.073,0.184 2.463,0.574 L5.999,4.110 L9.534,0.574 C9.925,0.184 10.558,0.184 10.948,0.574 C11.339,0.965 11.339,1.598 10.948,1.988 Z"/>
+                                </svg>
+                            </p>
+                            <ul>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                                <li><a href="#"><span>Question Title Occupation Question Title Occupation</span> </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="javascript:;">
+                                    <span>Problem classification 1</span>
+                                </a>
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="12px" height="7px" viewBox="0 0 12 7">
+                                    <path d="M10.948,1.988 L6.706,6.231 C6.315,6.621 5.682,6.621 5.292,6.231 L1.049,1.988 C0.658,1.598 0.658,0.965 1.049,0.574 C1.439,0.184 2.073,0.184 2.463,0.574 L5.999,4.110 L9.534,0.574 C9.925,0.184 10.558,0.184 10.948,0.574 C11.339,0.965 11.339,1.598 10.948,1.988 Z"/>
+                                </svg>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f_right">
+                    <div class="c_h1">
+                        <h1 class="f-40 lg:f-48">Question Title Occupancy Question Title Occupancy</h1>
+                        <div class="nd_timeBox pb-10 mb-40 flex j-between a-center">
+                            <div class="flex a-center g-30">
+                                <p class="nd_time flex a-center g-10">
+                                    <img src="src/svg/i-7.svg" alt="time"><time>02.11.2025</time>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="richText">
+                            <p>
+                                Problem Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details Occupy Question Details
+                            </p>
+                            <img src="src/images/img-85.png" alt="img">
+                        </div>
+                        <div class="pn_page pt-30 mt-80">
+                            <div class="p_n">
+                                <a href="javascript:;" class="disabled">Pre:<span>This is already the latest issue</span></a>
+                                <a href="/hangyedongtai/9.html">Next:<span>News Title Occupancy News Title Occupancy News Title Occupancy</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

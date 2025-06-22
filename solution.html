@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'Solution'},
+            ];
+        %>
+
+    <main class="main">
+        <section class="p_header p_header2">
+            <div class="c_img c_img_1">
+                <img src="/src/images/img-01.png" alt="Solution">
+            </div>
+            <div class="r_ring">
+                <div class="r r1"></div>
+                <div class="r r2"></div>
+            </div>
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                        <img src="src/svg/i-1.svg" alt="">
+                        <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                        <% if (idx < breakName.length - 1) { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <a href="javascript:;"><span><%= it.text %></span></a>
+                        </li>
+                        <% } else { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <span><%= it.text %></span>
+                        </li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="c_h1 pt-80 pb-60 xl:pt-100">
+                    <h1 class="f-40 lg:f-48">Industry challenges</h1>
+                </div>
+                <div class="s s1">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <% for (let i = 0; i < 5; i++) { %>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="s1_img radius-8 relative o-hidden">
+                                        <img src="src/images/img-62.png" alt="Solution">
+                                    </div>
+                                    <div class="s1_title f-16 f-center">
+                                        <p>Complex surfaces in rows</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s s2 pt-120 pb-120">
+            <div class="container grid grid-2">
+                <div class="s2_left">
+                    <img src="src/images/img-30.jpg" alt="technology" class="relative o-hidden">
+                </div>
+                <div class="s2_right pl-100 flex f-col j-center">
+                    <p class="b f-20 mb-10 ppins-Medium">Technical Capability Matrix 01</p>
+                    <p class="t f-40 lg:f-48 ppins-bold">Precision manufacturing process</p>
+                    <p class="s f-16">By using customized specialized deep hole cutting tools and deep hole machine equipment, high-precision machining of difficult to cut materials such as high difficulty multi-step sealed deep holes and deep hole inner ring grooves can be achieved. The machining range of the inner hole diameter of the part is ∅ 25-250mm, the maximum machining depth is 10m, and the coaxiality of the machined hole is 0.02mm. The diameter of the deep hole inner groove can reach 1.5 times the size of the through-hole, and the surface smoothness is better than Ra 1.6 μ m.</p>
+                    <a href="javasscript:;" class="btn btn-bc mt-30">Explore more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s s3 pt-100 pb-100 md:pt-120 md:pb-120">
+            <div class="container grid grid-2">
+                <div class="s3_right pr-100 flex f-col j-center">
+                    <p class="b f-20 mb-10 ppins-Medium">Technical Capability Matrix 02</p>
+                    <p class="t f-40 lg:f-48 ppins-bold">Special arts and crafts</p>
+                    <p class="s f-16">By using customized specialized deep hole cutting tools and deep hole machine equipment, high-precision machining of difficult to cut materials such as high difficulty multi-step sealed deep holes and deep hole inner ring grooves can be achieved. The machining range of the inner hole diameter of the part is ∅ 25-250mm, the maximum machining depth is 10m, and the coaxiality of the machined hole is 0.02mm. The diameter of the deep hole inner groove can reach 1.5 times the size of the through-hole, and the surface smoothness is better than Ra 1.6 μ m.</p>
+                    <a href="javasscript:;" class="btn btn-bc mt-30">Explore more</a>
+                </div>
+                <div class="s3_left">
+                    <img src="src/images/img-30.jpg" alt="technology" class="relative o-hidden">
+                </div>
+            </div>
+        </section>
+
+        <section class="s s4 grid g-one">
+            <div class="s4_bg">
+                <img src="src/images/img-63.png" alt="s4">
+            </div>
+            <div class="container">
+                <div class="pt-120 pb-120 md:pt-100 md:pb-100">
+                    <div class="title">
+                        <p class="t f-40 lg:f-48 ppins-bold f-center mb-10">Mass production</p>
+                        <p class="s f-center">Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space</p>
+                    </div>
+                    <a class="s4_play_btn" href="src/videos/podVideo.mp4" data-fancybox data-width="640" data-height="360">
+                        <img src="src/svg/i-11.svg" alt="btn">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s s5 pt-100 pb-100 md:pt-120 md:pb-120">
+
+            <% const s5 = [
+            'Car milling composite machining center',
+            'CNC lathe',
+            'Five axis machining center',
+            'vertical machining center',
+            'Gantry machining center',
+            'HORIZONTAL MACHINING CENTER',
+            'Spark',
+            'CNC deep hole drilling and boring machine',
+            'CNC gun drill',
+            'CNC shot blasting machine',
+            'Laser cladding machine'
+            ]; %>
+
+            <div class="container">
+                <div class="c_h2">
+                    <h2 class="f-40 lg:f-48">200+ large processing equipment</h2>
+                </div>
+                <div class="s5_list grid mt-40 g-20 md:g-30 lg:g-60 md:mt-60">
+                    <% s5.forEach(item => { %>
+                    <a href="javascript:;" class="s5_item">
+                        <div class="s5_item_img radius-8 relative o-hidden mb-20">
+                            <img src="src/images/img-64.png" alt="equipment">
+                        </div>
+                        <div class="s5_item_title f-18">
+                            <p><%= item %></p>
+                        </div>
+                    </a>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+
+        <section class="s s6 pt-100 md:pt-120">
+            <div class="container">
+                <div class="c_h2">
+                    <h2 class="f-40 lg:f-48">Industrial pilot service capability</h2>
+                </div>
+                <div class="s6_list mt-40 md:mt-60 radius-8 relative o-hidden">
+                    <div class="s6_list_smallImg flex radius-8 relative o-hidden">
+                        <div class="s6_item">
+                            <img src="src/images/img-66.jpg" alt="s6">
+                            <p class="f-24 ppins-bold">Prototype design</p>
+                        </div>
+                        <div class="s6_item">
+                            <img src="src/images/img-67.jpg" alt="s6">
+                            <p class="f-24 ppins-bold">Manufacturing</p>
+                        </div>
+                        <div class="s6_item">
+                            <img src="src/images/img-68.jpg" alt="s6">
+                            <p class="f-24 ppins-bold">Apparatus Assembly</p>
+                        </div>
+                        <div class="s6_item">
+                            <img src="src/images/img-69.jpg" alt="s6">
+                            <p class="f-24 ppins-bold">Quality control</p>
+                        </div>
+                        <div class="s6_item">
+                            <img src="src/images/img-70.jpg" alt="s6">
+                            <p class="f-24 ppins-bold">Maintenance</p>
+                        </div>
+                    </div>
+                    <div class="s6_showImg">
+                        <div class="s6_showImg_item">
+                            <img src="src/images/img-74.png" alt="s6">
+                            <div class="s6_showImg_item_info">
+                                <p class="t mb-10 ppins-bold">Prototype design</p>
+                                <p class="s">Prototype design Prototype design Prototype design Prototype design</p>
+                            </div>
+                        </div>
+                        <div class="s6_showImg_item">
+                            <img src="src/images/img-74.png" alt="s6">
+                            <div class="s6_showImg_item_info">
+                                <p class="t mb-10 ppins-bold">Prototype design</p>
+                                <p class="s">Prototype design Prototype design Prototype design Prototype design</p>
+                            </div>
+                        </div>
+                        <div class="s6_showImg_item">
+                            <img src="src/images/img-74.png" alt="s6">
+                            <div class="s6_showImg_item_info">
+                                <p class="t mb-10 ppins-bold">Prototype design</p>
+                                <p class="s">Prototype design Prototype design Prototype design Prototype design</p>
+                            </div>
+                        </div>
+                        <div class="s6_showImg_item">
+                            <img src="src/images/img-74.png" alt="s6">
+                            <div class="s6_showImg_item_info">
+                                <p class="t mb-10 ppins-bold">Prototype design</p>
+                                <p class="s">Prototype design Prototype design Prototype design Prototype design</p>
+                            </div>
+                        </div>
+                        <div class="s6_showImg_item">
+                            <img src="src/images/img-74.png" alt="s6">
+                            <div class="s6_showImg_item_info">
+                                <p class="t mb-10 ppins-bold">Prototype design</p>
+                                <p class="s">Prototype design Prototype design Prototype design Prototype design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s s7 grid g-one">
+            <div class="s7_bg">
+                <img src="src/images/img-71.png" alt="s7">
+            </div>
+            <div class="container">
+                <div class="pt-100 pb-100 md:pt-120 md:pb-120">
+                    <div class="c_h2">
+                        <h2 class="f-40 lg:f-48">Collaboration process</h2>
+                    </div>
+                    <div class="s7_Box mt-40 md:mt-60">
+                        <div class="s7_line">
+                            <img src="src/svg/i-12.svg" alt="s7">
+                        </div>
+                        <div class="s7_list swiper">
+                            <div class="swiper-wrapper">
+                                <% for (let i = 0; i < 6; i++) { 
+                                    const num = String(i + 1).padStart(2, '0');
+                                %>
+                                <div class="s7_item swiper-slide">
+                                    <div class="s7_number"></div>
+                                    <div class="s7_img radius-8 relative o-hidden">
+                                        <img src="src/images/img-72.png" alt="s7">
+                                    </div>
+                                    <div class="s7_title mt-20 mb-60">
+                                        <p>process</p>
+                                    </div>
+                                    <div class="s7_more">
+                                        <img src="src/images/img-73.png" alt="s7">
+                                    </div>
+                                </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="l_column l_technology_1 grid g-one">
+            <div class="l_technology_1_img">
+                <img src="src/images/img-65.jpg" alt="technology">
+            </div>
+            <div class="container">
+                <div class="l_technology_1_info flex f-col j-center">
+                    <h3 class="f-40 lg:f-48 mb-10">Shorten errors with technology<span>and fulfill promises with precision</span></h3>
+                    <p class="f-18 mb-30">Let precision manufacturing understand you better - one click quotation, unlock efficient production password</p>
+                    <a href="javascript:;" class="btn btn-f">Get a quote now</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

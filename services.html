@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'Service and Support'},
+                { text: 'Our services'}
+            ];
+        %>
+
+    <main class="main">
+        <section class="p_header">
+            <div class="c_img c_img_1">
+                <img src="/src/images/img-01.png" alt="Our services">
+            </div>
+            <div class="r_ring">
+                <div class="r r1"></div>
+                <div class="r r2"></div>
+            </div>
+            <div class="container">
+                <div class="c_break">
+                <ul class="f-14">
+                    <li>
+                    <img src="src/svg/i-1.svg" alt="">
+                    <a href="/"><span>Home</span></a>
+                    </li>
+                    <% breakName.forEach((it, idx) => { %>
+                    <% if (idx < breakName.length - 1) { %>
+                    <li>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                    <a href="javascript:;"><span><%= it.text %></span></a>
+                    </li>
+                    <% } else { %>
+                    <li>
+                    <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                        <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                    </svg>
+                    <span><%= it.text %></span>
+                    </li>
+                    <% } %>
+                    <% }) %>
+                </ul>
+                </div>
+                <div class="c_h1 pt-80 pb-60 xl:pt-100">
+                    <h1 class="f-40 lg:f-48">Our services</h1>
+                </div>
+                <div class="c_sort c_sort_swiper swiper">
+                <ul class="flex swiper-wrapper">
+                    <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Quality Control Services</a></li>
+                    <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Online Technical Support</a></li>
+                    <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Equipment maintenance services</a></li>
+                    <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Process optimization service</a></li>
+                </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se1 pt-100 pb-100 md:pt-120 md:pb-120">
+            <div class="container">
+                <div class="se1_box grid grid-2">
+                    <div class="se1_left">
+                        <div class="c_h2">
+                            <h2 class="f-40 lg:f-48">Our services
+                                <span>(American API, German ISO)</span>
+                            </h2>
+                        </div>
+                        <div class="se1_p">
+                            <div class="se1_p_line"></div>
+                            <p>Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy 
+                            Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Space Occupy Text Space</p>
+                        </div>
+                    </div>
+                    <div class="se_right flex a-end">
+                        <img src="src/images/img-79.png" alt="se1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se2 pb-100 md:pb-120">
+            <div class="container grid grid-2">
+                <div class="se2_left">
+                    <img src="src/images/img-80.png" alt="services" class="relative o-hidden">
+                </div>
+                <div class="se2_right pl-100 flex f-col a-center j-center">
+                    <p class="t f-40 lg:f-48 ppins-bold">Testing and certificationservices</p>
+                    <p class="s f-16">Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se3 pt-100 pb-100 md:pt-120 md:pb-120">
+            <div class="container">
+                <div class="c_h2">
+                    <h2 class="f-40 lg:f-48">Six major experimental platforms</h2>
+                </div>
+                <div class="se3_list mt-40 g-20 md:g-30 md:mt-60">
+                    <% for (let i = 0; i < 6; i++) {
+                        const num = String(i + 1).padStart(2, '0');
+                    %>
+                    <div class="se3_item radius-8 relative o-hidden grid g-one">
+                        <div class="se3_img">
+                            <img src="src/images/img-81.png" alt="se3">
+                        </div>
+                        <div class="se3_info p-40">
+                            <div class="se3_number flex j-between">
+                                <span class="f-24"><%= num %>.</span>
+                                <div class="ico grid g-one">
+                                    <img src="src/svg/i-13.svg" alt="i">
+                                    <img src="src/svg/i-14.svg" alt="i">
+                                </div>
+                            </div>
+                            <div class="se3_i">
+                                <p class="t f-24 ppins-bold">Water cycle testing facility</p>
+                                <p class="s f-14">
+                                    Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy
+                                    Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy
+                                    Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se4 pt-100 pb-100 md:pt-120 md:pb-120">
+            <div class="container">
+                <div class="se4_list">
+                    <div class="se4_item radius-8 relative o-hidden grid g-one">
+                        <div class="se4_img">
+                            <img src="src/images/img-82.png" alt="s">
+                        </div>
+                        <div class="se4_info pl-60 pr-60 flex f-col j-center">
+                            <p class="t f-40 lg:f-48 ppins-bold mb-10">Online technical support</p>
+                            <p class="s f-16">Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Space Occupy Text Space</p>
+                        </div>
+                    </div>
+                    <div class="se4_item radius-8 relative o-hidden grid g-one">
+                        <div class="se4_img">
+                            <img src="src/images/img-83.png" alt="s">
+                        </div>
+                        <div class="se4_info pl-60 pr-60 flex f-col j-center">
+                            <p class="t f-40 lg:f-48 ppins-bold mb-10">Online technical support</p>
+                            <p class="s f-16">Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Space Occupy Text Space</p>
+                        </div>
+                    </div>
+                    <div class="se4_item radius-8 relative o-hidden grid g-one">
+                        <div class="se4_img">
+                            <img src="src/images/img-84.png" alt="s">
+                        </div>
+                        <div class="se4_info pl-60 pr-60 flex f-col j-center">
+                            <p class="t f-40 lg:f-48 ppins-bold mb-10">Online technical support</p>
+                            <p class="s f-16">Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Text Space Occupy Space Occupy Text Space</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

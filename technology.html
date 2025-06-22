@@ -137,7 +137,7 @@
             <div class="container grid grid-2 g-60">
                 <div class="te4_left">
                     <div class="te4_left_title ppins-bold">
-                        <p class="f-40 lg:f-48 xl:f-56">Application industry</p>
+                        <p class="f-40 lg:f-48">Application industry</p>
                     </div>
                     <div class="te4_left_item">
                         <p><span>EADS</span><img src="src/images/img-32.png" alt="Application industry"></p>
@@ -152,6 +152,90 @@
                     <img src="src/images/img-31.jpg" alt="technology" class="relative o-hidden">
                     <img src="src/images/img-31.jpg" alt="technology" class="relative o-hidden">
                     <img src="src/images/img-31.jpg" alt="technology" class="relative o-hidden">
+                </div>
+            </div>
+        </section>
+
+        <section class="p_gallery p_gallery_2 pt-100 pb-100 md:pt-120 md:pb-120">
+            <div class="container">
+                <div class="c_h1 flex a-center j-between">
+                    <h1 class="f-28 md:f-32 lg:f-48">Craft Case Gallery</h1>
+                    <a href="javascript:;" class="f-16 flex a-center g-30">Explore all gallery <span><img src="src/images/img-33.png" alt="gallery"></span></a>
+                </div>
+                <% const galleryList = [
+                            { img: 'src/images/img-06.jpg' },
+                            { img: 'src/images/img-07.jpg' },
+                            { img: 'src/images/img-08.jpg' },
+                            { img: 'src/images/img-09.jpg' },
+                            { img: 'src/images/img-10.jpg' },
+                            { img: 'src/images/img-11.jpg' },
+                            { img: 'src/images/img-12.jpg' },
+                            { img: 'src/images/img-13.jpg' }
+                        ]; %>
+                <div class="c_list mt-40 g-20 md:g-30 md:mt-60">
+                <% galleryList.forEach(item => { %>
+                <a href="javascript:;" class="c_item">
+                    <div class="c_img radius-10 relative o-hidden">
+                    <img src="<%= item.img %>" alt="Customer case">
+                    </div>
+                </a>
+                <% }) %>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="Why_us pb-100 md:pb-120">
+            <div class="container">
+                <div class="c_h1 flex a-center j-between">
+                    <h1 class="f-28 md:f-32 lg:f-48">Why us</h1>
+                    <a href="javascript:;" class="f-16 flex a-center g-30">Explore all gallery <span><img src="src/images/img-33.png" alt="gallery"></span></a>
+                </div>
+                <div class="Why_us_list mt-40 g-20 md:g-30 md:mt-60 grid grid-2">
+                    <div class="Why_us_left flex f-col g-20 md:g-30">
+                        <a href="#" class="why_us_item grid g-one">
+                            <div class="Why_us_item_img">
+                                <img src="src/images/img-34.jpg" alt="Why us">
+                            </div>
+                            <div class="Why_us_item_title">
+                                <p class="f-32 ppins-bold mb-20">Mass production</p>
+                                <p>Text placeholder Text placeholder Text placeholder Text placeholder Text placeholder Text placeholder Text placeholder Text placeholder Text placeholder Text placeholder </p>
+                            </div>
+                        </a>
+                        <a href="#" class="why_us_item grid g-one">
+                            <div class="Why_us_item_img">
+                                <img src="src/images/img-35.jpg" alt="Why us">
+                            </div>
+                            <div class="Why_us_item_title">
+                                <p class="f-32 ppins-bold mb-20">Integrated service capability</p>
+                                <p>Fully connected prototype production, equipment assembly, and intelligent maintenance throughout the entire chain, achieving precise delivery throughout the entire cycle</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="Why_us_right">
+                        <a href="#" class="why_us_item grid g-one">
+                            <div class="Why_us_item_img">
+                                <img src="src/images/img-36.jpg" alt="Why us">
+                            </div>
+                            <div class="Why_us_item_title">
+                                <p class="f-32 ppins-bold mb-20">Device cluster</p>
+                                <p>Equipped with over 200 large precision CNC equipment (including imported five axis linkage machining centers, turning milling composite machining centers, and domestically customized CNC equipment)</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="l_column l_technology_1 grid g-one">
+            <div class="l_technology_1_img">
+                <img src="src/images/img-37.jpg" alt="technology">
+            </div>
+            <div class="container">
+                <div class="l_technology_1_info flex f-col j-center">
+                    <h3 class="f-40 lg:f-48 mb-10">Shorten errors with technology and <span>fulfill promises with precision</span></h3>
+                    <p class="f-18 mb-30">Let precision manufacturing understand you better - one click quotation, unlock efficient production password</p>
+                    <a href="javascript:;" class="btn btn-f">Get a quote now</a>
                 </div>
             </div>
         </section>

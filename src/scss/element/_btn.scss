@@ -28,3 +28,17 @@
         background-color: var(--bc_c);
     }
 }
+
+.btn-f {
+    color: var(--f);
+    border: 0.01rem solid var(--f);
+
+    &::before {
+        background-color: var(--f);
+    }
+
+    &:hover {
+        background-color: var(--bc);
+        border-color: var(--bc);
+    }
+}
