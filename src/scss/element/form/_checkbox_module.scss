@@ -1,0 +1,96 @@
+.checkbox_module {
+    [type="checkbox"] {
+        display: none;
+    }
+
+    .checkbox {
+        display: grid;
+        grid-template-columns: 0.2rem auto;
+        align-items: baseline;
+        gap: 0.04rem;
+        cursor: pointer;
+
+        input {
+            display: none;
+        }
+
+        p {
+            color: #666;
+            transition: all var(--ease) 0.3s;
+
+            &:hover {
+                color: var(--0);
+            }
+
+            a {
+                color: var(--1);
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .check {
+            height: 0.15rem;
+            width: 0.15rem;
+            display: flex;
+            border: 0.01rem solid #e5e5e5;
+            border-radius: 0.03rem;
+            transition: all var(--ease) 0.3s;
+            position: relative;
+            transform: translateY(0.02rem);
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0.05rem;
+                height: 0.02rem;
+                background: #fff;
+                border-radius: 0.1rem;
+                transform: rotate(45deg) translateX(0.06rem) translateY(0.04rem);
+                opacity: 0;
+
+                @media screen and (max-width:768px) {
+                    transform: rotate(45deg) translateX(0.05rem) translateY(0.04rem);
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0.02rem;
+                height: 0.09rem;
+                background: #fff;
+                border-radius: 0.1rem;
+                transform: rotate(45deg) translateX(0.07rem) translateY(-0.03rem);
+                opacity: 0;
+
+                @media screen and (max-width:768px) {
+                    transform: rotate(45deg) translateX(0.06rem) translateY(-0.04rem);
+                }
+            }
+
+        }
+
+        &:hover i {
+            border: 0.01rem solid var(--bc);
+        }
+    }
+
+    .checkbox_active {
+        .check {
+            background-color: var(--bc);
+            border-color: var(--bc);
+
+            &::before {
+                opacity: 1;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

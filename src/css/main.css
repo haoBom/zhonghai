@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --cw: 15rem;
   --ease: ease;
@@ -3040,6 +3041,385 @@ body {
   cursor: no-drop;
 }
 
+.cascade_module {
+  --cascader-primary-color: #f6f7f8;
+  --cascader-background-color: #f6f7f8;
+  --cascader-container-width: 100%;
+  --cascader-container-height: 0.5rem;
+  --cascader-container-padding: 0.08rem 0.2rem;
+  --cascader-container-border-width: 0.01rem;
+  --cascader-container-border-style: solid;
+  --cascader-container-border-color: #f6f7f8;
+  --cascader-container-border-radius: 0.06rem;
+  --cascader-container-value-color: rgba(0, 0, 0, 0.88);
+  --cascader-container-value-font-size: 0.18rem;
+  --cascader-container-arrow-color: #000;
+  --cascader-container-arrow-active-color: #000;
+  --cascader-container-menus-top: 110%;
+  --cascader-container-menus-border-radius: 0.06rem;
+  --cascader-container-menus-box-shadow: 0 0.06rem 0.16rem 0 rgba(0, 0, 0, 0.08), 0 0.03rem 0.06rem -0.04rem rgba(0, 0, 0, 0.12), 0 0.09rem 0.28rem 0.08rem rgba(0, 0, 0, 0.05);
+  --cascader-container-menu-max-height: 2rem;
+  --cascader-container-menu-padding: 0.05rem;
+  --cascader-container-menu-border-color: rgba(0, 0, 0, 0.06);
+  --cascader-container-item-padding: 0.08rem 0.1rem;
+  --cascader-container-item-border-radius: 0.06rem;
+  --cascader-container-item-background-color: #fff;
+  --cascader-container-item-background-hover-color: rgba(0, 0, 0, 0.06);
+  --cascader-container-item-background-active-color: rgb(230, 244, 255);
+  --cascader-container-item-disabled-color: rgba(0, 0, 0, 0.25);
+  --cascader-container-item-multiple-width: 0.2rem;
+  --cascader-container-item-multiple-height: 0.2rem;
+  --cascader-container-item-multiple-border-color: rgb(217, 217, 217);
+  --cascader-container-item-multiple-border-radius: 0.06rem;
+  --cascader-container-item-multiple-active-color: #1677ff;
+  --cascader-container-item-value-max-width: 1.5rem;
+  --cascader-container-item-value-font-size: 0.14rem;
+  --cascader-container-item-value-color: rgba(0, 0, 0, 0.88);
+  --cascader-container-item-icon-font-size: 0.14rem;
+  --cascader-container-item-icon-color: rgba(0, 0, 0, 0.45);
+}
+.cascade_module .cascader-container_menus {
+  z-index: 3;
+}
+.cascade_module .cascader-container_arrow,
+.cascade_module .cascader-container_clear {
+  position: absolute;
+  right: 0.2rem;
+}
+.cascade_module .cascader-container_arrow {
+  background-image: url(../svg/i0.svg);
+  background-size: 0.1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 0.2rem;
+  height: 0.2rem;
+  transform: rotate(-90deg);
+  display: flex !important;
+  display: -ms-flexbox;
+  opacity: 1;
+  transition: all var(--ease) 0.3s;
+}
+.cascade_module .cascader-container_arrow .cascader-container_arrow_icon {
+  display: none;
+}
+.cascade_module .cascader-container_clear {
+  width: 0.2rem;
+  height: 0.2rem;
+  align-items: center;
+  background: #b3b3b3;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--ease) 0.3s;
+  z-index: 3;
+}
+.cascade_module .cascader-container:hover .cascader-container_clear {
+  opacity: 1;
+}
+.cascade_module .cascader-container:hover .cascader-container_arrow {
+  opacity: 0;
+}
+.cascade_module .cascader-container_value_placeholder {
+  color: #000;
+}
+.cascade_module .cascader-container_menus {
+  width: 100%;
+  background-color: var(--w);
+}
+.cascade_module .cascader-container_menus_menu {
+  flex: 1;
+  height: 2rem;
+  overflow-y: overlay;
+  padding: 0.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.02rem;
+  -webkit-overflow-scrolling: touch;
+}
+.cascade_module .cascader-container_menus_menu_item_icon {
+  display: none;
+}
+
+.checkbox_module [type=checkbox] {
+  display: none;
+}
+.checkbox_module .checkbox {
+  display: grid;
+  grid-template-columns: 0.2rem auto;
+  align-items: baseline;
+  gap: 0.04rem;
+  cursor: pointer;
+}
+.checkbox_module .checkbox input {
+  display: none;
+}
+.checkbox_module .checkbox p {
+  color: #666;
+  transition: all var(--ease) 0.3s;
+}
+.checkbox_module .checkbox p:hover {
+  color: var(--0);
+}
+.checkbox_module .checkbox p a {
+  color: var(--1);
+  text-decoration: underline;
+}
+.checkbox_module .checkbox p a:hover {
+  text-decoration: underline;
+}
+.checkbox_module .checkbox .check {
+  height: 0.15rem;
+  width: 0.15rem;
+  display: flex;
+  border: 0.01rem solid #e5e5e5;
+  border-radius: 0.03rem;
+  transition: all var(--ease) 0.3s;
+  position: relative;
+  transform: translateY(0.02rem);
+}
+.checkbox_module .checkbox .check::before {
+  content: "";
+  position: absolute;
+  width: 0.05rem;
+  height: 0.02rem;
+  background: #fff;
+  border-radius: 0.1rem;
+  transform: rotate(45deg) translateX(0.06rem) translateY(0.04rem);
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .checkbox_module .checkbox .check::before {
+    transform: rotate(45deg) translateX(0.05rem) translateY(0.04rem);
+  }
+}
+.checkbox_module .checkbox .check::after {
+  content: "";
+  position: absolute;
+  width: 0.02rem;
+  height: 0.09rem;
+  background: #fff;
+  border-radius: 0.1rem;
+  transform: rotate(45deg) translateX(0.07rem) translateY(-0.03rem);
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .checkbox_module .checkbox .check::after {
+    transform: rotate(45deg) translateX(0.06rem) translateY(-0.04rem);
+  }
+}
+.checkbox_module .checkbox:hover i {
+  border: 0.01rem solid var(--bc);
+}
+.checkbox_module .checkbox_active .check {
+  background-color: var(--bc);
+  border-color: var(--bc);
+}
+.checkbox_module .checkbox_active .check::before {
+  opacity: 1;
+}
+.checkbox_module .checkbox_active .check::after {
+  opacity: 1;
+}
+
+.btn_module {
+  background-color: var(--bc);
+  color: var(--f);
+  border: 0.01rem solid var(--bc);
+  border-radius: 0.06rem;
+  display: inline-block;
+  padding: 0.15rem 0.15rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--ease) 0.3s;
+}
+.btn_module:hover {
+  background-color: var(--bc);
+  color: var(--f);
+}
+
+.upload_attachments_module .p_group {
+  width: 100%;
+  background: #f6f7f8;
+  border: 1px solid #f6f7f8;
+  height: auto;
+  border-radius: 0.06rem;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1.2rem;
+  align-items: center;
+  padding: 0.2rem;
+  gap: 0.12rem;
+}
+@media screen and (max-width: 768px) {
+  .upload_attachments_module .p_group {
+    grid-template-columns: 1fr;
+  }
+}
+.upload_attachments_module .p_group .input-group {
+  width: auto;
+}
+.upload_attachments_module button {
+  max-width: 1.2rem;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.06rem;
+  padding: 0 0.15rem;
+  background: #f6f7f8;
+  border: 1px solid #dfdfdf;
+  color: #666;
+  cursor: pointer;
+  transition: all var(--ease) 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .upload_attachments_module button {
+    max-width: 100%;
+  }
+}
+.upload_attachments_module button span {
+  transition: all var(--ease) 0.3s;
+}
+.upload_attachments_module button:hover {
+  border-color: var(--bc);
+}
+.upload_attachments_module button:hover span {
+  color: var(--bc);
+}
+.upload_attachments_module .p_file_info {
+  width: 100%;
+}
+.upload_attachments_module .p_file_info > p {
+  color: var(--6);
+  word-break: break-all;
+}
+.upload_attachments_module .p_fileName {
+  align-items: center;
+  max-width: 2rem;
+  width: 100%;
+  background-color: var(--f);
+  color: var(--6);
+  padding: 0.1rem 0.15rem;
+  padding-right: 0.26rem;
+  border-radius: 0.06rem;
+  display: none;
+  position: relative;
+}
+.upload_attachments_module .p_fileName .p_name {
+  word-break: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+}
+.upload_attachments_module .p_fileName .p_close {
+  position: absolute;
+  top: 0.04rem;
+  right: 0.04rem;
+  display: flex;
+  cursor: pointer;
+}
+.upload_attachments_module .p_fileName .p_close svg {
+  display: flex;
+  width: 0.15rem;
+  height: auto;
+  color: var(--6);
+  transition: all var(--ease) 0.3s;
+}
+.upload_attachments_module .p_fileName .p_close:hover svg {
+  color: var(--bc);
+}
+.upload_attachments_module .p_fileName.upload_ed {
+  display: flex;
+}
+
+/* 表单样式 */
+.form_input {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+@media screen and (max-width: 768px) {
+  .form_input {
+    flex-direction: column;
+  }
+}
+.form_input > div {
+  flex: 1;
+}
+
+legend,
+.p_label {
+  margin-bottom: 0.1rem;
+  display: flex;
+  gap: 0.05rem;
+  align-items: center;
+  color: var(--6);
+}
+
+.p_sub {
+  color: var(--6);
+  opacity: 0.5;
+}
+
+[required] .p_label::after {
+  content: "*";
+  margin: 0;
+  order: -1;
+  color: red;
+  transform: translateY(0.03rem);
+}
+
+.p_group {
+  display: flex;
+  gap: 0.3rem;
+  width: 100%;
+  z-index: 2;
+}
+.p_group .input-group {
+  width: 100%;
+  position: relative;
+}
+.p_group .input-group input,
+.p_group .input-group textarea {
+  border-radius: 0.06rem;
+  border: 1px solid var(--d);
+  background: var(--f);
+  padding: 0.08rem 0.1rem;
+  width: 100%;
+  height: 0.5rem;
+}
+.p_group .input-group textarea {
+  height: 0.68rem;
+}
+
+form .p_group .radioItem {
+  display: flex;
+  align-items: center;
+  gap: 0.08rem;
+  opacity: 0.6;
+  transition: all var(--ease) 0.3s;
+}
+
+form .p_group .radioItem input {
+  width: 0.13rem;
+  height: 0.13rem;
+}
+
+form .p_group .radioItem.cur {
+  opacity: 1;
+}
+
+form .code_img {
+  position: absolute;
+  right: 0.1rem;
+  width: 1.1rem;
+}
+
 .c_h1 {
   line-height: 1.2;
 }
@@ -5097,6 +5477,43 @@ body {
 }
 .f1 .f_left > ul > li.cur + li {
   margin-top: 0.2rem;
+}
+
+.register {
+  display: flex;
+  background: linear-gradient(0deg, #b9cbe3, transparent);
+  padding-top: 1rem;
+}
+.register .registerBox {
+  background: var(--f);
+  border-radius: 0.16rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  min-height: 3rem;
+  box-shadow: 0px 0.1rem 0.5rem 0px rgba(21, 74, 147, 0.15);
+  padding: 0.8rem;
+  position: relative;
+}
+.register .title .t {
+  margin-bottom: 0.1rem;
+  line-height: 1.2;
+}
+.register .title .s {
+  color: var(--6);
+}
+.register form {
+  margin-top: 0.5rem;
+}
+.register .login {
+  position: absolute;
+  right: 0.3rem;
+  top: 0.2rem;
+}
+.register .login a {
+  text-decoration: underline;
+}
+.register .login a:hover {
+  color: var(--bc);
 }
 
 .mp .container {

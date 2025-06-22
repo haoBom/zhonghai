@@ -1,0 +1,121 @@
+.cascade_module {
+    --cascader-primary-color: #f6f7f8;
+    --cascader-background-color: #f6f7f8;
+
+    --cascader-container-width: 100%;
+    --cascader-container-height: 0.5rem;
+    --cascader-container-padding: 0.08rem 0.2rem;
+    --cascader-container-border-width: 0.01rem;
+    --cascader-container-border-style: solid;
+    --cascader-container-border-color: #f6f7f8;
+    --cascader-container-border-radius: 0.06rem;
+
+    --cascader-container-value-color: rgba(0, 0, 0, 0.88);
+    --cascader-container-value-font-size: 0.18rem;
+
+    --cascader-container-arrow-color: #000;
+    --cascader-container-arrow-active-color: #000;
+
+    --cascader-container-menus-top: 110%;
+    --cascader-container-menus-border-radius: 0.06rem;
+    --cascader-container-menus-box-shadow: 0 0.06rem 0.16rem 0 rgba(0, 0, 0, 0.08), 0 0.03rem 0.06rem -0.04rem rgba(0, 0, 0, 0.12), 0 0.09rem 0.28rem 0.08rem rgba(0, 0, 0, 0.05);
+
+    --cascader-container-menu-max-height: 2rem;
+    --cascader-container-menu-padding: 0.05rem;
+    --cascader-container-menu-border-color: rgba(0, 0, 0, 0.06);
+
+    --cascader-container-item-padding: 0.08rem 0.1rem;
+    --cascader-container-item-border-radius: 0.06rem;
+    --cascader-container-item-background-color: #fff;
+    --cascader-container-item-background-hover-color: rgba(0, 0, 0, 0.06);
+    --cascader-container-item-background-active-color: rgb(230, 244, 255);
+    --cascader-container-item-disabled-color: rgba(0, 0, 0, 0.25);
+
+    --cascader-container-item-multiple-width: 0.2rem;
+    --cascader-container-item-multiple-height: 0.2rem;
+    --cascader-container-item-multiple-border-color: rgb(217, 217, 217);
+    --cascader-container-item-multiple-border-radius: 0.06rem;
+    --cascader-container-item-multiple-active-color: #1677ff;
+
+    --cascader-container-item-value-max-width: 1.5rem;
+    --cascader-container-item-value-font-size: 0.14rem;
+    --cascader-container-item-value-color: rgba(0, 0, 0, 0.88);
+
+    --cascader-container-item-icon-font-size: 0.14rem;
+    --cascader-container-item-icon-color: rgba(0, 0, 0, 0.45);
+
+    .cascader-container_menus {
+        z-index: 3;
+    }
+
+    .cascader-container_arrow,
+    .cascader-container_clear {
+        position: absolute;
+        right: 0.2rem;
+    }
+
+    .cascader-container_arrow {
+        background-image: url(../svg/i0.svg);
+        background-size: 0.1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 0.2rem;
+        height: 0.2rem;
+        transform: rotate(-90deg);
+        display: flex !important;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        opacity: 1;
+        transition: all var(--ease) .3s;
+
+        .cascader-container_arrow_icon {
+            display: none;
+        }
+    }
+
+    .cascader-container_clear {
+        width: 0.2rem;
+        height: 0.2rem;
+        align-items: center;
+        background: #b3b3b3;
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        justify-content: center;
+        opacity: 0;
+        transition: all var(--ease) .3s;
+        z-index: 3;
+    }
+
+    .cascader-container:hover .cascader-container_clear {
+        opacity: 1;
+    }
+
+    .cascader-container:hover .cascader-container_arrow {
+        opacity: 0;
+    }
+
+    .cascader-container_value_placeholder {
+        color: #000;
+    }
+
+    .cascader-container_menus {
+        width: 100%;
+        background-color: var(--w);
+    }
+
+    .cascader-container_menus_menu {
+        flex: 1;
+        height: 2rem;
+        overflow-y: overlay;
+        padding: 0.05rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.02rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cascader-container_menus_menu_item_icon{
+        display: none;
+    }
+}

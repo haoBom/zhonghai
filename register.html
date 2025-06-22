@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <main class="main">
+        <section class="register">
+            <div class="container">
+                <div class="registerBox">
+                    <div class="login">
+                        <a href="#">Log on</a>
+                    </div>
+                    <div class="title">
+                        <p class="t f-40 lg:f-48 ppins-bold f-center">Register</p>
+                        <p class="s f-16 f-center">Welcome to log in to Zhonghai Wantai Quotation Center</p>
+                    </div>
+                    <form action="">
+                        <div class="form_input">
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Account number</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your account number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Corporate name</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your corporate name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Password</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_input">
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Phone number</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your phone number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Confirm password</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your confirm password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Email</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_input">
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Name</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="e_input-5 form-group">
+                                <label class="p_label">Countries and territories</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your countries and territories">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="e_input-5 form-group yzm">
+                                <label class="p_label">Verification code</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter the verification code">
+                                        <img class="code_img" alt="yzm" title="yzm" src="src/images/yzm.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_input mt-20 checkbox_module">
+                            <input class="input-check" type="checkbox">
+                            <label class="checkbox f-14">
+                                <i class="check"></i>
+                                <p>Registration is deemed to automatically agree to the <a href="#">Privacy Agreement</a> of this website</p>
+                            </label>
+                        </div>
+                        <button class="btn_module mt-10">
+                            <span class="f-16">Complete registration</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

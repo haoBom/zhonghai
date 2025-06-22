@@ -1,0 +1,17 @@
+.btn_module {
+    background-color: var(--bc);
+    color: var(--f);
+    border: 0.01rem solid var(--bc);
+    border-radius: 0.06rem;
+    display: inline-block;
+    padding: 0.15rem 0.15rem;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--ease) 0.3s;
+
+    &:hover {
+        background-color: var(--bc);
+        color: var(--f);
+    }
+}
