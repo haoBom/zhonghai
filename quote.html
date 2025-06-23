@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <main class="main">
+        <section class="quote pt-100 pb-100 md:pt-120 mb:pb-120">
+            <div class="container">
+                <div class="quoteBox">
+                    <div class="c_h4 flex a-center j-between g-20">
+                        <h4 class="f-28 md:f-32">Provide one-stop services for rapid prototyping and mass production of drawings</h4>
+                        <a href="javascript:;" class="btn btn-bc">Personal center</a>
+                    </div>
+                    <form action="">
+                        <div class="form_input mt-60 upload_attachments_module">
+                            <div class="e_input form-group">
+                                <div class="p_group">
+                                    <div class="input-group flex j-center">
+                                        <input type="file" name="file" title="Upload files" class="uploadInput" hidden="">
+                                        <button type="button" class="file_upload f-16">
+                                            <img src="src/images/img-87.png" alt="Upload files">
+                                            <span class="f-16 ppins-Medium">Upload files</span>
+                                        </button>
+                                    </div>
+                                    <div class="p_file_info flex f-col a-center g-10">
+                                        <p class="ppins-bold f-center">File format support:</p>
+                                        <p class="f-center">3DFormat: STEP、STP、SLDPRT、STL、SAT、3DXML、PRT、ITP、CATPART、X TPTC、XB <br> 2DFormat: DWS、DWF、DWG、DXFPDF</p>
+                                    </div>
+                                </div>
+                                <div class="p_fileName f-14">
+                                    <span class="p_name">fileName.rar</span>
+                                    <span class="p_close">
+                                        <svg t="1748529605104" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1467" width="200" height="200">
+                                            <path d="M708.266667 746.666667c-8.533333 0-21.333333-4.266667-25.6-12.8l-170.666667-170.666667-170.666667 170.666667c-8.533333 8.533333-17.066667 12.8-25.6 12.8-8.533333 0-21.333333-4.266667-25.6-12.8-8.533333-8.533333-12.8-17.066667-12.8-25.6 0-8.533333 4.266667-21.333333 12.8-25.6l170.666667-170.666667-170.666667-170.666667c-17.066667-17.066667-17.066667-38.4 0-55.466666 8.533333-8.533333 17.066667-12.8 25.6-12.8 8.533333 0 21.333333 4.266667 25.6 12.8l170.666667 170.666666 170.666667-170.666666c8.533333-8.533333 17.066667-12.8 25.6-12.8 8.533333 0 21.333333 4.266667 25.6 12.8 17.066667 17.066667 17.066667 38.4 0 55.466666l-170.666667 170.666667 170.666667 170.666667c17.066667 17.066667 17.066667 38.4 0 55.466666-4.266667 4.266667-12.8 8.533333-25.6 8.533334z" p-id="1468"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

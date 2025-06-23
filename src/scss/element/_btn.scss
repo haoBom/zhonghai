@@ -9,6 +9,7 @@
     justify-content: center;
     text-align: center;
     gap: 0.2rem;
+    white-space: pre;
     transition: all var(--ease) 0.3s;
 
     &::before {

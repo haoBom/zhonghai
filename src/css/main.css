@@ -2881,6 +2881,7 @@ body {
   justify-content: center;
   text-align: center;
   gap: 0.2rem;
+  white-space: pre;
   transition: all var(--ease) 0.3s;
 }
 .btn::before {
@@ -3241,16 +3242,19 @@ body {
 
 .upload_attachments_module .p_group {
   width: 100%;
-  background: #f6f7f8;
-  border: 1px solid #f6f7f8;
-  height: auto;
+  background-color: var(--bl);
+  border: 1px dashed var(--bc);
+  background-image: url(/src/images/img-86.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  height: 4.9rem;
   border-radius: 0.06rem;
-  display: grid;
   justify-content: space-between;
-  grid-template-columns: 1fr 1.2rem;
   align-items: center;
-  padding: 0.2rem;
   gap: 0.12rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0.2rem 0.6rem;
 }
 @media screen and (max-width: 768px) {
   .upload_attachments_module .p_group {
@@ -3261,15 +3265,14 @@ body {
   width: auto;
 }
 .upload_attachments_module button {
-  max-width: 1.2rem;
   width: 100%;
-  height: 0.5rem;
   border-radius: 0.06rem;
   padding: 0 0.15rem;
-  background: #f6f7f8;
-  border: 1px solid #dfdfdf;
-  color: #666;
   cursor: pointer;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   transition: all var(--ease) 0.3s;
 }
 @media screen and (max-width: 768px) {
@@ -3277,7 +3280,11 @@ body {
     max-width: 100%;
   }
 }
+.upload_attachments_module button img {
+  height: 0.44rem;
+}
 .upload_attachments_module button span {
+  color: var(--0);
   transition: all var(--ease) 0.3s;
 }
 .upload_attachments_module button:hover {
@@ -3289,21 +3296,27 @@ body {
 .upload_attachments_module .p_file_info {
   width: 100%;
 }
+.upload_attachments_module .p_file_info p:first-child {
+  color: var(--0);
+}
+.upload_attachments_module .p_file_info p:last-child {
+  color: var(--1);
+}
 .upload_attachments_module .p_file_info > p {
   color: var(--6);
   word-break: break-all;
 }
 .upload_attachments_module .p_fileName {
   align-items: center;
-  max-width: 2rem;
   width: 100%;
-  background-color: var(--f);
+  background-color: var(--f6);
   color: var(--6);
   padding: 0.1rem 0.15rem;
   padding-right: 0.26rem;
   border-radius: 0.06rem;
   display: none;
   position: relative;
+  margin-top: 0.14rem;
 }
 .upload_attachments_module .p_fileName .p_name {
   word-break: break-word;
@@ -3316,8 +3329,9 @@ body {
 }
 .upload_attachments_module .p_fileName .p_close {
   position: absolute;
-  top: 0.04rem;
-  right: 0.04rem;
+  top: 50%;
+  right: 0.1rem;
+  transform: translateY(-50%);
   display: flex;
   cursor: pointer;
 }
@@ -5514,6 +5528,11 @@ form .code_img {
 }
 .register .login a:hover {
   color: var(--bc);
+}
+
+.quoteBox h4 {
+  max-width: 7.8rem;
+  line-height: 1.2;
 }
 
 .mp .container {
