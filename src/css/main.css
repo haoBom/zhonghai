@@ -3349,6 +3349,73 @@ body {
   display: flex;
 }
 
+.select {
+  position: relative;
+  cursor: pointer;
+  min-width: 1.5rem;
+}
+.select.cur .select_name {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.select_name {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.13rem;
+  position: relative;
+  background: url(../images/down.png) no-repeat;
+  background-size: 0.14rem;
+  background-position: 92% center;
+  border-radius: 0.06rem;
+  border: 1px solid var(--d);
+  background-color: var(--f);
+  padding: 0.08rem 0.2rem;
+  width: 100%;
+  height: 0.5rem;
+  font-size: 0.14rem;
+}
+.select_name img {
+  width: 0.11rem;
+}
+
+.select_options {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 2;
+  width: 100%;
+  border-radius: 0.05rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: var(--boxShadow);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--d);
+  border-top: 0;
+}
+
+.select.cur .select_options {
+  display: block;
+}
+
+.select_options li {
+  padding: 0 0.15rem;
+  font-size: 14px;
+  color: var(--b);
+  height: 0.45rem;
+  display: flex;
+  align-items: center;
+}
+
+.select_options li:hover {
+  background: #f5f6f7;
+}
+
 /* 表单样式 */
 .form_input {
   position: relative;
@@ -5533,6 +5600,295 @@ form .code_img {
 .quoteBox h4 {
   max-width: 7.8rem;
   line-height: 1.2;
+}
+.quoteBox form {
+  margin-top: 0.5rem;
+}
+
+.quoteBox_success h4 {
+  max-width: 7.8rem;
+  line-height: 1.2;
+}
+
+.quote_require {
+  margin-top: 0.5rem;
+  background-color: var(--bl);
+  min-height: 3rem;
+  padding: 0.2rem 0;
+}
+.quote_require .q_title {
+  padding: 0.35rem 0;
+}
+.quote_require .q_title p span {
+  color: var(--bc);
+}
+.quote_require .quote_require_more {
+  color: var(--6);
+}
+.quote_require .quote_require_more span {
+  white-space: pre;
+  transition: all var(--ease) 0.3s;
+}
+.quote_require .quote_require_more svg {
+  width: 0.07rem;
+  transition: all var(--ease) 0.3s;
+}
+.quote_require .quote_require_more a:hover {
+  color: var(--bc);
+}
+.quote_require .quote_1_xx {
+  background-color: var(--f);
+}
+.quote_require .quote_1_xx .t {
+  height: 0.6rem;
+  background: var(--bc);
+  color: var(--f);
+  line-height: 0.6rem;
+  padding: 0 0.2rem;
+  display: grid;
+  grid-template-columns: 1rem 1.6fr 1fr 1fr 1.6rem 1fr 1fr 1rem;
+}
+.quote_require .quote_1_xx .t p {
+  padding: 0 0.15rem;
+}
+.quote_require .quote_1_xx .b_list {
+  padding: 0.2rem;
+}
+.quote_require .quote_1_xx .b_list .b_item {
+  display: grid;
+  grid-template-columns: 1rem 1.6fr 1fr 1fr 1.6rem 1fr 1fr 1rem;
+}
+.quote_require .quote_1_xx .b_list .b_item > div {
+  padding: 0 0.15rem;
+  margin: 0;
+  align-items: center;
+}
+.quote_require .quote_1_xx .b_list .b_item > div input {
+  padding-left: 0.2rem;
+}
+.quote_require .quote_1_xx .b_list .b_item .i {
+  border-radius: 0.04rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 0.01rem solid #dddddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.quote_require .quote_1_xx .b_list .b_item .i img {
+  width: 0.25rem;
+  height: 0.31rem;
+}
+.quote_require .quote_1_xx .b_list .b_item .name {
+  position: relative;
+}
+.quote_require .quote_1_xx .b_list .b_item .name img {
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 0.16rem;
+  pointer-events: none;
+}
+.quote_require .quote_1_xx .b_list .b_item .delete_this {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.quote_require .quote_1_xx .b_list .b_item .delete_this img {
+  width: 0.15rem;
+  cursor: pointer;
+}
+.quote_require .quote_1_xx .b_list .b_item .input_hint {
+  border-radius: 0.04rem 3.95417px;
+  background-color: var(--f);
+  box-shadow: 0px 0px 0.1rem 0px rgba(21, 74, 147, 0.15);
+  color: var(--9);
+  font-size: 0.14rem;
+  padding: 0.08rem 0.12rem;
+  position: absolute;
+  left: 0.15rem;
+  top: calc(100% + 0.06rem);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all ease 0.3s;
+}
+.quote_require .quote_1_xx .b_list .b_item .input_hint p {
+  white-space: pre;
+  line-height: 1.2;
+}
+.quote_require .quote_1_xx .b_list .b_item .hint .input_hint {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.quote_2 .quote_2_Box {
+  background-color: var(--f);
+  padding: 0.35rem;
+}
+.quote_2 .t {
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 0.01rem solid var(--d);
+}
+.quote_2 .t img {
+  max-width: 0.25rem;
+}
+.quote_2 .t .s {
+  color: var(--6);
+  margin-left: 0.4rem;
+}
+.quote_2 .l_t,
+.quote_2 .r_t {
+  padding: 0 0.34rem;
+  margin-bottom: 0.2rem;
+}
+.quote_2 .l_t p,
+.quote_2 .r_t p {
+  position: relative;
+}
+.quote_2 .l_t p span,
+.quote_2 .r_t p span {
+  position: relative;
+  z-index: 2;
+}
+.quote_2 .l_t p::after,
+.quote_2 .r_t p::after {
+  content: "";
+  width: 0.15rem;
+  height: 0.15rem;
+  border-radius: 100%;
+  background-color: var(--ac);
+  position: absolute;
+  left: -0.08rem;
+  top: 0;
+  z-index: 0;
+}
+.quote_2 .left .b_list {
+  padding-right: 0.2rem;
+}
+.quote_2 .left .b_list p {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  justify-content: space-between;
+  padding: 0.14rem 0.34rem;
+  line-height: 1.2;
+  border-radius: 0.08rem;
+  background-color: var(--f);
+  transition: all var(--ease) 0.3s;
+  cursor: pointer;
+}
+.quote_2 .left .b_list p img {
+  width: 0.17rem;
+  opacity: 0;
+  transition: all var(--ease) 0.3s;
+}
+.quote_2 .left .b_list p:hover {
+  background-color: var(--bc);
+  color: var(--f);
+}
+.quote_2 .left .b_list p:hover span {
+  font-family: "Poppins-Medium";
+}
+.quote_2 .left .b_list p:hover img {
+  opacity: 1;
+}
+.quote_2 .right .b_list {
+  padding: 0 0.34rem;
+  border-left: 0.01rem solid var(--d);
+  height: calc(100% - 0.5rem);
+}
+.quote_2 .right .b_list .b_item {
+  display: none;
+}
+.quote_2 .right .b_list .b_item p {
+  font-size: 0.14rem;
+  color: var(--6);
+  padding: 0.06rem 0;
+  cursor: pointer;
+  transition: all var(--ease) 0.3s;
+}
+.quote_2 .right .b_list .b_item p:hover {
+  color: var(--bc);
+}
+.quote_2 .right .b_list .b_item.cur {
+  display: block;
+}
+.quote_2 .b_chouse {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.quote_2 .b_chouse p {
+  background-color: var(--bl);
+  font-family: "Poppins-Medium";
+  color: var(--0);
+  border-radius: 0.04rem;
+  min-width: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.12rem 0.3rem;
+  cursor: pointer;
+  transition: all var(--ease) 0.3s;
+}
+.quote_2 .b_chouse p.cur {
+  background-color: var(--bc);
+  color: var(--f);
+}
+.quote_2 .st_list .st_item .bt {
+  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;
+}
+.quote_2 .st_formBox .b_item {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  margin-top: 0.2rem;
+}
+.quote_2 .st_formBox .b_item > div {
+  max-width: 3.3rem;
+  width: 100%;
+  margin: 0;
+}
+.quote_2 .st_formBox .b_item .caozuo {
+  justify-content: center;
+  margin: 0 0 0 auto;
+  align-items: center;
+  transition: all var(--ease) 0.3s;
+  width: 0.24rem;
+  background: var(--d);
+  border-radius: 100%;
+}
+.quote_2 .st_formBox .b_item .caozuo > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.24rem;
+  height: 0.24rem;
+  cursor: pointer;
+}
+.quote_2 .st_formBox .b_item .caozuo > div.shanchu_this {
+  display: none;
+}
+.quote_2 .st_formBox .b_item .caozuo img {
+  width: 0.1rem;
+  transition: all var(--ease) 0.3s;
+}
+.quote_2 .st_formBox .b_item .caozuo:hover {
+  background: var(--9);
+  color: var(--f);
+}
+.quote_2 .st_item.added-before .shanchu_this {
+  display: flex !important;
+}
+.quote_2 .st_item.added-before .zengjia_this {
+  display: none !important;
 }
 
 .mp .container {
