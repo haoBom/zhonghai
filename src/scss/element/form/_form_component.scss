@@ -1,5 +1,6 @@
 @use '../form/_cascade_module'; // 级联选择器样式
 @use '../form/_checkbox_module'; // 复选框样式
+@use '../form/_radio_module'; // 单选框样式
 @use '../form/_btn_module'; // 按钮样式
 @use '../form/_upload_attachments_module'; // 上传附件样式
 @use '../form/_select_module'; // 下拉选择器样式
@@ -28,7 +29,7 @@ legend,
     display: flex;
     gap: 0.05rem;
     align-items: center;
-    color: var(--6);
+    color: var(--0);
 }
 
 .p_sub {
@@ -65,7 +66,8 @@ legend,
         }
 
         textarea {
-            height: 0.68rem;
+            height: 1.7rem;
+            padding: 0.14rem 0.2rem;
         }
     }
 }

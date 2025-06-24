@@ -408,3 +408,34 @@
         }
     }
 }
+
+.quote_options {
+    background-color: var(--bl);
+    padding-top: 0.3rem;
+
+    .form_input {
+        margin: 0;
+    }
+
+    .radiobox_other_input input {
+        background: transparent;
+        height: 0.38rem;
+    }
+}
+
+.special_textarea {
+    background-color: var(--bl);
+    padding-top: 0.4rem;
+
+    .form_input {
+        margin: 0;
+
+        textarea {
+            display: flex;
+        }
+    }
+}
+
+.quote_btn {
+    background-color: var(--bl);
+}

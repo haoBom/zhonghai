@@ -1,0 +1,78 @@
+.radio_module {
+    [type="radio"] {
+        display: none;
+    }
+
+    .radiobox {
+        display: grid;
+        grid-template-columns: 0.2rem auto;
+        align-items: center;
+        gap: 0.04rem;
+        min-width: 0.9rem;
+        cursor: pointer;
+
+        input {
+            display: none;
+        }
+
+        p {
+            color: var(--1);
+            transition: all var(--ease) 0.3s;
+
+            &:hover {
+                color: var(--0);
+            }
+
+            a {
+                color: var(--1);
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .radio {
+            height: 0.15rem;
+            width: 0.15rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.01rem solid #c4ccd6;
+            border-radius: 100%;
+            transition: all var(--ease) 0.3s;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 0.07rem;
+                height: 0.07rem;
+                background: var(--bc);
+                border-radius: 100%;
+                opacity: 0;
+            }
+
+        }
+
+        &:hover i {
+            border: 0.01rem solid var(--bc);
+        }
+    }
+
+    .radiobox_active {
+        .radio {
+            // background-color: var(--bc);
+            // border-color: var(--bc);
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    .radiobox_other_input {
+        width: auto;
+        min-width: 2rem;
+    }
+}

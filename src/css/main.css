@@ -3223,6 +3223,64 @@ body {
   opacity: 1;
 }
 
+.radio_module [type=radio] {
+  display: none;
+}
+.radio_module .radiobox {
+  display: grid;
+  grid-template-columns: 0.2rem auto;
+  align-items: center;
+  gap: 0.04rem;
+  min-width: 0.9rem;
+  cursor: pointer;
+}
+.radio_module .radiobox input {
+  display: none;
+}
+.radio_module .radiobox p {
+  color: var(--1);
+  transition: all var(--ease) 0.3s;
+}
+.radio_module .radiobox p:hover {
+  color: var(--0);
+}
+.radio_module .radiobox p a {
+  color: var(--1);
+  text-decoration: underline;
+}
+.radio_module .radiobox p a:hover {
+  text-decoration: underline;
+}
+.radio_module .radiobox .radio {
+  height: 0.15rem;
+  width: 0.15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.01rem solid #c4ccd6;
+  border-radius: 100%;
+  transition: all var(--ease) 0.3s;
+  position: relative;
+}
+.radio_module .radiobox .radio::before {
+  content: "";
+  width: 0.07rem;
+  height: 0.07rem;
+  background: var(--bc);
+  border-radius: 100%;
+  opacity: 0;
+}
+.radio_module .radiobox:hover i {
+  border: 0.01rem solid var(--bc);
+}
+.radio_module .radiobox_active .radio::before {
+  opacity: 1;
+}
+.radio_module .radiobox_other_input {
+  width: auto;
+  min-width: 2rem;
+}
+
 .btn_module {
   background-color: var(--bc);
   color: var(--f);
@@ -3244,7 +3302,7 @@ body {
   width: 100%;
   background-color: var(--bl);
   border: 1px dashed var(--bc);
-  background-image: url(/src/images/img-86.png);
+  background-image: url(../images/img-86.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   height: 4.9rem;
@@ -3439,7 +3497,7 @@ legend,
   display: flex;
   gap: 0.05rem;
   align-items: center;
-  color: var(--6);
+  color: var(--0);
 }
 
 .p_sub {
@@ -3475,7 +3533,8 @@ legend,
   height: 0.5rem;
 }
 .p_group .input-group textarea {
-  height: 0.68rem;
+  height: 1.7rem;
+  padding: 0.14rem 0.2rem;
 }
 
 form .p_group .radioItem {
@@ -4851,7 +4910,7 @@ form .code_img {
 .a4-5 .a4-5_list .pz4_Item .a4-5_jx {
   border-radius: 0.08rem;
   background-color: var(--bc);
-  background-image: url(/src/images/img-61.jpg);
+  background-image: url(../images/img-61.jpg);
   background-repeat: no-repeat;
   background-position: right top;
   width: 84%;
@@ -5224,7 +5283,7 @@ form .code_img {
 
 .se1 .se1_box {
   height: 74vh;
-  background-image: url(/src/images/img-78.png);
+  background-image: url(../images/img-78.png);
   background-size: cover;
   border-radius: 0.16rem;
 }
@@ -5889,6 +5948,33 @@ form .code_img {
 }
 .quote_2 .st_item.added-before .zengjia_this {
   display: none !important;
+}
+
+.quote_options {
+  background-color: var(--bl);
+  padding-top: 0.3rem;
+}
+.quote_options .form_input {
+  margin: 0;
+}
+.quote_options .radiobox_other_input input {
+  background: transparent;
+  height: 0.38rem;
+}
+
+.special_textarea {
+  background-color: var(--bl);
+  padding-top: 0.4rem;
+}
+.special_textarea .form_input {
+  margin: 0;
+}
+.special_textarea .form_input textarea {
+  display: flex;
+}
+
+.quote_btn {
+  background-color: var(--bl);
 }
 
 .mp .container {
