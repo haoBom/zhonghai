@@ -1,0 +1,254 @@
+header {
+    position: relative;
+    z-index: 10;
+}
+
+.header_top {
+    padding: 0 0.6rem;
+    height: 0.36rem;
+    background-color: var(--f6);
+
+    .grzxrukou {
+        a {
+            color: var(--6);
+        }
+
+        span {
+            font-size: 0.12rem;
+            color: var(--6);
+        }
+    }
+}
+
+.header_bottom {
+    padding: 0 0.6rem;
+    background-color: var(--f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0.8rem;
+    border-bottom: 0.01rem solid var(--d);
+
+    .navBox {
+        .nav_item {
+            .nav_text {
+                color: var(--1);
+
+                a {
+                    padding: 0 0.2rem;
+                    font-family: "Poppins-Medium";
+                    transition: all var(--ease) 0.3s;
+
+                    &:hover {
+                        color: var(--bc);
+                    }
+                }
+            }
+        }
+    }
+
+    .nav_item {
+        height: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: fixed;
+            top: calc(0.36rem + 0.8rem);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.4rem 0.15rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 12;
+            background: rgba(247, 247, 247, 0.9);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: all var(--ease) 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        &.have_children:hover {
+
+            .nav_children,
+            &::after {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: inherit;
+            }
+        }
+
+    }
+
+    .nav_item:not(.teshu) .nav_children {
+        background-color: var(--f);
+        padding: 0.2rem 0.1rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        z-index: 14;
+        border-radius: 0.08rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        gap: 0.05rem;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        a {
+            background: var(--f);
+            border-radius: 0.04rem;
+            color: var(--1);
+            transition: all var(--ease) 0.3s;
+            padding: 0.1rem 0.15rem;
+
+            &:hover {
+                background: var(--bc);
+                color: var(--f);
+            }
+        }
+    }
+
+    .teshu {
+        position: static;
+
+        .nav_children {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            background: var(--f);
+            z-index: 13;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: all var(--ease) 0.3s;
+
+            .container {
+                display: grid;
+                grid-template-columns: 2fr 5fr;
+
+                .nav_children_left {
+                    padding-top: 0.6rem;
+                    border-right: 0.01rem solid var(--d);
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    padding-bottom: 0.55rem;
+
+                    .nav_children_tab {
+                        p {
+                            position: relative;
+
+                            a {
+                                padding: 0.1rem 0;
+                                display: flex;
+
+                                &:hover {
+                                    color: var(--bc);
+                                }
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                right: -0.01rem;
+                                top: 0;
+                                bottom: 0;
+                                width: 0.01rem;
+                                height: 100%;
+                                background-color: var(--bc);
+                                opacity: 0;
+                                transition: all var(--ease) 0.3s;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    .nav_children_more {
+                        a {
+                            display: flex;
+                            align-items: baseline;
+                            color: var(--6);
+                            gap: 0.1rem;
+                        }
+
+                        img {
+                            width: auto;
+                        }
+                    }
+                }
+
+                .nav_children_right {
+                    padding-top: 0.6rem;
+                    padding-bottom: 0.55rem;
+                    padding-left: 1.2rem;
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.4rem;
+
+                        li {
+                            width: 1.52rem;
+
+                            .nav_img {
+                                width: 1.52rem;
+                                height: 1.52rem;
+                                border-radius: 0.08rem;
+                                position: relative;
+                                overflow: hidden;
+
+                                img {
+                                    transition: all var(--ease) 0.3s;
+                                }
+                            }
+
+                            p {
+                                text-align: center;
+                                line-height: 1.4;
+                                height: 0.44rem;
+                                transition: all var(--ease) 0.3s;
+                            }
+
+                            &:hover {
+                                p {
+                                    color: var(--bc);
+                                }
+
+                                img {
+                                    transform: scale(1.02);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mob_ico {
+        display: none;
+    }
+}
