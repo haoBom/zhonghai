@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <main class="main">
+        <section class="login_Box">
+            <div class="container grid grid-2">
+                <div class="login_contact">
+                    <div class="title">
+                        <p class="t f-40 lg:f-48 ppins-bold">Online quotation</p>
+                        <p class="s f-16 md:f-20">Ensuring a precise future: Log in to receive real-time quotes and expert level solutions</p>
+                    </div>
+                    <div class="c_contact_way f-20">
+                        <div class="c_contact_way_xin grid mb-20 a-baseline">
+                            <img src="src/svg/i-2.svg" alt="number">
+                            <a href="tel:0000-000000">0000-000000</a>
+                        </div>
+                        <div class="c_contact_way_xin grid mb-20 a-baseline">
+                            <img src="src/svg/i-3.svg" alt="mail">
+                            <a href="mailto:000000000@163.com">000000000@163.com</a>
+                        </div>
+                        <div class="c_contact_way_xin grid mb-20 a-baseline">
+                            <img src="src/svg/i-4.svg" alt="add">
+                            <a href="javascript:;">Address placeholder Address placeholder Address placeholder Address placeholder Address placeholder</a>
+                        </div>
+                    </div>
+                    <div class="threeico pl-20 pr-20 pt-30 pb-30 flex j-center">
+                        <div class="th_item">
+                            <img src="src/images/img-98.png" alt="i">
+                            <p class="mt-20">Upload drawings and requirements</p>
+                        </div>
+                        <div class="th_item">
+                            <img src="src/images/img-99.png" alt="i">
+                            <p class="mt-20">Engineers view drawings</p>
+                        </div>
+                        <div class="th_item">
+                            <img src="src/images/img-100.png" alt="i">
+                            <p class="mt-20">Quotation successful</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="login_Boxcont">
+                    <div class="registerlink">
+                        <a href="#">Register</a>
+                    </div>
+                    <div class="title">
+                        <img src="src/images/img-97.png" alt="i">
+                        <p class="t f-24 ppins-bold f-center">log on</p>
+                        <p class="s f-16 f-center">Welcome to log in to Zhonghai Wantai Quotation Center</p>
+                    </div>
+                    <form action="">
+                        <div class="form_input">
+                            <div class="e_input-1 form-group">
+                                <label class="p_label">Account number</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-1" placeholder="Please enter your account number">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_input">
+                            <div class="e_input-2 form-group">
+                                <label class="p_label">Password</label>
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="text" data-name="e_input-2" placeholder="Please enter your password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_input mt-20 checkbox_module">
+                            <input class="input-check" type="checkbox">
+                            <label class="checkbox f-14">
+                                <i class="check"></i>
+                                <p>Login is considered as automatically agreeing to the <a href="#">Privacy Agreement</a> of this website</p>
+                            </label>
+                        </div>
+                        <button class="btn_module mt-10">
+                            <span class="f-16">Log on</span>
+                        </button>
+                        <div class="otherLink flex a-center j-center mt-40 g-10">
+                            <a href="#" data-gofancy="forgot_password">Forgot Password</a>
+                            <span class="f-14">|</span>
+                            <a href="#">Forgot Account</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="forgot_password fancy" data-fancy="forgot_password">
+            <div class="container">
+                <div class="pl-30 pr-30 pb-40">
+                    <div class="title flex j-between a-center">
+                        <p>Forgot account | Forgot password</p>
+                        <img class="fancy_close" src="src/images/img-101.png" alt="i">
+                    </div>
+                    <div class="content">
+                        <a href="tel:+86-0757-66811866" class="imglink"><img src="src/images/img-102.png" alt="tel"></a>
+                        <p class="mt-30 mb-10 f-center">If you forget your password or account, you can call
+                            the following number to manually retrieve it</p>
+                        <a href="tel:+86-0757-66811866" class="mb-20 f-center tellink">+86-0757-66811866</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

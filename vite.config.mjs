@@ -80,15 +80,15 @@ export default defineConfig({
                         return `fonts/[name][extname]`;
                     }
                     if (['png', 'jpg', 'jpeg', 'gif', 'tiff', 'bmp', 'ico'].includes(ext)) {
-                        return `images/[name]-[hash][extname]`;
+                        return `images/[name][extname]`;
                     }
                     if (ext === 'svg') {
-                        return `svg/[name]-[hash][extname]`;
+                        return `svg/[name][extname]`;
                     }
                     if (['mp4', 'webm', 'ogg', 'mov', 'avi', 'mkv'].includes(ext)) {
-                        return `video/[name]-[hash][extname]`;
+                        return `video/[name][extname]`;
                     }
-                    return `other/[name]-[hash][extname]`;
+                    return `other/[name][extname]`;
                 },
                 chunkFileNames: `js/[name].js`,
                 entryFileNames: `js/[name].js`,

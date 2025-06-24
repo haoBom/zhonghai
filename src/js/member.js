@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { tab } from './tab.js';
+import './fancy.js';
 
 $('.quote_require .b_item input').on('focus', function () {
     $(this).closest('.form_input').addClass('hint');
