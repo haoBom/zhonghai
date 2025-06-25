@@ -3856,6 +3856,9 @@ header {
   .mob_ico {
     display: none;
   }
+  .nav_children_arrow {
+    display: none;
+  }
 }
 .p_header {
   border-bottom: 0.01rem solid var(--d);
