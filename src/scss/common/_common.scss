@@ -295,7 +295,7 @@ body {
     overflow: hidden;
 }
 
-.initialization__page [data-rolling] {
+[data-rolling] {
     overflow: hidden;
     width: min-content;
     display: flex;
@@ -303,11 +303,17 @@ body {
     flex-direction: row;
 }
 
-.initialization__page [data-rolling]>* {
+[data-rolling]>* {
     display: flex;
+    gap: 0.3rem;
 }
 
-.initialization__page [data-rolling] li {
+[data-rolling]>*>div {
+    display: flex;
+    gap: 0.3rem;
+}
+
+[data-rolling] li {
     display: flex;
     flex-wrap: wrap;
     white-space: nowrap;

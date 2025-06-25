@@ -1,7 +1,11 @@
 import $ from 'jquery';
 import { _if_Exists, isMo } from './tools.js';
 import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+Swiper.use([Navigation, Pagination]);
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // 分类
 _if_Exists('.c_sort_swiper', ($el) => {
@@ -176,5 +180,24 @@ _if_Exists('.s7 .swiper', ($el) => {
                 slidesPerView: 5,
             },
         }
+    });
+});
+
+// 首页幻灯片
+_if_Exists('.index_banner', ($el) => {
+    new Swiper($el[0], {
+        slidesPerView: 1,
+        speed: 800,
+        loop: true,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        pagination: {
+            el: '.index_banner .swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.index_banner .swiper-button-next',
+            prevEl: '.index_banner .swiper-button-prev',
+        },
     });
 });
