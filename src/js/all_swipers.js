@@ -50,7 +50,7 @@ _if_Exists('.te2 .swiper', ($el) => {
 // 关于我们 - te2
 _if_Exists('.history_list', ($el) => {
     const swiper = new Swiper($el[0], {
-        slidesPerView: 1,
+        slidesPerView: 1.4,
         speed: 800,
         loop: true,
         observer: true,

@@ -10,6 +10,14 @@
 
         >div {
             grid-area: 1 / 1;
+
+            @media screen and (max-width:768px) {
+                height: 5rem;
+            }
+        }
+
+        .index_img img {
+            object-fit: cover;
         }
 
         .index_title {
@@ -18,6 +26,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
+
+            @media screen and (max-width:768px) {
+                padding: 0.2rem;
+            }
 
             .index_title_top {
                 text-align: left;
@@ -31,6 +43,14 @@
                 margin-top: 0.4rem;
                 text-align: left;
 
+                @media screen and (max-width:768px) {
+                    margin-top: 0.2rem;
+
+                    p{
+                        font-size: 0.18rem;
+                    }
+                }
+
                 a {
                     margin: 0.24rem auto 0 0;
                 }
@@ -39,6 +59,10 @@
             p {
                 color: var(--f);
                 line-height: 1.3;
+
+                @media screen and (max-width:768px) {
+                    font-size: 0.32rem;
+                }
             }
         }
     }
@@ -109,10 +133,24 @@
         background-repeat: no-repeat;
         background-position: left bottom;
 
+        @media screen and (max-width:768px) {
+            padding-top: 0.3rem;
+            background-position: center bottom;
+        }
+
         .container {
             display: grid;
             gap: 0.2rem;
             grid-template-columns: 3fr 5fr;
+
+            @media screen and (max-width:768px) {
+                grid-template-columns: 1fr;
+
+                .btn {
+                    margin-top: 0.3rem;
+                    margin-bottom: 0.3rem;
+                }
+            }
         }
     }
 
@@ -125,6 +163,10 @@
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+
+        @media screen and (max-width:768px) {
+            height: 3.2rem;
+        }
     }
 
     h3 {
@@ -155,11 +197,19 @@
         background-position: center;
         transition: all var(--ease) 0.3s 0s;
         padding-bottom: 1.8rem;
+
+        @media screen and (max-width:768px) {
+            padding-bottom: 0.6rem;
+        }
     }
 
     .ab_bottom ul {
         display: flex;
         height: 100%;
+
+        @media screen and (max-width:768px) {
+            flex-wrap: wrap;
+        }
     }
 
     .ab_bottom ul li {
@@ -174,6 +224,14 @@
         gap: 0.3rem;
         align-items: baseline;
 
+        @media screen and (max-width:768px) {
+            width: 100%;
+            flex: 0 0 100%;
+            background: var(--f6);
+            margin: 0.15rem 0 0;
+            padding: 0.4rem 0.3rem 0.3rem;
+        }
+
         h5 {
             font-weight: normal;
             font-family: 'Poppins';
@@ -185,6 +243,10 @@
             font-size: 0.68rem;
             line-height: 1.1;
             font-family: "Oswald";
+
+            @media screen and (max-width:1024px) {
+                font-size: 0.52rem;
+            }
 
             color: var(--0);
 
@@ -205,11 +267,19 @@
     .ab_bottom_title {
         padding: 1.6rem 0 0.8rem;
 
+        @media screen and (max-width:768px) {
+            padding: 0.6rem 0 0.6rem;
+        }
+
         .t1 {
             font-size: 0.6rem;
             line-height: 1.2;
             text-align: center;
             color: var(--0);
+
+            @media screen and (max-width:768px) {
+                font-size: 0.26rem;
+            }
 
             span {
                 color: var(--bc);
@@ -218,6 +288,10 @@
 
         .t2 {
             text-align: center;
+
+            @media screen and (max-width:768px) {
+                font-size: 0.18rem;
+            }
         }
 
         >span {
@@ -236,6 +310,10 @@
             align-items: center;
             gap: 0.3rem;
 
+            @media screen and (max-width:768px) {
+                gap: 0.15rem;
+            }
+
             li {
                 border-width: 1px;
                 border-color: var(--d);
@@ -250,8 +328,17 @@
                 padding-left: 0.3rem;
                 cursor: pointer;
 
+                @media screen and (max-width:768px) {
+                    margin: 0;
+                    grid-template-columns: 1fr 0.7rem;
+                }
+
                 p {
                     font-size: 0.24rem;
+
+                    @media screen and (max-width:768px) {
+                        font-size: 0.18rem;
+                    }
                 }
 
                 .ab_bottom_three_ico {
@@ -263,6 +350,11 @@
                     justify-content: center;
                     align-items: center;
                     transition: all var(--ease) 0.3s;
+
+                    @media screen and (max-width:768px) {
+                        width: 0.7rem;
+                        height: 0.7rem;
+                    }
 
                     img {
                         grid-area: 1 / 1;
@@ -300,6 +392,10 @@
     position: relative;
     overflow: hidden;
 
+    @media screen and (max-width:768px) {
+        height: 60vh;
+    }
+
     .videos_bg {
         height: 100%;
         position: absolute;
@@ -324,6 +420,11 @@
             gap: 0.2rem;
             display: flex;
             justify-content: space-between;
+
+            @media screen and (max-width:768px) {
+                flex-direction: column;
+                justify-content: center;
+            }
         }
     }
 
@@ -339,6 +440,11 @@
             position: relative;
             display: flex;
             flex-direction: column;
+
+            @media screen and (max-width:768px) {
+                font-size: 0.28rem;
+                text-align: center;
+            }
 
             span {
                 font-weight: normal;
@@ -358,6 +464,10 @@
 
         p {
             color: var(--f);
+
+            @media screen and (max-width:768px) {
+                text-align: center;
+            }
         }
     }
 
@@ -371,6 +481,11 @@
             border-radius: 100%;
             // border: 0.01rem solid var(--f);
             position: relative;
+
+            @media screen and (max-width:768px) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
 
             svg {
                 position: absolute;
@@ -619,15 +734,31 @@
             display: grid;
             grid-template-columns: 1.5rem 2rem 1fr 0.2rem;
 
+            @media screen and (max-width:768px) {
+                grid-template-columns: 1fr;
+                height: auto;
+                gap: 0.1rem;
+                padding-bottom: 0.2rem;
+                margin-bottom: 0.2rem;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
             p {
                 color: var(--0);
             }
         }
 
         .news_title {
+            @media screen and (max-width:768px) {
+                margin-top: 0.1rem;
+                margin-bottom: 0.1rem;
+            }
+
             p {
                 font-size: 0.24rem;
                 font-family: "Poppins-Medium";
+                line-height: 1.2;
 
                 &:hover {
                     color: var(--bc);
@@ -654,6 +785,10 @@
         }
 
         .news_more {
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+
             img {
                 width: 0.15rem;
             }
@@ -665,21 +800,33 @@
             top: 0;
             pointer-events: none;
 
+            @media screen and (max-width:768px) {
+                position: static;
+                pointer-events: auto;
+                width: 100%;
+            }
+
             .news_img_box {
                 transform: scale(0);
                 opacity: 0;
                 transition: all var(--ease) 0.6s;
+
+                @media screen and (max-width:768px) {
+                    opacity: 1;
+                    transform: scale(1);
+                }
             }
         }
 
+        @media screen and (min-width:768px) {
+            &:hover {
+                .news_img_box {
+                    opacity: 1;
+                }
 
-        &:hover {
-            .news_img_box {
-                opacity: 1;
-            }
-
-            &::after {
-                opacity: 1;
+                &::after {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -720,6 +867,10 @@
 
         .l_technology_1_img img {
             max-width: 100%;
+
+            @media screen and (max-width:768px) {
+                object-position: -3rem;
+            }
         }
 
         .l_technology_1_info {

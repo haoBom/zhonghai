@@ -5,16 +5,29 @@
         display: grid;
         grid-template-columns: 2fr 4fr;
         gap: 0.8rem;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     h1 {
         line-height: 1.4;
+
+        @media screen and (max-width: 768px) {
+            font-size: 0.26rem;
+        }
     }
 
     .nd_timeBox {
         margin-top: 0.6rem;
         border-bottom: 0.01rem solid var(--d);
         padding-bottom: 0.5rem;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 0.3rem;
+            padding-bottom: 0.3rem;
+        }
 
         p {
             color: var(--9);

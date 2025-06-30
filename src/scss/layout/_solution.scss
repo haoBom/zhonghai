@@ -39,10 +39,15 @@
     .s2_left {
         img {
             border-radius: 0.16rem;
+            object-fit: cover;
         }
     }
 
     .s2_right {
+        @media screen and (max-width: 768px) {
+            padding: 0.3rem 0;
+        }
+
         .b {
             color: var(--bc);
         }
@@ -69,6 +74,10 @@
     }
 
     .s3_right {
+        @media screen and (max-width: 768px) {
+            padding: 0.3rem 0;
+        }
+
         .b {
             color: var(--bc);
         }
@@ -86,6 +95,10 @@
 }
 
 .s4 {
+    .s4_bg img {
+        object-fit: cover;
+    }
+
     .title {
         color: var(--f);
         max-width: 9.5rem;
@@ -286,6 +299,15 @@
 }
 
 .s7 {
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+
+        .s7_img {
+            max-width: 2.6rem;
+        }
+    }
+
     .s7_bg {
         img {
             object-fit: cover;
@@ -294,6 +316,8 @@
 
     .s7_list {
         counter-reset: li-counter;
+        width: 100%;
+        max-width: 100%;
     }
 
     .s7_number {

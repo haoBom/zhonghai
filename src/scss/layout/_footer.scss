@@ -1,6 +1,24 @@
 footer {
     background: #181818;
 
+    @media screen and (max-width:1024px) {
+        &.pl-60{
+            padding-left: 0.3rem;
+        }
+        &.pr-60{
+            padding-right: 0.3rem;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        &.pl-60{
+            padding-left: 0.15rem;
+        }
+        &.pr-60{
+            padding-right: 0.15rem;
+        }
+    }
+
     .footer_logo {
         max-width: 1.18rem;
     }
@@ -9,10 +27,30 @@ footer {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
+
+        @media screen and (max-width:1024px) {
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
     }
 
     .footer_menu_item {
         color: var(--f);
+
+        @media screen and (max-width:1024px) {
+            &:nth-child(1){
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5){
+                display: none;
+            }
+        }
 
         .footer_menu_t {
             font-size: 0.18rem;
@@ -49,6 +87,17 @@ footer {
         gap: 0.1rem;
         padding: 0.2rem 0;
 
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            justify-content: center;
+
+            .f_other_page {
+                flex-wrap: wrap;
+                opacity: 0.6;
+                line-height: 1.2;
+            }
+        }
+
         a {
             transition: all var(--ease) 0.3s;
 
@@ -64,6 +113,10 @@ footer {
         border-radius: 0.04rem;
         margin-top: 0.1rem;
         float: left;
+
+        .form_input{
+            margin: 0;
+        }
 
         .input-group {
             padding: 0 0.15rem;

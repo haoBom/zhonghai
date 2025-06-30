@@ -4,6 +4,11 @@
     .container {
         display: grid;
         grid-template-columns: 6fr 2fr;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
     }
 
     .c_list_1 {
@@ -105,6 +110,21 @@
     .p_news_right {
         padding: 0.6rem 0.5rem;
 
+        @media screen and (max-width: 768px) {
+            padding: 0.6rem 0rem 0;
+
+            .right_more_news {
+                background-color: var(--f6);
+                padding: 0.5rem 0.5rem;
+                margin-bottom: 0.1rem;
+            }
+
+            .right_more_tag {
+                background-color: var(--f6);
+                padding: 0.5rem 0.5rem;
+            }
+        }
+
         .more_news {
             border-top: 0.01rem solid #ddd;
 
@@ -148,12 +168,22 @@
 
     h1 {
         line-height: 1.4;
+
+        @media screen and (max-width: 768px) {
+            font-size: 0.3rem;
+        }
     }
 
     .nd_timeBox {
         margin-top: 0.6rem;
         border-bottom: 0.01rem solid var(--d);
         padding-bottom: 0.5rem;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.1rem;
+        }
 
         p {
             color: var(--9);

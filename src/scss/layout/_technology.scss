@@ -1,3 +1,5 @@
+@use '../common/tool' as *;
+
 .c_technology_sort {
     border-bottom: 0.01rem solid var(--d);
 }
@@ -36,6 +38,10 @@
     }
 
     .te3_right {
+        @media screen and (max-width:768px) {
+            padding: 0.3rem 0rem;
+        }
+
         .t {
             line-height: 1.2;
             margin-bottom: 0.2rem;
@@ -60,6 +66,10 @@
     .te4_left_title {
         padding-top: 1rem;
 
+        @media screen and (max-width:768px) {
+            padding-top: 0.6rem;
+        }
+
         p {
             color: var(--f);
         }
@@ -71,6 +81,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @media screen and (max-width:768px) {
+            padding: 0rem 0.3rem;
+        }
     }
 
     .te4_left_item {
@@ -144,6 +158,10 @@
 
     .c_h1 {
         a {
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+
             color: var(--0);
             transition: all var(--ease) 0.3s;
 
@@ -165,6 +183,7 @@
             align-items: center;
             justify-content: center;
             transition: all var(--ease) 0.3s;
+
 
             img {
                 width: 0.14rem;
@@ -198,6 +217,10 @@
 .Why_us {
     .c_h1 {
         a {
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+
             color: var(--0);
             transition: all var(--ease) 0.3s;
 
@@ -229,6 +252,10 @@
     .Why_us_list {
         height: 7.2rem;
         overflow: hidden;
+
+        @media screen and (max-width: 768px) {
+            height: auto;
+        }
     }
 
     .Why_us_item_title {
@@ -240,6 +267,10 @@
 
         .why_us_item {
             flex: 1;
+
+            @media screen and (max-width: 768px) {
+                flex: 0 0 4rem;
+            }
         }
     }
 
@@ -290,6 +321,10 @@
             position: relative;
             z-index: 1;
 
+            @media screen and (max-width: 480px) {
+                padding: 0.3rem;
+            }
+
             p {
                 color: var(--f);
             }
@@ -310,6 +345,15 @@
     position: relative;
     overflow: hidden;
     background-color: #1f2629;
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+
+        .container {
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+        }
+    }
 
     .container {
         display: flex;
@@ -396,6 +440,11 @@
     .container>div {
         align-items: end;
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 0.6rem 0;
+        }
     }
 
     .l_quote_1_info {
@@ -435,6 +484,10 @@
             transition: all var(--ease) 0.3s;
             color: var(--6);
 
+            @media screen and (max-width:768px) {
+                display: none;
+            }
+
             &:hover {
                 color: var(--bc);
             }
@@ -447,11 +500,27 @@
     border: 0.01rem solid var(--d);
     display: grid;
     grid-template-columns: var(--w) 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width:1440px) {
+        --w: 3rem;
+    }
+
+    @media screen and (max-width:1024px) {
+        --w: 2.8rem;
+    }
+
+    @media screen and (max-width:1024px) {
+        grid-template-columns: 1fr;
+    }
 
     .l_materials_item_img {
         aspect-ratio: 1 / 1;
         width: var(--w);
         height: var(--w);
+        width: auto;
+        height: auto;
+        height: 100%;
         overflow: hidden;
 
         img {
@@ -482,9 +551,15 @@
     }
 
     .l_materials_item_info {
+
+        @media screen and (max-width:1440px) {
+            padding-top: 0.2rem;
+        }
+
         h3 {
             line-height: 1.2;
             color: var(--0);
+            @include ellipsis(2);
         }
 
         p {
@@ -517,4 +592,8 @@
     &:hover .l_materials_item_img img {
         transform: scale(1.1);
     }
+}
+
+.l_quote_1_img img {
+    object-fit: cover;
 }

@@ -124,8 +124,7 @@ $spacing-steps: (
 }
 
 // 间距工具
-@each $name, $gap in (
-    10: .1rem,
+@each $name, $gap in (10: .1rem,
     20: .2rem,
     30: .3rem,
     40: .4rem,
@@ -215,5 +214,44 @@ $radiuses: (
                 @include grid-columns($i);
             }
         }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .pt-120 {
+        padding-top: 0.8rem;
+    }
+
+    .pb-120 {
+        padding-bottom: 0.8rem;
+    }
+
+    .pt-100 {
+        padding-top: 0.6rem;
+    }
+
+    .pb-100 {
+        padding-bottom: 0.6rem;
+    }
+
+    .mt-60 {
+        margin-top: 0.3rem;
+    }
+
+    .grid-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .f-24 {
+        font-size: 0.18rem;
+    }
+
+    .f-56 {
+        font-size: 0.36rem;
+    }
+
+    .f-40 {
+        font-size: 0.3rem;
     }
 }

@@ -1,3 +1,5 @@
+@use '../common/tool' as *;
+
 .register {
     display: flex;
     background: linear-gradient(0deg, #b9cbe3, transparent);
@@ -12,6 +14,11 @@
         box-shadow: 0px 0.1rem 0.5rem 0px rgba(21, 74, 147, 0.15);
         padding: 0.8rem;
         position: relative;
+
+        @media screen and (max-width: 768px) {
+            padding: 0.8rem 0.2rem;
+        }
+
     }
 
     .title {
@@ -45,6 +52,13 @@
 }
 
 .quoteBox {
+    @media screen and (max-width: 768px) {
+        .c_h4 {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
     h4 {
         max-width: 7.8rem;
         line-height: 1.2;
@@ -56,6 +70,13 @@
 }
 
 .quoteBox_success {
+    @media screen and (max-width: 768px) {
+        .c_h4 {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
     h4 {
         max-width: 7.8rem;
         line-height: 1.2;
@@ -67,6 +88,7 @@
     background-color: var(--bl);
     min-height: 3rem;
     padding: 0.2rem 0;
+    overflow: hidden;
 
     .q_title {
         padding: 0.3rem 0;
@@ -98,6 +120,7 @@
 
     .quote_1_xx {
         background-color: var(--f);
+        overflow-x: auto;
 
         .t {
             height: 0.6rem;
@@ -107,6 +130,7 @@
             padding: 0 0.2rem;
             display: grid;
             grid-template-columns: 1rem 1.6fr 1fr 1fr 1.6rem 1fr 1fr 1rem;
+            min-width: 14rem;
 
             p {
                 padding: 0 0.15rem;
@@ -115,6 +139,7 @@
 
         .b_list {
             padding: 0.2rem;
+            min-width: 14rem;
 
             .b_item {
                 display: grid;
@@ -205,6 +230,10 @@
     .quote_2_Box {
         background-color: var(--f);
         padding: 0.35rem;
+
+        @media screen and (max-width: 768px) {
+            padding: 0.35rem 0.2rem;
+        }
     }
 
     .t {
@@ -253,6 +282,10 @@
         .b_list {
             padding-right: 0.2rem;
 
+            @media screen and (max-width: 768px) {
+                margin-bottom: 0.5rem;
+            }
+
             p {
                 display: flex;
                 align-items: center;
@@ -293,6 +326,10 @@
             border-left: 0.01rem solid var(--d);
             height: calc(100% - 0.5rem);
 
+            @media screen and (max-width: 768px) {
+                border-left: 0 solid var(--d);
+            }
+
             .b_item {
                 display: none;
 
@@ -320,6 +357,10 @@
         align-items: center;
         gap: 0.1rem;
         margin-bottom: 0.1rem;
+
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+        }
 
         p {
             background-color: var(--bl);
@@ -356,6 +397,10 @@
             align-items: center;
             gap: 0.1rem;
             margin-top: 0.2rem;
+
+            @media screen and (max-width: 768px) {
+                flex-wrap: wrap;
+            }
 
             >div {
                 max-width: 3.3rem;
@@ -415,6 +460,13 @@
 
     .form_input {
         margin: 0;
+
+        @media screen and (max-width: 768px) {
+            .radioList {
+                gap: 0.1rem;
+                flex-wrap: wrap;
+            }
+        }
     }
 
     .radiobox_other_input input {
@@ -446,6 +498,14 @@
     background: linear-gradient(0deg, #b5d0f5, #e5f0fe);
     padding-top: 1rem;
 
+    @media screen and (max-width: 768px) {
+        padding-top: 0rem;
+    }
+
+    .container {
+        gap: 0.2rem;
+    }
+
     .login_Boxcont {
         background: var(--f);
         border-radius: 0.16rem;
@@ -455,6 +515,10 @@
         box-shadow: 0px 0.1rem 0.5rem 0px rgba(21, 74, 147, 0.15);
         padding: 0.8rem;
         position: relative;
+
+        @media screen and (max-width: 768px) {
+            padding: 0.8rem 0.2rem;
+        }
 
         .title {
             .t {
@@ -517,6 +581,24 @@
             .c_contact_way_xin {
                 grid-template-columns: 0.3rem 1fr;
                 gap: 0.15rem;
+
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 0.22rem 1fr;
+                    gap: 0.1rem;
+                    margin-bottom: 0.1rem;
+                }
+
+                a {
+                    transition: all var(--ease) 0.3s;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.14rem;
+                    }
+                }
+
+                a:hover {
+                    color: var(--bc);
+                }
             }
 
             img {
@@ -534,6 +616,11 @@
             border: 0.01rem solid #fff;
             margin-top: 0.4rem;
 
+            @media screen and (max-width: 768px) {
+                flex-wrap: wrap;
+                gap: 0.2rem;
+            }
+
             .th_item {
                 display: flex;
                 flex-direction: column;
@@ -544,11 +631,20 @@
                 padding: 0 0.2rem;
                 position: relative;
                 z-index: 2;
+
+                @media screen and (max-width: 768px) {
+                    flex: 0 0 100%;
+                }
             }
 
             img {
                 width: 1.1rem;
                 height: 1.1rem;
+
+                @media screen and (max-width: 768px) {
+                    width: 0.8rem;
+                    height: 0.8rem;
+                }
             }
 
             &::after {
@@ -560,6 +656,10 @@
                 width: 80%;
                 margin: 0 auto;
                 border-top: 0.01rem dashed #fff;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
             }
         }
     }
@@ -630,6 +730,10 @@
         flex-direction: column;
         padding: 0.5rem 0.4rem;
 
+        @media screen and (max-width: 768px) {
+            padding: 0.5rem 0.2rem;
+        }
+
         &+.dingdantop {
             margin-top: 0.6rem;
         }
@@ -637,6 +741,7 @@
         .xx {
             display: flex;
             justify-content: space-between;
+            align-items: end;
         }
 
         ul {
@@ -659,6 +764,7 @@
 
         a {
             display: flex;
+            align-items: center;
             gap: 0.1rem;
             white-space: pre;
 
@@ -672,6 +778,7 @@
 .dingdantop {
     .xiangxi {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 0.1rem;
         margin-bottom: 0.15rem;
@@ -696,7 +803,16 @@
     }
 
     .dingdan {
-        background-color: var(--f);
+        background-color: transparent;
+
+        @media screen and (max-width: 1400px) {
+            overflow-x: auto;
+            padding-bottom: 0.05rem;
+
+            &::-webkit-scrollbar {
+                background-color: transparent;
+            }
+        }
 
         .t {
             height: 0.6rem;
@@ -706,6 +822,10 @@
             padding: 0 0.2rem;
             display: grid;
             grid-template-columns: 1rem 2rem 1.8rem 1fr 1.6rem 2rem 2rem 1rem;
+
+            @media screen and (max-width: 1400px) {
+                min-width: 14rem;
+            }
 
             p {
                 padding: 0 0.15rem;
@@ -719,6 +839,11 @@
             border-radius: 0.08rem;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
+            background: var(--f);
+
+            @media screen and (max-width: 1400px) {
+                min-width: 14rem;
+            }
 
             .b_item {
                 display: grid;
@@ -854,6 +979,20 @@
         margin-bottom: 0.3rem;
         padding-bottom: 0.3rem;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .goback {
+                display: none;
+            }
+
+            .d_or_b {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
         .goback {
             img {
                 width: auto;
@@ -871,6 +1010,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
 
         li {
             p {
@@ -898,9 +1041,18 @@
 .grzx_detail_2 {
     padding-bottom: 1.2rem;
 
+    @media screen and (max-width: 768px) {
+        padding-bottom: 0.8rem;
+    }
+
     .st_formBox .b_item {
         margin-top: 0.1rem;
         gap: 0.15rem;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
     }
 
     .st_formBox .b_item p {
@@ -910,6 +1062,10 @@
         flex: 1;
         padding: 0.12rem 0.2rem;
         font-size: 0.14rem;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .quote_2_Box {
@@ -924,5 +1080,14 @@
         border-radius: 0.08rem;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+
+        @media screen and (max-width: 768px) {
+            padding: 0.35rem 0.2rem;
+
+            .radioList {
+                gap: 0.1rem;
+                flex-wrap: wrap;
+            }
+        }
     }
 }

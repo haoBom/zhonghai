@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { _if_Exists } from './tools.js';
+import { _if_Exists, isMo } from './tools.js';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -207,6 +207,9 @@ _if_Exists('.circle-ani', () => {
 
 // 内页头部圆圈动画
 _if_Exists('.i5', () => {
+    if(isMo()){
+        return;
+    }
     gsap.set(".news_img", { xPercent: -50, yPercent: -50 });
 
     const ball = document.querySelectorAll(".news_img");
