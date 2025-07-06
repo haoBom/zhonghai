@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'Search'},
+            ];
+        %>
+
+    <main class="main">
+        <div class="search_top">
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                        <img src="src/svg/i-1.svg" alt="">
+                        <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                        <% if (idx < breakName.length - 1) { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <a href="javascript:;"><span><%= it.text %></span></a>
+                        </li>
+                        <% } else { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <span><%= it.text %></span>
+                        </li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="s_title mt-60 mb-40">
+                    <h1 class="t f-40 lg:f-48 xl:f-56 f-center">Search result</h1>
+                    <p class="s f-16 f-center mt-10">Here, find the answer you want</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="search_sort search_nodata">
+            <div class="container flex j-between g-10">
+                <div class="s_sort_search">
+                    <form action="/search/" class="searchBox search">
+                        <div class="form_input">
+                            <div class="e_input-5 form-group">
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="keyword" data-name="e_input-1" placeholder="Search" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="formBtn" type="submit">
+                            <img src="src/images/img-132.png" alt="search">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="nodata">
+            <div class="container">
+                <div class="nodata_box">
+                    <img src="src/images/img-133.png" alt="nodata">
+                    <p class="f-16">No matching information <br>
+                        please try again</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

@@ -55,7 +55,7 @@
     }
 
     .se_right {
-        padding-top: 2rem;
+        padding-top: 1.5215rem;
 
         @media screen and (max-width:768px) {
             padding-top: 0.6rem;
@@ -161,7 +161,6 @@
         }
 
         .se3_i {
-            transform: translateY(1.6rem);
             transition: all var(--ease) 0.3s;
 
             .t {
@@ -214,7 +213,7 @@
             }
 
             .se3_i {
-                transform: translateY(0rem);
+                transform: translateY(1.6rem);
             }
         }
     }

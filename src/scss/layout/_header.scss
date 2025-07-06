@@ -162,13 +162,22 @@ header {
         @media screen and (min-width: 768px) {
             &.have_children:hover {
 
-                .nav_children,
+                .nav_children {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: inherit;
+                }
+            }
+
+            &.teshu:hover {
+
                 &::after {
                     opacity: 1;
                     visibility: visible;
                     pointer-events: inherit;
                 }
             }
+             
         }
     }
 
@@ -191,6 +200,7 @@ header {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
+        border-top: 0.01rem solid var(--d);
 
         a {
             background: var(--f);
@@ -278,10 +288,10 @@ header {
                             &::after {
                                 content: '';
                                 position: absolute;
-                                right: -0.01rem;
+                                right: -0.02rem;
                                 top: 0;
                                 bottom: 0;
-                                width: 0.01rem;
+                                width: 0.03rem;
                                 height: 100%;
                                 background-color: var(--bc);
                                 opacity: 0;
@@ -302,6 +312,10 @@ header {
                             align-items: baseline;
                             color: var(--6);
                             gap: 0.1rem;
+
+                            &:hover{
+                                color: var(--bc);
+                            }
                         }
 
                         img {
@@ -325,6 +339,8 @@ header {
                         display: flex;
                         flex-wrap: wrap;
                         gap: 0.4rem;
+                        height: 4.8rem;
+                        overflow-y: auto;
 
                         @media screen and (max-width:768px) {
                             gap: 0.16rem;

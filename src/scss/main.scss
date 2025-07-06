@@ -5,6 +5,65 @@
 @use 'layout/layout';
 
 .homeBanner {
+    height: calc(100vh - 0.8rem - 0.36rem);
+
+    .homeBanner_left {
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        padding: 0.6rem;
+        padding-bottom: 0.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        width: fit-content;
+
+        @media screen and (max-width:768px) {
+            display: none;
+        }
+
+        .homeBanner_left_Box {
+            border-left: 0.01rem solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            padding-bottom: 0.4rem;
+        }
+
+        p {
+            color: var(--f);
+            padding-left: 0.2rem;
+            line-height: 1.4;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            transform: translateX(-0.01rem);
+            transition: all var(--ease) 0.3s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 0.01rem;
+                height: 100%;
+                background-color: var(--f);
+                opacity: 0;
+                transition: all var(--ease) 0.3s;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.title::before,
+            &:hover::before {
+                opacity: 1;
+            }
+        }
+    }
+
     .swiper-slide {
         display: grid;
 
@@ -46,7 +105,7 @@
                 @media screen and (max-width:768px) {
                     margin-top: 0.2rem;
 
-                    p{
+                    p {
                         font-size: 0.18rem;
                     }
                 }
@@ -65,6 +124,11 @@
                 }
             }
         }
+    }
+
+    .index_banner {
+        width: 100%;
+        height: 100%;
     }
 
     .index_banner_arr {
@@ -244,6 +308,10 @@
             line-height: 1.1;
             font-family: "Oswald";
 
+            i{
+                font-style: normal;
+            }
+
             @media screen and (max-width:1024px) {
                 font-size: 0.52rem;
             }
@@ -335,6 +403,7 @@
 
                 p {
                     font-size: 0.24rem;
+                    font-family: "Poppins", "PingFang SC", "Microsoft YaHei", "Microsoft YaHei UI", "SimSun", "SimHei", "Arial";
 
                     @media screen and (max-width:768px) {
                         font-size: 0.18rem;
@@ -532,6 +601,7 @@
         a {
             color: var(--0);
             transition: all var(--ease) 0.3s;
+            gap: 0.08rem;
 
             &:hover {
                 color: var(--bc);
@@ -678,6 +748,7 @@
         a {
             color: var(--0);
             transition: all var(--ease) 0.3s;
+            gap: 0.08rem;
 
             &:hover {
                 color: var(--bc);
@@ -732,7 +803,12 @@
             justify-content: space-between;
             align-items: center;
             display: grid;
-            grid-template-columns: 1.5rem 2rem 1fr 0.2rem;
+            grid-template-columns: 1.5rem 2rem 1fr 4rem 0.2rem;
+
+            @media screen and (max-width:1024px) {
+                grid-template-columns: 1rem 1.2rem 0.8fr 2rem 0.2rem;
+                gap: 0.2rem;
+            }
 
             @media screen and (max-width:768px) {
                 grid-template-columns: 1fr;
@@ -795,25 +871,42 @@
         }
 
         .news_img {
-            position: fixed;
-            left: 0;
-            top: 0;
+            // position: fixed;
+            // left: 0;
+            // top: 0;
             pointer-events: none;
+            position: relative;
+            height: 100%;
+            padding-top: 0.2rem;
 
             @media screen and (max-width:768px) {
                 position: static;
                 pointer-events: auto;
                 width: 100%;
+                padding: 0;
             }
 
             .news_img_box {
-                transform: scale(0);
-                opacity: 0;
+                // transform: scale(0);
+                // opacity: 0;
                 transition: all var(--ease) 0.6s;
+                position: absolute;
+                height: 0;
+                max-width: 3.5rem;
+                height: 2.2rem;
+                width: 100%;
+                height: 0;
+
+                img{
+                    object-fit: cover;
+                }
 
                 @media screen and (max-width:768px) {
                     opacity: 1;
                     transform: scale(1);
+                    position: static;
+                    height: auto;
+                    max-width: 100%;
                 }
             }
         }
@@ -821,7 +914,11 @@
         @media screen and (min-width:768px) {
             &:hover {
                 .news_img_box {
-                    opacity: 1;
+                    height: 2.2rem;
+
+                    @media screen and (max-width:1024px) {
+                        height: 1.4rem;
+                    }
                 }
 
                 &::after {
@@ -831,9 +928,9 @@
         }
     }
 
-    .news_list:hover .news_img_box {
-        transform: scale(1);
-    }
+    // .news_list:hover .news_img_box {
+    //     transform: scale(1);
+    // }
 }
 
 .i6 {
@@ -864,6 +961,7 @@
         border-radius: 0.08rem;
         position: relative;
         overflow: hidden;
+        height: 3.10rem;
 
         .l_technology_1_img img {
             max-width: 100%;

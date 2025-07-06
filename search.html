@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'Search'},
+            ];
+        %>
+
+    <main class="main">
+        <div class="search_top">
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                        <img src="src/svg/i-1.svg" alt="">
+                        <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                        <% if (idx < breakName.length - 1) { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <a href="javascript:;"><span><%= it.text %></span></a>
+                        </li>
+                        <% } else { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <span><%= it.text %></span>
+                        </li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="s_title mt-60 mb-40">
+                    <h1 class="t f-40 lg:f-48 xl:f-56 f-center">Search result</h1>
+                    <p class="s f-16 f-center mt-10"><span>88</span> results</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="search_sort">
+            <div class="container flex j-between g-10">
+                <div class="s_sort_search">
+                    <div class="c_sort c_sort_swiper swiper">
+                        <ul class="flex swiper-wrapper">
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30 cur" href="javascript:;">ALL</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Technology</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Material</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Customer case</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">News</a></li>
+                        </ul>
+                    </div>
+                    <form action="/search/" class="searchBox search">
+                        <div class="form_input">
+                            <div class="e_input-5 form-group">
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="keyword" data-name="e_input-1" placeholder="Please enter keyword" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="formBtn" type="submit">
+                            <img src="src/images/img-131.png" alt="search">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se_technology mb-40">
+            <% const te2_slideList = [
+                    { img: 'src/images/img-22.jpg', title: 'Precision deep holemachining' },
+                    { img: 'src/images/img-23.jpg', title: 'Thread rolling' },
+                    { img: 'src/images/img-24.jpg', title: 'Ultra deep gun drill' },
+                    { img: 'src/images/img-25.jpg', title: 'Space oblique hole processing' },
+                    { img: 'src/images/img-26.jpg', title: 'Deep hole drilling eccentric hole' },
+                    { img: 'src/images/img-27.jpg', title: 'Deep hole electric spark' },
+                    { img: 'src/images/img-28.jpg', title: 'Thin shaft machining' },
+                    { img: 'src/images/img-29.jpg', title: 'Five axis precision machining' },
+                ];
+            %>
+            <div class="container">
+                <div class="se_title">
+                    <p class="f-32 ppins-bold">Technology(<span>8</span>)</p>
+                    <div class="c_sort_more flex a-center">
+                        <a href="javascript:;" class="flex a-center g-10">
+                            <span class="f-14">More results</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px" height="11px" viewBox="0 0 7 11">
+                                <path d="M6.001,6.318 L1.758,10.561 C1.368,10.952 0.734,10.952 0.344,10.561 C-0.047,10.170 -0.047,9.538 0.344,9.147 L3.880,5.611 L0.344,2.076 C-0.047,1.685 -0.047,1.052 0.344,0.662 C0.734,0.271 1.368,0.271 1.758,0.662 L6.001,4.904 C6.391,5.295 6.391,5.928 6.001,6.318 Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="se_technology_list">
+                    <% te2_slideList.forEach((item) => { %>
+                            <a href="javascript:;" class="se_technology_item">
+                                <div class="te2_img radius-8 relative o-hidden mb-10">
+                                    <img src="<%= item.img %>" alt="technology">
+                                </div>
+                                <div class="te_title f-14 f-center">
+                                    <p><%= item.title %></p>
+                                </div>
+                            </a>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se_material mb-40">
+            <div class="container">
+                <div class="se_title">
+                    <p class="f-32 ppins-bold">Material(<span>8</span>)</p>
+                    <div class="c_sort_more flex a-center">
+                        <a href="javascript:;" class="flex a-center g-10">
+                            <span class="f-14">More results</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px" height="11px" viewBox="0 0 7 11">
+                                <path d="M6.001,6.318 L1.758,10.561 C1.368,10.952 0.734,10.952 0.344,10.561 C-0.047,10.170 -0.047,9.538 0.344,9.147 L3.880,5.611 L0.344,2.076 C-0.047,1.685 -0.047,1.052 0.344,0.662 C0.734,0.271 1.368,0.271 1.758,0.662 L6.001,4.904 C6.391,5.295 6.391,5.928 6.001,6.318 Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="l_materials_list grid grid-1 md:grid-2 g-20 md:g-30">
+                    <% for (let i = 0; i < 6; i++) { %>
+                    <a href="javascript:;" class="l_materials_item p-10 flex g-20 md:g-40 radius-8 relative o-hidden">
+                        <div class="l_materials_item_img relative o-hidden radius-8">
+                            <img src="src/images/img-40.jpg" class="" alt="materials">
+                        </div>
+                        <div class="l_materials_item_info pt-20 md:pt-40">
+                            <h3 class="f-20">High nitrogen non-magnetic stainless steel</h3>
+                            <div class="l_materials_item_line"></div>
+                            <div class="l_materials_item_brand">
+                                <p class="f-16 ppins-Medium">Brand:</p>
+                                <p class="f-16">
+                                    P550 <br>
+                                    P650<br>
+                                    15-15 HS MAX<br>
+                                    SCF-19
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se_case mb-40">
+            <div class="container">
+                <div class="se_title">
+                    <p class="f-32 ppins-bold">Customer case(<span>8</span>)</p>
+                    <div class="c_sort_more flex a-center">
+                        <a href="javascript:;" class="flex a-center g-10">
+                            <span class="f-14">More results</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px" height="11px" viewBox="0 0 7 11">
+                                <path d="M6.001,6.318 L1.758,10.561 C1.368,10.952 0.734,10.952 0.344,10.561 C-0.047,10.170 -0.047,9.538 0.344,9.147 L3.880,5.611 L0.344,2.076 C-0.047,1.685 -0.047,1.052 0.344,0.662 C0.734,0.271 1.368,0.271 1.758,0.662 L6.001,4.904 C6.391,5.295 6.391,5.928 6.001,6.318 Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <% const caseList = [
+                        { img: 'src/images/img-03.jpg' },
+                        { img: 'src/images/img-04.jpg' },
+                        { img: 'src/images/img-05.jpg' },
+                        { img: 'src/images/img-03.jpg' },
+                        { img: 'src/images/img-04.jpg' },
+                        { img: 'src/images/img-05.jpg' },
+                    ]; %>
+                <div class="c_list_1 g-30">
+                    <% caseList.forEach(item => { %>
+                    <a href="javascript:;" class="c_item radius-8 relative o-hidden">
+                        <div class="c_img radius-8 relative o-hidden">
+                        <img src="<%= item.img %>" alt="Customer case">
+                        </div>
+                        <div class="c_info radius-8 pl-30 pr-30 pt-30 pb-30 relative">
+                        <p class="t f-24">Case name</p>
+                        <p class="s f-16">Case Summary Occupancy Case Summary</p>
+                        <div class="i mt-30 op-0">
+                            <img src="src/images/img-02.png" alt="Customer case">
+                        </div>
+                        </div>
+                    </a>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se_news mb-40">
+            <div class="container">
+                <div class="se_title">
+                    <p class="f-32 ppins-bold">News(<span>8</span>)</p>
+                    <div class="c_sort_more flex a-center">
+                        <a href="javascript:;" class="flex a-center g-10">
+                            <span class="f-14">More results</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px" height="11px" viewBox="0 0 7 11">
+                                <path d="M6.001,6.318 L1.758,10.561 C1.368,10.952 0.734,10.952 0.344,10.561 C-0.047,10.170 -0.047,9.538 0.344,9.147 L3.880,5.611 L0.344,2.076 C-0.047,1.685 -0.047,1.052 0.344,0.662 C0.734,0.271 1.368,0.271 1.758,0.662 L6.001,4.904 C6.391,5.295 6.391,5.928 6.001,6.318 Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p_news_left flex f-col g-60">
+                    <% const newsList = [
+                                { img: 'src/images/img-03.jpg' },
+                                { img: 'src/images/img-04.jpg' },
+                                { img: 'src/images/img-05.jpg' },
+                                { img: 'src/images/img-03.jpg' },
+                                { img: 'src/images/img-04.jpg' },
+                                { img: 'src/images/img-05.jpg' },
+                            ]; %>
+                    <div class="c_list_1">
+                        <% newsList.forEach(item => { %>
+                        <div class="c_item pt-60 pb-60">
+                            <div class="c_info relative">
+                                <time class="flex g-10 a-center f-18">
+                                    <img src="src/svg/i-6.svg" alt="time">
+                                    <span>12.12.2024</span>
+                                </time>
+                                <p class="t f-24">
+                                    <a href="#">Article Title Occupancy Article Title Occupancy Article Title </a>
+                                </p>
+                                <div class="tag f-14">
+                                    <a href="javascript:;">#Tag occupancy</a>
+                                    <a href="javascript:;">#Tag occupancy</a>
+                                </div>
+                            </div>
+                            <div class="c_img radius-8 relative o-hidden">
+                                <a href="#">
+                                    <img src="<%= item.img %>" alt="News">
+                                </a>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>

@@ -20,17 +20,21 @@
     }
 
     .nd_timeBox {
-        margin-top: 0.6rem;
+        margin-top: 0.4rem;
         border-bottom: 0.01rem solid var(--d);
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.2rem;
 
         @media screen and (max-width: 768px) {
-            margin-top: 0.3rem;
-            padding-bottom: 0.3rem;
+            margin-top: 0.2rem;
+            padding-bottom: 0.1rem;
         }
 
         p {
             color: var(--9);
+
+            img{
+                width: 0.16rem;
+            }
         }
 
         .nd_type a {

@@ -1,6 +1,16 @@
 @use '../common/tool' as *;
 
 .a2 {
+    height: 2.6rem;
+
+    @media screen and (max-width:1024px) {
+        height: auto;
+    }
+
+    img{
+        object-fit: cover;
+    }
+
     .container {
         z-index: 2;
     }
@@ -75,8 +85,8 @@
         left: 0;
         right: 0;
         z-index: 2;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         background-color: rgb(255 255 255 / 10%);
         transition: all var(--ease) 0.3s 0s;
 
@@ -406,6 +416,14 @@
     .honor_imt {
         height: 3.2rem;
         background-color: var(--f6);
+
+        img{
+            transition: all var(--ease) 0.3s;
+        }
+
+        &:hover img{
+            transform: scale(1.04);
+        }
     }
 }
 
@@ -471,13 +489,13 @@
             }
         }
 
-        &:hover .kcx_title {
-            padding-top: 0.85rem;
-        }
+        // &:hover .kcx_title {
+        //     padding-top: 0.85rem;
+        // }
 
-        &:hover::after {
-            opacity: 0;
-        }
+        // &:hover::after {
+        //     opacity: 0;
+        // }
     }
 }
 

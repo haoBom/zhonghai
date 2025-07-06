@@ -206,29 +206,54 @@ _if_Exists('.circle-ani', () => {
 });
 
 // 内页头部圆圈动画
-_if_Exists('.i5', () => {
-    if(isMo()){
-        return;
-    }
-    gsap.set(".news_img", { xPercent: -50, yPercent: -50 });
+// _if_Exists('.i5', () => {
+//     if (isMo()) {
+//         return;
+//     }
+//     gsap.set(".news_img", { xPercent: -50, yPercent: -50 });
 
-    const ball = document.querySelectorAll(".news_img");
-    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    const mouse = { x: pos.x, y: pos.y };
-    const speed = 0.2;
-    const xSet = gsap.quickSetter(ball, "x", "px");
-    const ySet = gsap.quickSetter(ball, "y", "px");
+//     const ball = document.querySelectorAll(".news_img");
+//     const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+//     const mouse = { x: pos.x, y: pos.y };
+//     const speed = 0.2;
+//     const xSet = gsap.quickSetter(ball, "x", "px");
+//     const ySet = gsap.quickSetter(ball, "y", "px");
 
-    window.addEventListener("mousemove", e => {
-        mouse.x = e.x;
-        mouse.y = e.y;
-    });
+//     window.addEventListener("mousemove", e => {
+//         mouse.x = e.x;
+//         mouse.y = e.y;
+//     });
 
-    gsap.ticker.add(() => {
-        const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-        pos.x += (mouse.x - pos.x) * dt;
-        pos.y += (mouse.y - pos.y) * dt;
-        xSet(pos.x);
-        ySet(pos.y);
+//     gsap.ticker.add(() => {
+//         const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+//         pos.x += (mouse.x - pos.x) * dt;
+//         pos.y += (mouse.y - pos.y) * dt;
+//         xSet(pos.x);
+//         ySet(pos.y);
+//     });
+// });
+
+// 首页数字滚动
+_if_Exists('.ab_bottom', () => {
+    $('.num').each(function () {
+        const $this = $(this);
+        const rawVal = $this.data('num');
+        const endValue = parseInt(rawVal, 10);
+
+        // 判断是否为纯数字（排除类似T4的文本）
+        if (!isNaN(endValue)) {
+            const counter = { value: 0 };
+            gsap.to(counter, {
+                value: endValue,
+                duration: 2,
+                ease: "power1.out",
+                onUpdate: function () {
+                    $this.text(Math.floor(counter.value));
+                }
+            });
+        } else {
+            // 非数字，直接保持原样（或者你也可以加一些淡入动画）
+            $this.text(rawVal);
+        }
     });
 });

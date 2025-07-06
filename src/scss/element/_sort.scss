@@ -23,6 +23,7 @@
                 transition: all var(--ease) 0.3s;
             }
 
+            &.cur::after,
             &:hover::after {
                 left: 0;
                 width: 100%;

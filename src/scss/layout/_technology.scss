@@ -164,6 +164,7 @@
 
             color: var(--0);
             transition: all var(--ease) 0.3s;
+            gap: 0.08rem;
 
             &:hover {
                 color: var(--bc);
@@ -223,6 +224,7 @@
 
             color: var(--0);
             transition: all var(--ease) 0.3s;
+            gap: 0.08rem;
 
             &:hover {
                 color: var(--bc);
@@ -335,7 +337,7 @@
         }
 
         &:hover::before {
-            opacity: 1;
+            opacity: 0.95;
         }
     }
 }
@@ -404,10 +406,11 @@
     }
 
     .l_technology_1_info {
-        width: 64%;
+        width: 100%;
         padding: 0.2rem 0;
         position: relative;
         z-index: 2;
+        max-width: 7.9rem;
 
         h3 {
             color: var(--f);

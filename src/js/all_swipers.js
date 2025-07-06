@@ -18,7 +18,7 @@ _if_Exists('.c_sort_swiper', ($el) => {
         observeSlideChildren: true,
         breakpoints: {
             768: {
-                spaceBetween: "5%",
+                spaceBetween: 60,
             },
         }
     });
@@ -141,7 +141,7 @@ _if_Exists('.a4-5_list', ($el) => {
 _if_Exists('.s1 .swiper', ($el) => {
     new Swiper($el[0], {
         slidesPerView: 1.4,
-        spaceBetween: "3%",
+        spaceBetween: "2.1%",
         speed: 800,
         observer: true,
         observeParents: true,
@@ -194,6 +194,7 @@ _if_Exists('.index_banner', ($el) => {
         observeSlideChildren: true,
         pagination: {
             el: '.index_banner .swiper-pagination',
+            clickable :true,
         },
         navigation: {
             nextEl: '.index_banner .swiper-button-next',

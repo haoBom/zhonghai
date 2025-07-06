@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, email=no, address=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="keywords" content="<%= keywords %>">
+  <link rel="stylesheet" crossorigin href="src/css/main.css" />
+</head>
+
+<body>
+    <%- header %>
+
+    <% const breakName = [
+                { text: 'Search'},
+            ];
+        %>
+
+    <main class="main">
+        <div class="search_top">
+            <div class="container">
+                <div class="c_break">
+                    <ul class="f-14">
+                        <li>
+                        <img src="src/svg/i-1.svg" alt="">
+                        <a href="/"><span>Home</span></a>
+                        </li>
+                        <% breakName.forEach((it, idx) => { %>
+                        <% if (idx < breakName.length - 1) { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <a href="javascript:;"><span><%= it.text %></span></a>
+                        </li>
+                        <% } else { %>
+                        <li>
+                        <svg t="1747209631478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2443" width="200" height="200">
+                            <path d="M400.576 212.688a16 16 0 0 0-22.64 0l-45.248 45.248a16 16 0 0 0 0 22.64L564.624 512.48 332.688 744.432a16 16 0 0 0 0 22.624l45.248 45.264a16 16 0 0 0 22.64 0l288.48-288.512a16 16 0 0 0 0-22.624l-288.48-288.496z" p-id="2444"></path>
+                        </svg>
+                        <span><%= it.text %></span>
+                        </li>
+                        <% } %>
+                        <% }) %>
+                    </ul>
+                </div>
+                <div class="s_title mt-60 mb-40">
+                    <h1 class="t f-40 lg:f-48 xl:f-56 f-center">Search result</h1>
+                    <p class="s f-16 f-center mt-10"><span>88</span> results</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="search_sort">
+            <div class="container flex j-between g-10">
+                <div class="s_sort_search">
+                    <div class="c_sort c_sort_swiper swiper">
+                        <ul class="flex swiper-wrapper">
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">ALL</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30 cur" href="javascript:;">Technology</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Material</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">Customer case</a></li>
+                            <li class="flex swiper-slide"><a class="pt-30 pb-30" href="javascript:;">News</a></li>
+                        </ul>
+                    </div>
+                    <form action="/search/" class="searchBox search">
+                        <div class="form_input">
+                            <div class="e_input-5 form-group">
+                                <div class="p_group">
+                                    <div class="input-group">
+                                        <input type="text" class="p_input f-14" name="keyword" data-name="e_input-1" placeholder="Please enter keyword" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="formBtn" type="submit">
+                            <img src="src/images/img-131.png" alt="search">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="se se_technology mb-40">
+            <% const te2_slideList = [
+                    { img: 'src/images/img-22.jpg', title: 'Precision deep holemachining' },
+                    { img: 'src/images/img-23.jpg', title: 'Thread rolling' },
+                    { img: 'src/images/img-24.jpg', title: 'Ultra deep gun drill' },
+                    { img: 'src/images/img-25.jpg', title: 'Space oblique hole processing' },
+                    { img: 'src/images/img-26.jpg', title: 'Deep hole drilling eccentric hole' },
+                    { img: 'src/images/img-27.jpg', title: 'Deep hole electric spark' },
+                    { img: 'src/images/img-28.jpg', title: 'Thin shaft machining' },
+                    { img: 'src/images/img-29.jpg', title: 'Five axis precision machining' },
+                ];
+            %>
+            <div class="container">
+                <div class="se_title">
+                    <p class="f-32 ppins-bold">Technology(<span>8</span>)</p>
+                </div>
+                <div class="se_technology_list">
+                    <% te2_slideList.forEach((item) => { %>
+                            <a href="javascript:;" class="se_technology_item">
+                                <div class="te2_img radius-8 relative o-hidden mb-10">
+                                    <img src="<%= item.img %>" alt="technology">
+                                </div>
+                                <div class="te_title f-14 f-center">
+                                    <p><%= item.title %></p>
+                                </div>
+                            </a>
+                    <% }) %>
+                </div>
+                <div class="pagenation mt-60 mb-60">
+                    <a href="javascript:;" class="page_a page_first">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px" height="12px" viewBox="0 0 7 12">
+                        <path d="M0.466,5.875 L5.124,1.035 C5.378,0.772 5.808,0.754 6.084,0.995 C6.361,1.236 6.379,1.645 6.126,1.908 L1.888,6.312 L6.123,10.728 C6.375,10.992 6.356,11.401 6.079,11.642 C5.801,11.882 5.372,11.864 5.119,11.600 L0.469,6.753 C0.460,6.743 0.450,6.732 0.442,6.722 C0.230,6.478 0.234,6.115 0.466,5.875 L0.466,5.875 Z" />
+                        </svg>
+                    </a>
+                    <a href="javascript:;" class="page_a page_num current">1</a>
+                    <a href="javascript:;" class="page_a page_num">2</a>
+                    <a href="javascript:;" class="page_a page_num">3</a>
+                    <a href="javascript:;" class="page_a page_next">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px" height="12px" viewBox="0 0 7 12">
+                        <path d="M6.104,5.875 L1.464,1.035 C1.211,0.772 0.783,0.754 0.508,0.995 C0.232,1.236 0.214,1.645 0.466,1.908 L4.688,6.312 L0.470,10.728 C0.218,10.992 0.237,11.401 0.514,11.642 C0.790,11.882 1.218,11.864 1.469,11.600 L6.101,6.753 C6.110,6.743 6.120,6.732 6.128,6.722 C6.339,6.478 6.335,6.115 6.104,5.875 L6.104,5.875 Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- footer %>
+
+    <script type="module" crossorigin src="src/js/main.js"></script>
+</body>
+
+</html>
