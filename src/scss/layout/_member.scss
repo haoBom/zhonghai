@@ -1112,7 +1112,7 @@
 
     .set_up_fanc_box {
         background-color: var(--f);
-        padding: 0.4rem;
+        padding: 0.2rem 0.4rem;
         border-radius: 0.08rem;
         max-width: 5.2rem;
         width: 100%;
@@ -1176,9 +1176,15 @@
 
     .set_up_fanc_box_close {
         position: absolute;
-        right: 0.3rem;
+        right: 0.4rem;
         top: 0.2rem;
         z-index: 10;
         cursor: pointer;
+    }
+
+    .set_up_fanc_box_top_title {
+        margin-bottom: 0.25rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 0.01rem solid var(--d);
     }
 }

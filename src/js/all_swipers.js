@@ -33,6 +33,10 @@ _if_Exists('.te2 .swiper', ($el) => {
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
+        navigation: {
+            nextEl: '.te2 .arr_prev',
+            prevEl: '.te2 .arr_next',
+        },
         breakpoints: {
             768: {
                 slidesPerView: 4,

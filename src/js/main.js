@@ -22,3 +22,26 @@ $('.nav_children').on('click', function (e) {
         $(this).removeClass('arrow_active');
     }
 });
+
+let lastScrollTop = 0;
+
+$(window).on('scroll', function () {
+    const scrollTop = $(this).scrollTop();
+    const headerHeight = $('header').outerHeight();
+
+    // 判断 header 显隐
+    if (scrollTop > headerHeight) {
+        $('header').addClass('scroll_down');
+    } else {
+        $('header').removeClass('scroll_down');
+    }
+
+    // 判断滚动方向，添加 body 类名
+    if (scrollTop > lastScrollTop) {
+        $('body').addClass('down').removeClass('up');
+    } else if (scrollTop < lastScrollTop) {
+        $('body').addClass('up').removeClass('down');
+    }
+
+    lastScrollTop = scrollTop;
+});

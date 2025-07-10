@@ -27,6 +27,7 @@
     background-color: var(--bc);
 
     &:hover {
+        color: var(--f) !important;
         background-color: var(--bc_c);
     }
 }

@@ -23,11 +23,24 @@
                 transition: all var(--ease) 0.3s;
             }
 
+            &.cur{
+                color: var(--bc);
+            }
+
             &.cur::after,
             &:hover::after {
                 left: 0;
                 width: 100%;
             }
+        }
+
+        &.on a{
+            color: var(--bc);
+        }
+
+        &.on a::after{
+            left: 0;
+            width: 100%;
         }
     }
 }
@@ -56,5 +69,9 @@
 
     a:hover {
         color: var(--bc);
+
+        svg{
+            transform: translateX(0.05rem);
+        }
     }
 }

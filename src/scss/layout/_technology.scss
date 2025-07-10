@@ -7,6 +7,10 @@
 .te2 {
     background-color: var(--f6);
 
+    .container{
+        position: relative;
+    }
+
     .swiper {
         padding: 0.6rem 0;
 
@@ -25,6 +29,32 @@
 
             img {
                 transform: scale(1.1);
+            }
+        }
+    }
+
+    .arr {
+        &>div {
+            position: absolute;
+            top: calc(50% - 0.24rem);
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            &.arr_prev{
+                left: -0.3rem;
+            }
+
+            &.arr_next{
+                right: -0.3rem;
+
+                img{
+                    transform: rotate(180deg);
+                }
+            }
+
+            img {
+                width: 0.15rem;
+                height: 0.28rem;
             }
         }
     }
