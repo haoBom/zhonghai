@@ -1,5 +1,5 @@
 import $ from 'jquery';
 
-$('.f_left svg').on('click', function () {
-    $(this).closest('li').addClass('cur').siblings().removeClass('cur');
+$('.f_left > ul > li').on('click', function () {
+    $(this).addClass('cur').siblings().removeClass('cur');
 });

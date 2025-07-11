@@ -12,6 +12,10 @@
     white-space: pre;
     transition: all var(--ease) 0.3s;
 
+    span{
+        transition: all var(--ease) 0.3s;
+    }
+
     &::before {
         content: '';
         width: 0.08rem;
@@ -19,6 +23,31 @@
         background-color: var(--ac);
         border-radius: 100%;
         transition: all var(--ease) 0.3s;
+    }
+}
+
+.btn[hover-word]{
+    position: relative;
+
+    &::after{
+        content: attr(hover-word);
+        position: absolute;
+        right: 0.3rem;
+        transform: translateY(50%);
+        opacity: 0;
+        transition: all var(--ease) 0.3s;
+    }
+
+    &:hover {
+        span{
+            transform: translateY(-50%);
+            opacity: 0;
+        }
+
+        &::after{
+            transform: translateY(0%);
+            opacity: 1;
+        }
     }
 }
 

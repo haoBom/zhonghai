@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { tab } from './tab.js'
 import "./all_fancyapps.js"
 import "./all_swipers.js"
 import "./all_gsaps.js"
@@ -9,8 +10,15 @@ import "./form/form.js"
 import "./member.js"
 
 $('.mob_ico').on('click', function () {
-    $('.nav').toggleClass('header_active')
-})
+    $(this).toggleClass('active');
+    $('.nav').toggleClass('header_active');
+
+    if ($('.nav').hasClass('header_active')) {
+        $('body').addClass('no-scroll');
+    } else {
+        $('body').removeClass('no-scroll');
+    }
+});
 
 $('.nav_children_arrow').on('click', function () {
     $(this).closest('.nav_item').find('.nav_children').toggleClass('arrow_active')
@@ -45,3 +53,6 @@ $(window).on('scroll', function () {
 
     lastScrollTop = scrollTop;
 });
+
+
+tab('.nav_children_tab', '.nav_children_right > div', 'mouseenter')

@@ -70,6 +70,10 @@ footer {
             font-size: 0.14rem;
             margin-bottom: 0.1rem;
 
+            @media screen and (max-width:768px) {
+                font-size: 12px;
+            }
+
             a {
                 transition: all var(--ease) 0.3s;
 

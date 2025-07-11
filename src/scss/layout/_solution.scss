@@ -140,6 +140,11 @@
         grid-template-columns: repeat(auto-fill, minmax(3.4rem, 1fr));
         position: relative;
 
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 0.16rem;
+        }
+
         .s5_item {
             transition: all var(--ease) 0.3s;
         }
@@ -304,7 +309,7 @@
         display: flex;
 
         .s7_img {
-            max-width: 2.6rem;
+            max-width: 3rem;
         }
     }
 
@@ -381,5 +386,13 @@
             max-height: fit-content;
             transform: translateY(-0.03rem);
         }
+    }
+}
+
+.loadmore {
+    display: none;
+
+    &.active {
+        display: flex;
     }
 }

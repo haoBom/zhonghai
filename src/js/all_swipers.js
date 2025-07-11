@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import { _if_Exists, isMo } from './tools.js';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-Swiper.use([Navigation, Pagination]);
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+Swiper.use([Navigation, Pagination, Autoplay]);
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -53,10 +53,18 @@ _if_Exists('.te2 .swiper', ($el) => {
 
 // 关于我们 - te2
 _if_Exists('.history_list', ($el) => {
-    const swiper = new Swiper($el[0], {
+    const container = $el[0];
+    const slideCount = container.querySelectorAll('.swiper-slide').length;
+
+    // 如果 slide 数量 ≤ 4，就给 history_list 容器加类
+    if (slideCount <= 4) {
+        container.classList.add('few-slides');
+        $('.a5_mouse').hide();
+    }
+
+    const swiper = new Swiper(container, {
         slidesPerView: 1.4,
         speed: 800,
-        loop: true,
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
@@ -104,7 +112,6 @@ _if_Exists('.history_list', ($el) => {
             swiper.slides[idx].classList.add('is-visible');
         }
     }
-
 });
 
 // 荣誉 - a6
@@ -116,6 +123,11 @@ _if_Exists('.a6 .swiper', ($el) => {
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
+        autoplay: {
+            delay: 3000,            // 每隔 3 秒切换一次
+            disableOnInteraction: true, // 用户操作后继续自动播放
+            pauseOnMouseEnter: true      // 鼠标移入时暂停（可选）
+        },
         breakpoints: {
             768: {
                 slidesPerView: 2,
@@ -144,8 +156,8 @@ _if_Exists('.a4-5_list', ($el) => {
 // 工艺技术 - s1
 _if_Exists('.s1 .swiper', ($el) => {
     new Swiper($el[0], {
-        slidesPerView: 1.4,
-        spaceBetween: "2.1%",
+        slidesPerView: 2.4,
+        spaceBetween: 10,
         speed: 800,
         observer: true,
         observeParents: true,
@@ -197,12 +209,12 @@ _if_Exists('.index_banner', ($el) => {
         observeParents: true,
         observeSlideChildren: true,
         pagination: {
-            el: '.index_banner .swiper-pagination',
-            clickable :true,
+            el: '.homeBanner .swiper-pagination',
+            clickable: true,
         },
         navigation: {
-            nextEl: '.index_banner .swiper-button-next',
-            prevEl: '.index_banner .swiper-button-prev',
+            nextEl: '.homeBanner .swiper-button-next',
+            prevEl: '.homeBanner .swiper-button-prev',
         },
     });
 });
