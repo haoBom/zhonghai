@@ -114,11 +114,20 @@
             align-items: center;
             background: hsl(0deg 0% 100% / 20%);
 
+            @media screen and (max-width:1440px) {
+                width: 0.6rem;
+                height: 0.6rem;
+            }
+
             img {
                 width: 0.3rem;
                 position: relative;
                 z-index: 2;
                 transition: all var(--ease) 0.3s;
+
+                @media screen and (max-width:1440px) {
+                    width: 0.15rem;
+                }
 
                 &:first-child {
                     opacity: 1;
@@ -155,6 +164,7 @@
             pointer-events: none;
 
             img {
+                object-fit: cover;
                 transform: scale(1.1);
                 transition: all var(--ease) 0.3s;
             }
@@ -166,12 +176,23 @@
             .t {
                 margin-bottom: 0.15rem;
                 transition: all var(--ease) 0.3s;
+
+                @media screen and (max-width:1440px) {
+                    line-height: 1.2;
+                    font-size: 0.18rem;
+                }
             }
 
             .s {
                 @include ellipsis(7);
                 height: 1.6rem;
                 transition: all var(--ease) 0.3s;
+
+                @media screen and (max-width:1440px) {
+                    height: 1.1rem;
+                    overflow-y: auto;
+                    padding-right: 0.2rem;
+                }
             }
         }
 
@@ -214,6 +235,10 @@
 
             .se3_i {
                 transform: translateY(1.6rem);
+
+                @media screen and (max-width:1440px) {
+                    transform: translateY(1.1rem);
+                }
             }
         }
     }

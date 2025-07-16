@@ -69,6 +69,16 @@
                 margin-top: 0.04rem;
                 transition: color var(--ease) 0.3s;
             }
+
+            .scroll_info{
+                overflow-y: auto;
+                height: 1.1rem;
+                padding-right: 0.1rem;
+
+                &::-webkit-scrollbar {
+                    background-color: transparent;
+                }
+            }
         }
 
         &:hover {
@@ -80,8 +90,20 @@
                     color: var(--f);
                 }
 
+                .scroll_info >* {
+                    color: var(--f);
+                }
+
                 .i {
                     opacity: 1;
+                }
+
+                .scroll_info{
+                    height: 1.8rem;
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: var(--f);
+                    }
                 }
             }
 
@@ -162,10 +184,11 @@
             height: 3rem;
             margin-left: -0.1rem;
             margin-right: 0.1rem;
+            padding-right: 0.15rem;
             width: calc(100% + 0.2rem);
 
             .s {
-                @include ellipsis(3);
+                @include ellipsis(30);
                 color: var(--6);
             }
         }

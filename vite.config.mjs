@@ -61,13 +61,14 @@ export default defineConfig({
         outDir: 'dist',
         assetsDir: '', // 设置为空，资源不要放 assets 文件夹
         assetsInlineLimit: 0, // 确保所有资源（包括 SVG）都不再内联 base64
-        minify: 'terser',
-        terserOptions: {
-            // 输出:format 压缩:compress 混淆:mangle
-            compress: { drop_console: true, drop_debugger: true },
-            format: { comments: false },
-            mangle: { toplevel: false },
-        },
+        minify: false,
+        // minify: 'terser',
+        // terserOptions: {
+        //     // 输出:format 压缩:compress 混淆:mangle
+        //     compress: { drop_console: true, drop_debugger: true },
+        //     format: { comments: false },
+        //     mangle: { toplevel: false },
+        // },
         rollupOptions: {
             output: {
                 assetFileNames: (assetInfo) => {

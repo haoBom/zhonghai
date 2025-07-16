@@ -34,6 +34,11 @@
     }
 
     .arr {
+
+        @media screen and (max-width:768px) {
+            display: none;
+        }
+
         &>div {
             position: absolute;
             top: calc(50% - 0.24rem);
@@ -538,10 +543,12 @@
 
     @media screen and (max-width:1440px) {
         --w: 3rem;
+        max-height: 2.8rem;
     }
 
     @media screen and (max-width:1024px) {
         --w: 2.8rem;
+        max-height:none;
     }
 
     @media screen and (max-width:1024px) {
@@ -555,6 +562,7 @@
         width: auto;
         height: auto;
         height: 100%;
+        width: 100%;
         overflow: hidden;
 
         img {
@@ -585,6 +593,9 @@
     }
 
     .l_materials_item_info {
+        max-height: 3.4rem;
+        overflow-y: auto;
+        padding-right: 0.2rem;
 
         @media screen and (max-width:1440px) {
             padding-top: 0.2rem;
@@ -593,7 +604,6 @@
         h3 {
             line-height: 1.2;
             color: var(--0);
-            @include ellipsis(2);
         }
 
         p {

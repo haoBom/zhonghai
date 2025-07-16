@@ -128,6 +128,12 @@
     .index_banner {
         width: 100%;
         height: calc(100vh - .8rem - .36rem);
+
+        @media screen and (max-width:768px) {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .index_banner_arr {
@@ -298,8 +304,10 @@
         h5 {
             font-weight: normal;
             font-family: 'Poppins';
-            @include ellipsis(1);
+            // @include ellipsis(1);
             color: var(--0);
+            line-height: 1.4;
+            min-height: 0.45rem;
         }
 
         p {

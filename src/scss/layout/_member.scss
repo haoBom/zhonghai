@@ -119,8 +119,9 @@
     }
 
     .quote_1_xx {
-        background-color: var(--f);
+        overflow-y: hidden;
         overflow-x: auto;
+        padding-bottom: 0.1rem;
 
         .t {
             height: 0.6rem;
@@ -140,6 +141,7 @@
         .b_list {
             padding: 0.2rem;
             min-width: 14rem;
+            background: var(--f);
 
             .b_item {
                 display: grid;
@@ -568,6 +570,10 @@
         max-width: 6rem;
         width: 100%;
 
+        @media screen and (max-width: 768px) {
+            max-width:none;
+        }
+
         .title {
             border-bottom: 0.01rem solid #b1c6e2;
             margin-bottom: 0.25rem;
@@ -586,6 +592,7 @@
                     grid-template-columns: 0.22rem 1fr;
                     gap: 0.1rem;
                     margin-bottom: 0.1rem;
+                    font-size: 14px;
                 }
 
                 a {
@@ -593,6 +600,7 @@
 
                     @media screen and (max-width: 768px) {
                         font-size: 0.14rem;
+                        font-size: 14px;
                     }
                 }
 
@@ -632,7 +640,7 @@
                 position: relative;
                 z-index: 2;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 440px) {
                     flex: 0 0 100%;
                 }
             }
