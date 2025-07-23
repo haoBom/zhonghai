@@ -14,7 +14,11 @@ $('.delete_this').on('click', function () {
     $(this).closest('.b_item').remove();
 });
 
-tab('.quote_2_Box .left .b_list', '.quote_2_Box .right .b_list', 'click');
+tab('.quote_2_Box .left .b_list', '.quote_2_Box .right .b_list', 'mouseenter');
+
+$('.quote_2_Box .right .b_list p').on('click', function () {
+    $(this).addClass('cur').siblings().removeClass('cur');
+})
 
 $('.b_chouse p').on('click', function () {
     $(this).addClass('cur').siblings().removeClass('cur');

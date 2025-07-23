@@ -342,6 +342,7 @@
                     cursor: pointer;
                     transition: all var(--ease) 0.3s;
 
+                    &.cur,
                     &:hover {
                         color: var(--bc);
                     }

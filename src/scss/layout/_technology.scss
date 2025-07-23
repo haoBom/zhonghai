@@ -85,6 +85,7 @@
 
         .s {
             color: var(--1);
+            text-align: justify;
         }
     }
 }
@@ -238,8 +239,17 @@
     }
 
     .c_item {
+        height: 100%;
+        width: 100%;
+
+        .c_img {
+            height: 100%;
+            width: 100%;
+        }
+
         img {
             transition: all var(--ease) 0.3s;
+            object-fit: cover;
         }
 
         &:hover {
@@ -364,6 +374,7 @@
 
             p {
                 color: var(--f);
+                text-align: justify;
             }
         }
 

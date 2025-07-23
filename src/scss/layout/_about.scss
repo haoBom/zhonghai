@@ -20,6 +20,7 @@
     display: grid;
     gap: 0.2rem;
     grid-template-columns: 3fr 5fr;
+    text-align: justify;
 
     @media screen and (max-width:1024px) {
         grid-template-columns: 1fr;
@@ -236,6 +237,7 @@
 
         .s {
             color: var(--1);
+            text-align: justify;
         }
     }
 
@@ -485,6 +487,7 @@
                 color: var(--f);
                 max-width: 8rem;
                 width: 100%;
+                text-align: justify;
             }
 
             p:first-child {

@@ -56,3 +56,9 @@ $(window).on('scroll', function () {
 
 
 tab('.nav_children_tab', '.nav_children_right > div', 'mouseenter')
+
+$('.backTop').on('click', function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
+})

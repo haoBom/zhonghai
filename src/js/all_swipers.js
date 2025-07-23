@@ -68,6 +68,10 @@ _if_Exists('.history_list', ($el) => {
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        },
         breakpoints: {
             768: {
                 slidesPerView: 2,
