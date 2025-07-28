@@ -6080,6 +6080,7 @@ header.scroll_down {
   position: relative;
   overflow: hidden;
   max-width: 4.6rem;
+  height: auto;
 }
 .s1 .swiper-slide .s1_img {
   border-bottom-left-radius: 0;
@@ -7367,6 +7368,7 @@ header.scroll_down {
 .login_Box .login_contact .c_contact_way .c_contact_way_xin {
   grid-template-columns: 0.3rem 1fr;
   gap: 0.15rem;
+  display: flex;
 }
 @media screen and (max-width: 768px) {
   .login_Box .login_contact .c_contact_way .c_contact_way_xin {
@@ -8385,17 +8387,11 @@ footer .footer_menu .search .formBtn img {
   position: relative;
   z-index: 2;
   padding: 0.6rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.5rem;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
   width: -moz-fit-content;
   width: fit-content;
-}
-@media screen and (max-width: 768px) {
-  .homeBanner .homeBanner_left {
-    display: none;
-  }
 }
 .homeBanner .homeBanner_left .homeBanner_left_Box {
   border-left: 0.01rem solid rgba(255, 255, 255, 0.1);
@@ -8403,6 +8399,14 @@ footer .footer_menu .search .formBtn img {
   flex-direction: column;
   gap: 0.2rem;
   padding-bottom: 0.4rem;
+}
+.homeBanner .homeBanner_left .homeBanner_left_Box:last-child {
+  padding-bottom: 0rem;
+}
+@media screen and (max-width: 1440px) {
+  .homeBanner .homeBanner_left .homeBanner_left_Box {
+    gap: 0.1rem;
+  }
 }
 .homeBanner .homeBanner_left p {
   color: var(--f);
@@ -9536,4 +9540,169 @@ footer .footer_menu .search .formBtn img {
 }
 .sidebar .backTop:hover p {
   opacity: 1;
+}
+
+.newsbox {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  background-color: rgba(255, 255, 255, 0);
+  transition: all var(--ease) 0.6s;
+  display: flex;
+  clip-path: inset(0 76% 0 0%);
+  height: calc(100vh - 0.8rem - 0.36rem);
+  max-height: 7.4rem;
+}
+@media screen and (max-width: 768px) {
+  .newsbox {
+    display: none;
+  }
+}
+.newsbox .homeBanner_left {
+  width: 24%;
+  padding-top: 1.2rem;
+}
+@media screen and (max-width: 1024px) {
+  .newsbox .homeBanner_left {
+    padding-top: 0.8rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+}
+.newsbox .homeBanner_right {
+  width: 76%;
+  padding-top: 1.2rem;
+  padding-left: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-right: 2rem;
+  border-left: 0.01rem solid rgba(0, 0, 0, 0.1);
+  display: grid;
+}
+@media screen and (max-width: 1440px) {
+  .newsbox .homeBanner_right {
+    padding-left: 0.6rem;
+    padding-right: 1.4rem;
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .newsbox .homeBanner_right {
+    padding-top: 0.8rem;
+  }
+}
+.newsbox .homeBanner_right .homeBanner_right_Box {
+  display: grid;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--ease) 0.3s;
+  grid-area: 1/1;
+}
+.newsbox .homeBanner_right .homeBanner_right_Box.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.newsbox .homeBanner_right .homeBanner_left_Item {
+  display: flex;
+  justify-content: space-between;
+  grid-area: 1/1;
+  gap: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--ease) 0.3s;
+}
+@media screen and (max-width: 1440px) {
+  .newsbox .homeBanner_right .homeBanner_left_Item {
+    gap: 0.5rem;
+  }
+}
+.newsbox .homeBanner_right .homeBanner_left_Item.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .swiper-slide {
+  border-radius: 0.04rem;
+  overflow: hidden;
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_paragraph .t {
+  line-height: 1.3;
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_paragraph .s {
+  color: var(--6);
+  text-align: justify;
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_swiper_h1 a {
+  color: var(--0);
+  transition: all var(--ease) 0.3s;
+  gap: 0.08rem;
+}
+@media screen and (max-width: 480px) {
+  .newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_swiper_h1 a {
+    display: none;
+  }
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_swiper_h1 a:hover {
+  color: var(--bc);
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_swiper_h1 a:hover span {
+  background-color: var(--bc);
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_swiper_h1 a span {
+  background-color: var(--0);
+  border-radius: 0.04rem;
+  width: 0.23rem;
+  height: 0.23rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--ease) 0.3s;
+}
+.newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_swiper_h1 a span img {
+  width: 0.14rem;
+}
+.newsbox .homeBanner_right .homeBanner_right_inRight {
+  width: 40%;
+  border-radius: 0.04rem;
+  overflow: hidden;
+}
+.newsbox .homeBanner_right .homeBanner_right_inRight img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.newsbox:hover, .newsbox.active {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+  clip-path: inset(0 0% 0 0%);
+}
+.newsbox:hover .homeBanner_left p:not(.title), .newsbox.active .homeBanner_left p:not(.title) {
+  opacity: 0.6;
+}
+.newsbox:hover .homeBanner_left p:not(.title)::before, .newsbox.active .homeBanner_left p:not(.title)::before {
+  display: none;
+}
+.newsbox:hover .homeBanner_left p, .newsbox.active .homeBanner_left p {
+  color: var(--0);
+}
+.newsbox:hover .homeBanner_left p:hover, .newsbox.active .homeBanner_left p:hover {
+  color: var(--bc);
+  text-decoration: underline;
+  opacity: 1;
+}
+.newsbox:hover .homeBanner_left p::before, .newsbox.active .homeBanner_left p::before {
+  background-color: var(--0);
+}
+.newsbox:hover .homeBanner_left_Box, .newsbox.active .homeBanner_left_Box {
+  border-left-color: rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=main.css.map */

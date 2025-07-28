@@ -62,3 +62,17 @@ $('.backTop').on('click', function () {
         scrollTop: 0
     }, 500);
 })
+
+$('.homeBanner_left p').on('mouseenter', function () {
+    var p_index = $(this).closest('.homeBanner_left_Box').index();
+    var index = $(this).index();
+
+    // 找到对应的 homeBanner_right 子区域
+    var $targetBox = $('.homeBanner_right').children().eq(p_index);
+
+    // 在该区域内设置第 index 个子项为 active，其余移除
+    $targetBox.addClass('active').siblings().removeClass('active');
+
+    // 其他区域移除 active（如果需要）
+    $targetBox.children().eq(index).addClass('active').siblings().removeClass('active');
+});

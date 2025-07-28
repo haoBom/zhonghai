@@ -222,3 +222,15 @@ _if_Exists('.index_banner', ($el) => {
         },
     });
 });
+
+// 首页幻灯片左侧内容幻灯片
+_if_Exists('.homeBanner_right_swiper', ($el) => {
+    new Swiper('.homeBanner_right_swiper .swiper', {
+        slidesPerView: 3,
+        speed: 400,
+        spaceBetween : 30,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+    });
+});

@@ -588,6 +588,7 @@
             .c_contact_way_xin {
                 grid-template-columns: 0.3rem 1fr;
                 gap: 0.15rem;
+                display: flex;
 
                 @media screen and (max-width: 768px) {
                     grid-template-columns: 0.22rem 1fr;
