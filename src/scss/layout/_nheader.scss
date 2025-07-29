@@ -9,6 +9,7 @@
 
     .c_img_1 {
         position: absolute;
+        left: 0;
         right: 0;
         top: 0;
         bottom: 0;
@@ -16,7 +17,7 @@
         display: none;
 
         img {
-            object-position: right top;
+            object-fit: cover;
         }
     }
 
@@ -130,6 +131,15 @@
 
         100% {
             transform: rotate(360deg);
+        }
+    }
+
+    &.haveImg{
+        .r_ring{
+            display: none;
+        }
+        .c_img{
+            display: flex;
         }
     }
 }

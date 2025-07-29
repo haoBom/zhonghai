@@ -319,6 +319,17 @@
                     }
                 }
             }
+
+            .b_item.cur {
+                p{
+                    background-color: var(--bc);
+                    color: var(--f);
+                    
+                    img{
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 

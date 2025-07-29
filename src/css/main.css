@@ -4024,7 +4024,7 @@ header.scroll_down {
   padding-top: 0.6rem;
   border-right: 0.01rem solid var(--d);
   display: flex;
-  justify-content: space-between;
+  gap: 0.14rem;
   flex-direction: column;
   padding-bottom: 0.55rem;
 }
@@ -4179,6 +4179,7 @@ header.scroll_down {
 }
 .p_header .c_img_1 {
   position: absolute;
+  left: 0;
   right: 0;
   top: 0;
   bottom: 0;
@@ -4186,8 +4187,8 @@ header.scroll_down {
   display: none;
 }
 .p_header .c_img_1 img {
-  -o-object-position: right top;
-     object-position: right top;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p_header .r_ring {
   --r1: 9rem;
@@ -4302,6 +4303,12 @@ header.scroll_down {
   100% {
     transform: rotate(360deg);
   }
+}
+.p_header.haveImg .r_ring {
+  display: none;
+}
+.p_header.haveImg .c_img {
+  display: flex;
 }
 
 .p_header2 {
@@ -7144,6 +7151,13 @@ header.scroll_down {
   font-family: "Poppins-Medium";
 }
 .quote_2 .left .b_list p:hover img {
+  opacity: 1;
+}
+.quote_2 .left .b_list .b_item.cur p {
+  background-color: var(--bc);
+  color: var(--f);
+}
+.quote_2 .left .b_list .b_item.cur p img {
   opacity: 1;
 }
 .quote_2 .right .b_list {
