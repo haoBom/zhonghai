@@ -16,18 +16,21 @@ $('.delete_this').on('click', function () {
 
 tab('.quote_2_Box .left .b_list', '.quote_2_Box .right .b_list', 'mouseenter');
 
-$('.quote_2_Box .right .b_list p').on('click', function () {
-    $(this).addClass('cur').siblings().removeClass('cur');
+$(function(){
+    $('.quote_2_Box').on('click','.right .b_list p', function () {
+        $(this).closest('.b_item').find('p').removeClass('cur');
+        $(this).addClass('cur');
 
-    // 添加点击记录
-    var p_index = $(this).closest('.b_item').index();
-    var hasCur = $(this).closest('.b_item').find('p.cur').length > 0;
-    var $leftItem = $('.quote_2_Box .left .b_list .b_item').eq(p_index);
-    if (hasCur) {
-        $leftItem.addClass('choice_ietm');
-    } else {
-        $leftItem.removeClass('choice_ietm');
-    }
+        // 添加点击记录
+        var p_index = $(this).closest('.b_item').index();
+        var hasCur = $(this).closest('.b_item').find('p.cur').length > 0;
+        var $leftItem = $(this).closest('.quote_2_Box').find('.left .b_list .b_item').eq(p_index);
+        if (hasCur) {
+            $leftItem.addClass('choice_ietm');
+        } else {
+            $leftItem.removeClass('choice_ietm');
+        }
+    });
 })
 
 $('.b_chouse p').on('click', function () {
