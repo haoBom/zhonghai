@@ -300,6 +300,21 @@
                 transition: all var(--ease) 0.3s;
                 cursor: pointer;
 
+                span{
+                    display: flex;
+                    gap: 0.08rem;
+                    align-items: center;
+
+                    &::before{
+                        content: '';
+                        width: 0.06rem;
+                        height: 0.06rem;
+                        background-color: var(--ac);
+                        border-radius: 100%;
+                        display: none;
+                    }
+                }
+
                 img {
                     width: 0.17rem;
                     opacity: 0;
@@ -330,6 +345,12 @@
                     }
                 }
             }
+
+            .b_item.choice_ietm{
+                p span::before{
+                    display: block;
+                }
+            }
         }
     }
 
@@ -352,10 +373,26 @@
                     padding: 0.06rem 0;
                     cursor: pointer;
                     transition: all var(--ease) 0.3s;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.1rem;
+
+                    &::before{
+                        content: '';
+                        width: 0.14rem;
+                        height: 0.14rem;
+                        background-color: var(--f);
+                        border: 0.01rem solid #9b9b9b;
+                        border-radius: 100%;
+                    }
 
                     &.cur,
                     &:hover {
                         color: var(--bc);
+
+                        &::before{
+                            border: 0.03rem solid var(--ac);
+                        }
                     }
                 }
 
@@ -1208,4 +1245,22 @@
         padding-bottom: 0.2rem;
         border-bottom: 0.01rem solid var(--d);
     }
+}
+
+
+.custom-date {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 0 0.1rem;
+    text-align: center;
+    max-width: 1.3rem;
+}
+
+.custom-date::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }

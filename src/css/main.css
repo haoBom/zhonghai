@@ -6602,7 +6602,6 @@ header.scroll_down {
   overflow: hidden;
   height: 1.6rem;
   transition: all var(--ease) 0.3s;
-  text-align: justify;
 }
 @media screen and (max-width: 1440px) {
   .se3 .se3_item .se3_i .s {
@@ -7138,6 +7137,19 @@ header.scroll_down {
   transition: all var(--ease) 0.3s;
   cursor: pointer;
 }
+.quote_2 .left .b_list p span {
+  display: flex;
+  gap: 0.08rem;
+  align-items: center;
+}
+.quote_2 .left .b_list p span::before {
+  content: "";
+  width: 0.06rem;
+  height: 0.06rem;
+  background-color: var(--ac);
+  border-radius: 100%;
+  display: none;
+}
 .quote_2 .left .b_list p img {
   width: 0.17rem;
   opacity: 0;
@@ -7160,6 +7172,9 @@ header.scroll_down {
 .quote_2 .left .b_list .b_item.cur p img {
   opacity: 1;
 }
+.quote_2 .left .b_list .b_item.choice_ietm p span::before {
+  display: block;
+}
 .quote_2 .right .b_list {
   padding: 0 0.34rem;
   border-left: 0.01rem solid var(--d);
@@ -7179,9 +7194,23 @@ header.scroll_down {
   padding: 0.06rem 0;
   cursor: pointer;
   transition: all var(--ease) 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+.quote_2 .right .b_list .b_item p::before {
+  content: "";
+  width: 0.14rem;
+  height: 0.14rem;
+  background-color: var(--f);
+  border: 0.01rem solid #9b9b9b;
+  border-radius: 100%;
 }
 .quote_2 .right .b_list .b_item p.cur, .quote_2 .right .b_list .b_item p:hover {
   color: var(--bc);
+}
+.quote_2 .right .b_list .b_item p.cur::before, .quote_2 .right .b_list .b_item p:hover::before {
+  border: 0.03rem solid var(--ac);
 }
 .quote_2 .right .b_list .b_item.cur {
   display: block;
@@ -7912,6 +7941,23 @@ header.scroll_down {
   margin-bottom: 0.25rem;
   padding-bottom: 0.2rem;
   border-bottom: 0.01rem solid var(--d);
+}
+
+.custom-date {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  padding: 0 0.1rem;
+  text-align: center;
+  max-width: 1.3rem;
+}
+
+.custom-date::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
 
 .mp .container {

@@ -189,7 +189,6 @@
                 @include ellipsis(7);
                 height: 1.6rem;
                 transition: all var(--ease) 0.3s;
-                text-align: justify;
 
                 @media screen and (max-width:1440px) {
                     height: 1.1rem;
