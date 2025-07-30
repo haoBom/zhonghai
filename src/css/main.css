@@ -7117,6 +7117,9 @@ header.scroll_down {
   top: 0;
   z-index: 0;
 }
+.quote_2 .r_t {
+  padding: 0 0.64rem;
+}
 .quote_2 .left .b_list {
   padding-right: 0.2rem;
 }
@@ -7191,12 +7194,14 @@ header.scroll_down {
 .quote_2 .right .b_list .b_item p {
   font-size: 0.14rem;
   color: var(--6);
-  padding: 0.06rem 0;
+  padding: 0.06rem 0.3rem;
   cursor: pointer;
   transition: all var(--ease) 0.3s;
   display: flex;
   align-items: center;
   gap: 0.1rem;
+  border-radius: 0.04rem;
+  border: 0.01rem solid var(--f);
 }
 .quote_2 .right .b_list .b_item p::before {
   content: "";
@@ -7208,9 +7213,11 @@ header.scroll_down {
 }
 .quote_2 .right .b_list .b_item p.cur, .quote_2 .right .b_list .b_item p:hover {
   color: var(--bc);
+  border: 0.01rem solid var(--bc);
+  background-color: #eaf3ff;
 }
 .quote_2 .right .b_list .b_item p.cur::before, .quote_2 .right .b_list .b_item p:hover::before {
-  border: 0.03rem solid var(--ac);
+  border: 0.034rem solid var(--ac);
 }
 .quote_2 .right .b_list .b_item.cur {
   display: block;
@@ -9064,6 +9071,13 @@ footer .footer_menu .search .formBtn img {
   color: var(--0);
   line-height: 1.2;
   transition: color var(--ease) 0.3s;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
 }
 .i4 .c_item .c_info .s {
   word-break: break-word;

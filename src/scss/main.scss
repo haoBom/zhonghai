@@ -702,6 +702,7 @@
                 color: var(--0);
                 line-height: 1.2;
                 transition: color var(--ease) 0.3s;
+                @include ellipsis(2);
             }
 
             .s {

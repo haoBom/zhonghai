@@ -280,6 +280,10 @@
         }
     }
 
+    .r_t{
+        padding: 0 0.64rem;
+    }
+
     .left {
         .b_list {
             padding-right: 0.2rem;
@@ -370,12 +374,14 @@
                 p {
                     font-size: 0.14rem;
                     color: var(--6);
-                    padding: 0.06rem 0;
+                    padding: 0.06rem 0.3rem;
                     cursor: pointer;
                     transition: all var(--ease) 0.3s;
                     display: flex;
                     align-items: center;
                     gap: 0.1rem;
+                    border-radius: 0.04rem;
+                    border: 0.01rem solid var(--f);
 
                     &::before{
                         content: '';
@@ -389,9 +395,11 @@
                     &.cur,
                     &:hover {
                         color: var(--bc);
+                        border: 0.01rem solid var(--bc);
+                        background-color: #eaf3ff;
 
                         &::before{
-                            border: 0.03rem solid var(--ac);
+                            border: 0.034rem solid var(--ac);
                         }
                     }
                 }
