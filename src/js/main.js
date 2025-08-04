@@ -64,6 +64,19 @@ $('.backTop').on('click', function () {
 })
 
 $('.homeBanner_left p').on('mouseenter', function () {
+    var href = $(this).find('a').attr('href');
+    var $newsbox = $(this).closest('.newsbox');
+
+    // 如果是有效链接（不是 javascript:void(0);），直接返回
+    if (href && href !== 'javascript:void(0);') {
+        $newsbox.removeClass('active');
+
+        return;
+    }
+
+    // 向上查找 newsbox，并加类名 active，移除其他 active
+    $newsbox.addClass('active').siblings('.newsbox').removeClass('active');
+
     var p_index = $(this).closest('.homeBanner_left_Box').index();
     var index = $(this).index();
 
@@ -75,4 +88,27 @@ $('.homeBanner_left p').on('mouseenter', function () {
 
     // 其他区域移除 active（如果需要）
     $targetBox.children().eq(index).addClass('active').siblings().removeClass('active');
+});
+
+$('.newsbox').on('mouseleave', function () {
+    $(this).removeClass('active');
+})
+
+$(window).on('scroll', function () {
+    const scrollTop = $(this).scrollTop();
+    const windowHeight = $(this).height();
+    const docHeight = $(document).height();
+    const $body = $('body');
+
+    if (scrollTop <= 3) {
+        $body.addClass('at-top');
+    } else {
+        $body.removeClass('at-top');
+    }
+
+    if (scrollTop + windowHeight >= docHeight - 3) {
+        $body.addClass('at-bottom');
+    } else {
+        $body.removeClass('at-bottom');
+    }
 });

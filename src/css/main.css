@@ -3097,10 +3097,6 @@ body {
   border-top: 0.01rem dashed #ccc;
 }
 
-.richText p {
-  text-align: justify;
-}
-
 .pn_page {
   display: flex;
   justify-content: flex-start;
@@ -3792,12 +3788,20 @@ header.scroll_down {
   height: 0.8rem;
   border-bottom: 0.01rem solid var(--d);
 }
+.header_bottom .logo {
+  max-width: 0.44rem;
+}
+@media screen and (max-width: 1024px) {
+  .header_bottom .logo {
+    max-width: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header_bottom {
     padding: 0 0.3rem;
   }
   .header_bottom .logo img {
-    width: 1.05rem;
+    width: 0.4rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4394,6 +4398,7 @@ header.scroll_down {
   place-content: center;
   background: var(--f);
   transition: opacity var(--ease) 0.3s;
+  margin-top: 0.2rem;
 }
 @media screen and (max-width: 768px) {
   .p_case_1 .c_item .c_info .i {
@@ -4406,6 +4411,13 @@ header.scroll_down {
 .p_case_1 .c_item .c_info .t {
   color: var(--0);
   line-height: 1.2;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
   transition: color var(--ease) 0.3s;
 }
 .p_case_1 .c_item .c_info .s {
@@ -4498,9 +4510,6 @@ header.scroll_down {
 }
 .case_d_1 .container {
   align-items: center;
-}
-.case_d_1 .container .s {
-  text-align: justify;
 }
 @media screen and (max-width: 768px) {
   .case_d_1 .container .s3_right {
@@ -4955,7 +4964,6 @@ header.scroll_down {
 }
 .te3 .te3_right .s {
   color: var(--1);
-  text-align: justify;
 }
 
 .te4 {
@@ -5202,7 +5210,6 @@ header.scroll_down {
 }
 .Why_us .why_us_item .Why_us_item_title p {
   color: var(--f);
-  text-align: justify;
 }
 .Why_us .why_us_item:hover .Why_us_item_title {
   padding-top: 0.85rem;
@@ -5471,7 +5478,6 @@ header.scroll_down {
   display: grid;
   gap: 0.2rem;
   grid-template-columns: 3fr 5fr;
-  text-align: justify;
 }
 @media screen and (max-width: 1024px) {
   .a2_info {
@@ -5685,7 +5691,6 @@ header.scroll_down {
 }
 .a4 .a4_right .s {
   color: var(--1);
-  text-align: justify;
 }
 .a4 .a4_item2 .siimg {
   left: auto;
@@ -5907,7 +5912,6 @@ header.scroll_down {
   color: var(--f);
   max-width: 8rem;
   width: 100%;
-  text-align: justify;
 }
 .a7 .kcx .kcx_title p:first-child {
   line-height: 1.2;
@@ -6131,7 +6135,6 @@ header.scroll_down {
 }
 .s2 .s2_right .s {
   color: var(--1);
-  text-align: justify;
 }
 
 .s3 {
@@ -6155,7 +6158,6 @@ header.scroll_down {
 }
 .s3 .s3_right .s {
   color: var(--1);
-  text-align: justify;
 }
 
 .s4 .s4_bg img {
@@ -6683,9 +6685,6 @@ header.scroll_down {
   color: var(--f);
   max-width: 7.5rem;
 }
-.se4 .se4_info .s {
-  text-align: justify;
-}
 @media screen and (max-width: 768px) {
   .se4 .se4_info {
     padding: 0.3rem;
@@ -6979,7 +6978,7 @@ header.scroll_down {
 .quote_require .quote_1_xx {
   overflow-y: hidden;
   overflow-x: auto;
-  padding-bottom: 0.1rem;
+  padding-bottom: 0.2rem;
 }
 .quote_require .quote_1_xx .t {
   height: 0.6rem;
@@ -7311,6 +7310,14 @@ header.scroll_down {
 }
 .quote_options .form_input {
   margin: 0;
+}
+.quote_options .form_input .radiobox_Item {
+  min-width: 1.2rem;
+}
+@media screen and (max-width: 768px) {
+  .quote_options .form_input .radiobox_Item {
+    min-width: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .quote_options .form_input .radioList {
@@ -7967,6 +7974,11 @@ header.scroll_down {
   -webkit-appearance: none;
 }
 
+.st_formBox .p_group .input-group input {
+  height: 0.4rem;
+  font-size: 0.14rem;
+}
+
 .mp .container {
   max-width: 10rem;
 }
@@ -8054,7 +8066,7 @@ footer {
   }
 }
 footer .footer_logo {
-  max-width: 1.18rem;
+  max-width: 2.2rem;
 }
 footer .footer_menu {
   display: flex;
@@ -8540,6 +8552,7 @@ footer .footer_menu .search .formBtn img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  padding-right: 1.2rem;
 }
 @media screen and (max-width: 768px) {
   .homeBanner .swiper-slide .index_title {
@@ -8548,9 +8561,6 @@ footer .footer_menu .search .formBtn img {
 }
 .homeBanner .swiper-slide .index_title .index_title_top {
   text-align: left;
-}
-.homeBanner .swiper-slide .index_title .index_title_top p:last-child {
-  font-style: italic;
 }
 .homeBanner .swiper-slide .index_title .index_title_bottom {
   margin-top: 0.4rem;
@@ -8682,6 +8692,7 @@ footer .footer_menu .search .formBtn img {
 }
 .i2 h3 {
   position: relative;
+  line-height: 1;
 }
 .i2 h3::after {
   content: "";
@@ -8695,7 +8706,6 @@ footer .footer_menu .search .formBtn img {
 }
 .i2 .c_rich p {
   margin-bottom: 0.1rem;
-  text-align: justify;
 }
 .i2 .ab_bottom {
   height: var(--asb);
@@ -9364,6 +9374,7 @@ footer .footer_menu .search .formBtn img {
   bottom: 15%;
   right: 0.18rem;
   z-index: 10;
+  transition: all var(--ease) 0.6s;
 }
 @media screen and (max-width: 1440px) {
   .sidebar {
@@ -9616,6 +9627,11 @@ footer .footer_menu .search .formBtn img {
   opacity: 1;
 }
 
+.at-top .sidebar,
+.at-bottom .sidebar {
+  right: -1rem;
+}
+
 .newsbox {
   position: relative;
   z-index: 2;
@@ -9714,7 +9730,6 @@ footer .footer_menu .search .formBtn img {
 }
 .newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_paragraph .s {
   color: var(--6);
-  text-align: justify;
 }
 .newsbox .homeBanner_right .homeBanner_right_inLeft .homeBanner_right_swiper_h1 a {
   color: var(--0);
@@ -9754,29 +9769,29 @@ footer .footer_menu .search .formBtn img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.newsbox:hover, .newsbox.active {
+.newsbox.active {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.9);
   clip-path: inset(0 0% 0 0%);
 }
-.newsbox:hover .homeBanner_left p:not(.title), .newsbox.active .homeBanner_left p:not(.title) {
+.newsbox.active .homeBanner_left p:not(.title) {
   opacity: 0.6;
 }
-.newsbox:hover .homeBanner_left p:not(.title)::before, .newsbox.active .homeBanner_left p:not(.title)::before {
+.newsbox.active .homeBanner_left p:not(.title)::before {
   display: none;
 }
-.newsbox:hover .homeBanner_left p, .newsbox.active .homeBanner_left p {
+.newsbox.active .homeBanner_left p {
   color: var(--0);
 }
-.newsbox:hover .homeBanner_left p:hover, .newsbox.active .homeBanner_left p:hover {
+.newsbox.active .homeBanner_left p:hover {
   color: var(--bc);
   text-decoration: underline;
   opacity: 1;
 }
-.newsbox:hover .homeBanner_left p::before, .newsbox.active .homeBanner_left p::before {
+.newsbox.active .homeBanner_left p::before {
   background-color: var(--0);
 }
-.newsbox:hover .homeBanner_left_Box, .newsbox.active .homeBanner_left_Box {
+.newsbox.active .homeBanner_left_Box {
   border-left-color: rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=main.css.map */

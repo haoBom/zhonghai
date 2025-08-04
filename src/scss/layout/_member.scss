@@ -121,7 +121,7 @@
     .quote_1_xx {
         overflow-y: hidden;
         overflow-x: auto;
-        padding-bottom: 0.1rem;
+        padding-bottom: 0.2rem;
 
         .t {
             height: 0.6rem;
@@ -519,6 +519,14 @@
 
     .form_input {
         margin: 0;
+
+        .radiobox_Item{
+            min-width: 1.2rem;
+
+            @media screen and (max-width: 768px) {
+                min-width: auto;
+            }
+        }
 
         @media screen and (max-width: 768px) {
             .radioList {
@@ -1271,4 +1279,9 @@
 .custom-date::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
+}
+
+.st_formBox .p_group .input-group input{
+    height: 0.4rem;
+    font-size: 0.14rem;
 }

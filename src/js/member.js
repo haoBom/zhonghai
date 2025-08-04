@@ -2,6 +2,9 @@ import $ from 'jquery';
 import { tab } from './tab.js';
 import './fancy.js';
 
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
+
 $('.quote_require .b_item input').on('focus', function () {
     $(this).closest('.form_input').addClass('hint');
 })
@@ -17,15 +20,23 @@ $('.delete_this').on('click', function () {
 tab('.quote_2_Box .left .b_list', '.quote_2_Box .right .b_list', 'mouseenter');
 
 $(function(){
-    $('.quote_2_Box').on('click','.right .b_list p', function () {
-        $(this).closest('.b_item').find('p').removeClass('cur');
-        $(this).addClass('cur');
+    $('.quote_2_Box .right .b_list p').on('click', function () {
+        var $this = $(this);
+        var $parentItem = $this.closest('.b_item');
+        var wasAlreadySelected = $this.hasClass('cur'); // 检查是否已经选中
 
-        // 添加点击记录
-        var p_index = $(this).closest('.b_item').index();
-        var hasCur = $(this).closest('.b_item').find('p.cur').length > 0;
-        var $leftItem = $(this).closest('.quote_2_Box').find('.left .b_list .b_item').eq(p_index);
-        if (hasCur) {
+        // 先移除同组所有 p 的 cur
+        $parentItem.find('p').removeClass('cur');
+
+        // 如果之前没选中，就选中它（否则保持未选中）
+        if (!wasAlreadySelected) {
+            $this.addClass('cur');
+        }
+
+        // 更新左侧的 choice_ietm 状态
+        var p_index = $parentItem.index();
+        var $leftItem = $this.closest('.quote_2_Box').find('.left .b_list .b_item').eq(p_index);
+        if ($parentItem.find('p.cur').length > 0) {
             $leftItem.addClass('choice_ietm');
         } else {
             $leftItem.removeClass('choice_ietm');
@@ -61,4 +72,10 @@ $('.zengjia_this').on('click', function () {
 
 $(document).on('click', '.shanchu_this', function () {
     $(this).closest('.st_item').remove();
+});
+
+$(function(){
+    flatpickr("#appt-date", {
+        dateFormat: "Y-m-d"
+    });
 });
