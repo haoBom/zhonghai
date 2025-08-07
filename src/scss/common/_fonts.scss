@@ -23,6 +23,15 @@ $fonts: (
         style: normal),
     'Oswald': (file: 'Oswald-Regular',
         weight: 700,
+        style: normal),
+    'OpenSans-Regular': (file: 'OpenSans-Regular',
+        weight: 400,
+        style: normal),
+    'OpenSans-Medium': (file: 'OpenSans-Medium',
+        weight: 500,
+        style: normal),
+    'OpenSans-Bold': (file: 'OpenSans-Bold',
+        weight: 700,
         style: normal)
 );
 
@@ -34,7 +43,7 @@ $fonts: (
 }
 
 .ppins-bold {
-    font-family: "Poppins-Bold";
+    font-family: "OpenSans-Bold";
 
     >* {
         font-family: inherit;
@@ -42,7 +51,7 @@ $fonts: (
 }
 
 .ppins-Medium {
-    font-family: "Poppins-Medium";
+    font-family: "OpenSans-Medium";
 
     >* {
         font-family: inherit;

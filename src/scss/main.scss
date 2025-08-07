@@ -326,7 +326,7 @@
 
         h5 {
             font-weight: normal;
-            font-family: 'Poppins';
+            font-family: 'OpenSans-Regular';
             // @include ellipsis(1);
             color: var(--0);
             line-height: 1.4;
@@ -433,7 +433,7 @@
 
                 p {
                     font-size: 0.24rem;
-                    font-family: "Poppins", "PingFang SC", "Microsoft YaHei", "Microsoft YaHei UI", "SimSun", "SimHei", "Arial";
+                    font-family: "OpenSans-Regular", "PingFang SC", "Microsoft YaHei", "Microsoft YaHei UI", "SimSun", "SimHei", "Arial";
 
                     @media screen and (max-width:768px) {
                         font-size: 0.18rem;
@@ -864,7 +864,7 @@
 
             p {
                 font-size: 0.24rem;
-                font-family: "Poppins-Medium";
+                font-family: "OpenSans-Medium";
                 line-height: 1.2;
 
                 &:hover {
@@ -982,7 +982,7 @@
         }
 
         p {
-            font-family: 'Poppins-Regular';
+            font-family: 'OpenSans-Regular';
             line-height: 1.2;
         }
     }

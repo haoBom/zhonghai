@@ -48,19 +48,11 @@ header {
     border-bottom: 0.01rem solid var(--d);
 
     .logo {
-        max-width: 0.44rem;
-
-        @media screen and (max-width:1024px) {
-            max-width: none;
-        }
+        height: 0.6rem;
     }
 
     @media screen and (max-width:1024px) {
         padding: 0 0.3rem;
-
-        .logo img {
-            width: 0.4rem;
-        }
     }
 
     @media screen and (max-width:768px) {
@@ -128,7 +120,7 @@ header {
 
                 a {
                     padding: 0 0.2rem;
-                    font-family: "Poppins-Medium";
+                    font-family: "OpenSans-Medium";
                     transition: all var(--ease) 0.3s;
 
                     @media screen and (max-width:768px) {

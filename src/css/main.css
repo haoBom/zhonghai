@@ -2361,15 +2361,36 @@ html {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Medium";
+  src: url("../fonts/OpenSans-Medium.woff2") format("woff2"), url("../fonts/OpenSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 .ppins-bold {
-  font-family: "Poppins-Bold";
+  font-family: "OpenSans-Bold";
 }
 .ppins-bold > * {
   font-family: inherit;
 }
 
 .ppins-Medium {
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
 }
 .ppins-Medium > * {
   font-family: inherit;
@@ -2384,7 +2405,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", "PingFang SC", "Microsoft YaHei", "Microsoft YaHei UI", "SimSun", "SimHei", "Arial";
+  font-family: "OpenSans-Regular", "PingFang SC", "Microsoft YaHei", "Microsoft YaHei UI", "SimSun", "SimHei", "Arial";
 }
 
 ::-webkit-scrollbar {
@@ -2414,7 +2435,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins-Bold";
+  font-family: "OpenSans-Bold";
 }
 
 body,
@@ -3789,19 +3810,11 @@ header.scroll_down {
   border-bottom: 0.01rem solid var(--d);
 }
 .header_bottom .logo {
-  max-width: 0.44rem;
-}
-@media screen and (max-width: 1024px) {
-  .header_bottom .logo {
-    max-width: none;
-  }
+  height: 0.6rem;
 }
 @media screen and (max-width: 1024px) {
   .header_bottom {
     padding: 0 0.3rem;
-  }
-  .header_bottom .logo img {
-    width: 0.4rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3859,7 +3872,7 @@ header.scroll_down {
 }
 .header_bottom .navBox .nav_item .nav_text a {
   padding: 0 0.2rem;
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
   transition: all var(--ease) 0.3s;
 }
 @media screen and (max-width: 768px) {
@@ -5578,7 +5591,7 @@ header.scroll_down {
 }
 .a3 .ab_bottom ul li h5 {
   font-weight: normal;
-  font-family: "Poppins";
+  font-family: "OpenSans-Regular";
   word-break: break-word;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -6047,8 +6060,8 @@ header.scroll_down {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
 }
 .a4-5 .a4-5_list .pz4_Item .sx {
@@ -6803,7 +6816,7 @@ header.scroll_down {
 }
 .f1 .f_left > ul > li > p {
   color: var(--0);
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
   display: flex;
   justify-content: space-between;
   gap: 0.1rem;
@@ -7162,7 +7175,7 @@ header.scroll_down {
   color: var(--f);
 }
 .quote_2 .left .b_list p:hover span {
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
 }
 .quote_2 .left .b_list p:hover img {
   opacity: 1;
@@ -7234,7 +7247,7 @@ header.scroll_down {
 }
 .quote_2 .b_chouse p {
   background-color: var(--bl);
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
   color: var(--0);
   border-radius: 0.04rem;
   min-width: 2.6rem;
@@ -7543,7 +7556,7 @@ header.scroll_down {
   display: flex;
   justify-content: center;
   color: var(--bc);
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
   transition: all var(--ease) 0.3s;
 }
 .forgot_password .content .tellink:hover {
@@ -7743,7 +7756,7 @@ header.scroll_down {
   padding: 0.02rem 0.1rem;
 }
 .dingdantop .dingdan .b_list .b_item .tishi_end {
-  font-family: "Poppins-Bold";
+  font-family: "OpenSans-Medium";
   color: var(--bc);
 }
 .dingdantop .dingdan .b_list .b_item .anniu_this {
@@ -8026,7 +8039,7 @@ header.scroll_down {
   margin-bottom: 0.2rem;
 }
 .mp .sitemap_list ul h6 a {
-  font-family: "Poppins-Bold";
+  font-family: "OpenSans-Bold";
 }
 .mp .sitemap_list ul p {
   color: var(--1);
@@ -8066,7 +8079,9 @@ footer {
   }
 }
 footer .footer_logo {
-  max-width: 2.2rem;
+  height: 0.3rem;
+  width: -moz-max-content;
+  width: max-content;
 }
 footer .footer_menu {
   display: flex;
@@ -8095,7 +8110,7 @@ footer .footer_menu_item {
 footer .footer_menu_item .footer_menu_t {
   font-size: 0.18rem;
   margin-bottom: 0.2rem;
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
 }
 footer .footer_menu_item .footer_menu_t a {
   transition: all var(--ease) 0.3s;
@@ -8752,7 +8767,7 @@ footer .footer_menu .search .formBtn img {
 }
 .i2 .ab_bottom ul li h5 {
   font-weight: normal;
-  font-family: "Poppins";
+  font-family: "OpenSans-Regular";
   color: var(--0);
   line-height: 1.4;
   min-height: 0.45rem;
@@ -8850,7 +8865,7 @@ footer .footer_menu .search .formBtn img {
 }
 .i2 .ab_bottom_three ul li p {
   font-size: 0.24rem;
-  font-family: "Poppins", "PingFang SC", "Microsoft YaHei", "Microsoft YaHei UI", "SimSun", "SimHei", "Arial";
+  font-family: "OpenSans-Regular", "PingFang SC", "Microsoft YaHei", "Microsoft YaHei UI", "SimSun", "SimHei", "Arial";
 }
 @media screen and (max-width: 768px) {
   .i2 .ab_bottom_three ul li p {
@@ -9229,7 +9244,7 @@ footer .footer_menu .search .formBtn img {
 }
 .i5 .news_item .news_title p {
   font-size: 0.24rem;
-  font-family: "Poppins-Medium";
+  font-family: "OpenSans-Medium";
   line-height: 1.2;
 }
 .i5 .news_item .news_title p:hover {
@@ -9324,7 +9339,7 @@ footer .footer_menu .search .formBtn img {
   left: -0.5rem;
 }
 .i6 .c_h3 p {
-  font-family: "Poppins-Regular";
+  font-family: "OpenSans-Regular";
   line-height: 1.2;
 }
 .i6 .l_column {

@@ -330,7 +330,7 @@
                     color: var(--f);
 
                     span {
-                        font-family: "Poppins-Medium";
+                        font-family: "OpenSans-Medium";
                     }
 
                     img {
@@ -423,7 +423,7 @@
 
         p {
             background-color: var(--bl);
-            font-family: "Poppins-Medium";
+            font-family: "OpenSans-Medium";
             color: var(--0);
             border-radius: 0.04rem;
             min-width: 2.6rem;
@@ -781,7 +781,7 @@
             display: flex;
             justify-content: center;
             color: var(--bc);
-            font-family: "Poppins-Medium";
+            font-family: "OpenSans-Medium";
             transition: all var(--ease) 0.3s;
 
             &:hover {
@@ -1012,7 +1012,7 @@
                 }
 
                 .tishi_end {
-                    font-family: "Poppins-Bold";
+                    font-family: "OpenSans-Medium";
                     color: var(--bc);
                 }
 

@@ -20,7 +20,8 @@ footer {
     }
 
     .footer_logo {
-        max-width: 2.2rem;
+        height: 0.3rem;
+        width: max-content;
     }
 
     .footer_menu {
@@ -55,7 +56,7 @@ footer {
         .footer_menu_t {
             font-size: 0.18rem;
             margin-bottom: 0.2rem;
-            font-family: "Poppins-Medium";
+            font-family: "OpenSans-Medium";
 
             a {
                 transition: all var(--ease) 0.3s;
