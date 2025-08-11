@@ -4423,7 +4423,7 @@ header.scroll_down {
 }
 .p_case_1 .c_item .c_info .t {
   color: var(--0);
-  line-height: 1.2;
+  line-height: 1.3;
   word-break: break-word;
   text-overflow: ellipsis;
   display: -webkit-box;

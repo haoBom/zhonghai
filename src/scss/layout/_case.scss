@@ -69,7 +69,7 @@
 
             .t {
                 color: var(--0);
-                line-height: 1.2;
+                line-height: 1.3;
                 @include ellipsis(2);
                 transition: color var(--ease) 0.3s;
             }
