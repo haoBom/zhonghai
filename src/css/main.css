@@ -8592,6 +8592,9 @@ footer .footer_menu .search .formBtn img {
 .homeBanner .swiper-slide .index_title .index_title_bottom a {
   margin: 0.24rem auto 0 0;
 }
+.homeBanner .swiper-slide .index_title .index_title_bottom a[hover-word]::after {
+  font-weight: bold;
+}
 .homeBanner .swiper-slide .index_title p {
   color: var(--f);
   line-height: 1.3;
